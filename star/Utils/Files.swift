@@ -21,3 +21,12 @@ func createFolderIfNotExisits(folderPath : String) -> Bool {
   }
   return true
 }
+
+func getAllFileName() -> [String]{
+  let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+  let manager = FileManager.default
+  let fileUrl = documentPath as String
+  let subPaths = manager.subpaths(atPath: fileUrl)
+  let array = subPaths?.filter({$0 != ".DS_Store"})
+  return array!
+}
