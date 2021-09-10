@@ -21,3 +21,9 @@
 "ConnectionView_Failed" = "I can’t connect to your game console";
 "ConnectionView_FailedDes" = "Re-scan connecting QR code show on console\nor check your system settings";
 "ConnectionView_RetryBtn" = "Retry";
+"ConnectionView_Error_CannotCreateFolder" = "Cannot create media folder";
+"ConnectionView_Transfering" = "Transfering...";
+"ConnectionView_Transfering_Desc" = "It will not take long time.";
+"ConnectionView_Transferred" = "Completed!";
+"ConnectionView_Transferred_Desc" = "Go to “Album” to view all your media from console.";
+"ConnectionView_TransferMoreBtn" = "Transfer more media";

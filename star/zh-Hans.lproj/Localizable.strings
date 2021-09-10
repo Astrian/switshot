@@ -21,3 +21,9 @@
 "ConnectionView_Failed" = "无法连接至你的游戏主机";
 "ConnectionView_FailedDes" = "重新扫描主机上的连接二维码\n或者检查系统设置";
 "ConnectionView_RetryBtn" = "重试";
+"ConnectionView_Error_CannotCreateFolder" = "无法创建媒体文件夹";
+"ConnectionView_Transfering" = "正在转移……";
+"ConnectionView_Transfering_Desc" = "很快就好，稍安勿躁。";
+"ConnectionView_Transferred" = "完成！";
+"ConnectionView_Transferred_Desc" = "前往「相册」查看从主机转移的媒体。";
+"ConnectionView_TransferMoreBtn" = "转移更多媒体";

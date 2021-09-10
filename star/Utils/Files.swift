@@ -7,13 +7,17 @@
 
 import Foundation
 
-func createFolderIfNotExisits(folderPath : String)->Bool {
+func createFolderIfNotExisits(folderPath : String) -> Bool {
   let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
   let fileManager = FileManager.default
   let filePath = documentPath as String + "/" + folderPath
   let exist = fileManager.fileExists(atPath: filePath)
   if !exist {
-    try! fileManager.createDirectory(atPath: filePath,withIntermediateDirectories: true, attributes: nil)
+    do {
+      try fileManager.createDirectory(atPath: filePath, withIntermediateDirectories: true, attributes: nil)
+    } catch {
+      return false
+    }
   }
-  return exist
+  return true
 }

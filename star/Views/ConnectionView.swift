@@ -8,12 +8,15 @@
 import SwiftUI
 import SystemConfiguration
 import Alamofire
+import AlertToast
 
 struct ConnectionView: View {
   @State private var connected = 0
   @State private var transfered = 0
   @State private var consoleName = ""
   @State private var files = [String]()
+  @State private var showAlert = false
+  @State private var alertContent = ""
   
   var body: some View {
     NavigationView {
@@ -27,7 +30,27 @@ struct ConnectionView: View {
             .font(.headline)
         } else if connected == 1 {
           if transfered == 1 {
-            Text("transfered!")
+            Text("✅")
+              .font(.custom("", size: 80))
+              .padding(.bottom)
+            Text(String(format: NSLocalizedString("ConnectionView_Transferred", comment: ""), consoleName))
+              .font(.headline)
+              .padding(.bottom)
+            Text(String(format: NSLocalizedString("ConnectionView_Transferred_Desc", comment: ""), consoleName))
+              .padding(.bottom)
+            Button(action: {
+              connected = 0
+              transfered = 0
+              files = [String]()
+              req()
+            }) {
+              Text("ConnectionView_TransferMoreBtn")
+                .padding(.horizontal, 25)
+            }
+            .frame(height: 50)
+            .background(Color("AccentColor"))
+            .foregroundColor(Color(.white))
+            .cornerRadius(25)
           } else if transfered == 0{
             VStack {
               Text("🪄")
@@ -36,7 +59,9 @@ struct ConnectionView: View {
               Text(String(format: NSLocalizedString("ConnectionView_ConnectedConsole", comment: ""), consoleName))
                 .font(.headline)
                 .padding(.bottom)
-              Button(action: {}) {
+              Button(action: {
+                transfer()
+              }) {
                 Text("ConnectionView_TransferBtn")
                   .padding(.horizontal, 25)
               }
@@ -45,6 +70,14 @@ struct ConnectionView: View {
               .foregroundColor(Color(.white))
               .cornerRadius(25)
             }
+          } else if transfered == -1 {
+            Text("📲")
+              .font(.custom("", size: 80))
+              .padding(.bottom)
+            Text(String(format: NSLocalizedString("ConnectionView_Transfering", comment: ""), consoleName))
+              .font(.headline)
+              .padding(.bottom)
+            Text(String(format: NSLocalizedString("ConnectionView_Transfering_Desc", comment: ""), consoleName))
           }
         } else if connected == -1 {
           Text("😕")
@@ -70,11 +103,14 @@ struct ConnectionView: View {
         Spacer()
         Spacer()
       }
-      .padding(.horizontal)
+        .padding(.horizontal)
         .navigationTitle("ConnectionView_Title")
     }
     .onAppear {
       req()
+    }
+    .toast(isPresenting: $showAlert){
+      AlertToast(type: .regular, title: alertContent)
     }
   }
   
@@ -94,7 +130,23 @@ struct ConnectionView: View {
     }
   }
   func transfer() {
-    
+    /* guard createFolderIfNotExisits(folderPath: "Console Album") else {
+      alertContent = "ConnectionView_Error_CannotCreateFolder"
+      showAlert = true
+      return
+    } */
+    transfered = -1
+    for media in files {
+      AF.download("http://192.168.0.1/img/\(media)" ).responseData { response in
+        if response.error == nil {
+          let manager = FileManager.default
+          let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+          let fileUrl = documentPath as String
+          manager.createFile(atPath: "\(fileUrl)/\(media)", contents: response.value, attributes: nil)
+        }
+      }
+    }
+    transfered = 1
   }
   func retry() {
     connected = 0

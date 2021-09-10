@@ -13,6 +13,7 @@
 		454480E126EB90CF003B0AFE /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480E026EB90CF003B0AFE /* Debug.swift */; };
 		454480E326EB9C65003B0AFE /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480E226EB9C65003B0AFE /* AlbumView.swift */; };
 		454480E526EB9F95003B0AFE /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480E426EB9F95003B0AFE /* Files.swift */; };
+		454480E826EBA34D003B0AFE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 454480E726EBA34D003B0AFE /* AlertToast */; };
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		454480E026EB90CF003B0AFE /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		454480E226EB9C65003B0AFE /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		454480E426EB9F95003B0AFE /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		454480E926EBA4CC003B0AFE /* star.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = star.entitlements; sourceTree = "<group>"; };
 		45AA096F26EB8A5C001043AE /* star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AA097226EB8A5C001043AE /* starApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starApp.swift; sourceTree = "<group>"; };
 		45AA097626EB8A5D001043AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				454480DE26EB8FE7003B0AFE /* Alamofire in Frameworks */,
+				454480E826EBA34D003B0AFE /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		45AA097126EB8A5C001043AE /* star */ = {
 			isa = PBXGroup;
 			children = (
+				454480E926EBA4CC003B0AFE /* star.entitlements */,
 				454480DF26EB90C2003B0AFE /* Utils */,
 				454480DB26EB8C2F003B0AFE /* Views */,
 				45AA097226EB8A5C001043AE /* starApp.swift */,
@@ -120,6 +124,7 @@
 			name = star;
 			packageProductDependencies = (
 				454480DD26EB8FE7003B0AFE /* Alamofire */,
+				454480E726EBA34D003B0AFE /* AlertToast */,
 			);
 			productName = star;
 			productReference = 45AA096F26EB8A5C001043AE /* star.app */;
@@ -151,6 +156,7 @@
 			mainGroup = 45AA096626EB8A5C001043AE;
 			packageReferences = (
 				454480DC26EB8FE7003B0AFE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 45AA097026EB8A5C001043AE /* Products */;
 			projectDirPath = "";
@@ -323,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
@@ -346,6 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
@@ -396,6 +404,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -403,6 +419,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 454480DC26EB8FE7003B0AFE /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		454480E726EBA34D003B0AFE /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
