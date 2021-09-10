@@ -37,3 +37,5 @@
 "AlbumView_Empty_Desc" = "Try transfer some media into Switshot.";
 "AlbumView_Picker_Image" = "Images";
 "AlbumView_Picker_Video" = "Videos";
+"AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
+"AlbumView_Toast_Deleted" = "Media have been deleted";

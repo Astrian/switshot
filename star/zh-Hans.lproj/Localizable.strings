@@ -37,3 +37,5 @@
 "AlbumView_Empty_Desc" = "试着转移一些媒体到 Switshot 吧。";
 "AlbumView_Picker_Image" = "图片";
 "AlbumView_Picker_Video" = "视频";
+"AlbumView_Error_CannotDelete" = "无法删除选定的媒体";
+"AlbumView_Toast_Deleted" = "媒体已被删除";

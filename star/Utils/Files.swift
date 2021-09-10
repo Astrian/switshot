@@ -31,11 +31,11 @@ func getAllFileName() -> [String]{
   return array!
 }
 
-func deleteFile(folderPath: String, fileName: String) -> Bool {
+func deleteFile(fileName: String) -> Bool {
   var success = false
   let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
   let manager = FileManager.default
-  let fileUrl = documentPath as String + "/" + folderPath
+  let fileUrl = documentPath as String + "/"
   let subPaths = manager.subpaths(atPath: fileUrl)
   let removePath = fileUrl + "/" + fileName
   for fileStr in subPaths!{

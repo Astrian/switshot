@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct AlbumView: View {
   @State private var images = [String: Data]()
@@ -13,6 +14,8 @@ struct AlbumView: View {
   @State private var videos = [String: Data]()
   @State private var videosName = [String]()
   @State private var pickerValue = 0
+  @State private var showToast = false
+  @State private var alertContent = ""
   var pickerOptions = [
     String(format: NSLocalizedString("AlbumView_Picker_Image", comment: "")),
     String(format: NSLocalizedString("AlbumView_Picker_Video", comment: ""))
@@ -34,7 +37,7 @@ struct AlbumView: View {
                     .clipped()
                     .contextMenu{
                       Button(action: {
-                         // bla
+                        self.delete(item: item)
                       }) {
                         HStack {
                           Text("AlbumView_BtnDelete")
@@ -91,27 +94,45 @@ struct AlbumView: View {
           }.pickerStyle(SegmentedPickerStyle())
         }
       }
+      .toast(isPresenting: $showToast){
+        AlertToast(type: .regular, title: alertContent)
+      }
     }
     .onAppear{
-      images = [String: Data]()
-      imagesName = [String]()
-      videos = [String: Data]()
-      videosName = [String]()
-      let array = getAllFileName()
-      let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
-      let fileUrl = documentPath as String
-      let manager = FileManager.default
-      for item in array {
-        guard let data = manager.contents(atPath: "\(fileUrl)/\(item)") else {
-          continue
-        }
-        if item.split(separator: ".")[1] == "jpg" {
-          imagesName.append(item)
-          images.updateValue(data, forKey: item)
-        } else if item.split(separator: ".")[1] == "mp4" {
-          videosName.append(item)
-          videos.updateValue(data, forKey: item)
-        }
+      refresh()
+    }
+  }
+  
+  func delete(item media: String) {
+    guard deleteFile(fileName: media) else {
+      showToast = true
+      alertContent = "AlbumView_Error_CannotDelete"
+      return
+    }
+    // showToast = true
+    // alertContent = "AlbumView_Toast_Deleted"
+    refresh()
+  }
+  
+  func refresh() {
+    images = [String: Data]()
+    imagesName = [String]()
+    videos = [String: Data]()
+    videosName = [String]()
+    let array = getAllFileName()
+    let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+    let fileUrl = documentPath as String
+    let manager = FileManager.default
+    for item in array {
+      guard let data = manager.contents(atPath: "\(fileUrl)/\(item)") else {
+        continue
+      }
+      if item.split(separator: ".")[1] == "jpg" {
+        imagesName.append(item)
+        images.updateValue(data, forKey: item)
+      } else if item.split(separator: ".")[1] == "mp4" {
+        videosName.append(item)
+        videos.updateValue(data, forKey: item)
       }
     }
   }
