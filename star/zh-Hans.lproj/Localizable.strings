@@ -1,0 +1,23 @@
+/* 
+  i18n.strings
+  star
+
+  Created by Astrian Zheng on 2021/9/10.
+  
+*/
+
+// Local network permission description
+"LocalNetworkPermission_Description" = "…… 以连接至你的游戏主机！";
+
+// Tabs
+"Tabs_Connection" = "连接";
+"Tabs_Album" = "相册";
+
+// ConnectionView
+"ConnectionView_Title" = "连接";
+"ConnectionView_ConnectedConsole" = "已连接至：%@";
+"ConnectionView_TransferBtn" = "现在转移";
+"ConnectionView_Connecting" = "正连接……";
+"ConnectionView_Failed" = "无法连接至你的游戏主机";
+"ConnectionView_FailedDes" = "重新扫描主机上的连接二维码\n或者检查系统设置";
+"ConnectionView_RetryBtn" = "重试";

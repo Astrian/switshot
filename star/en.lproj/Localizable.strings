@@ -1,0 +1,23 @@
+/* 
+  i18n.strings
+  star
+
+  Created by Astrian Zheng on 2021/9/10.
+  
+*/
+
+// Local network permission description
+"LocalNetworkPermission_Description" = "... in order to connect to your console!";
+
+// Tabs
+"Tabs_Connection" = "Connection";
+"Tabs_Album" = "Album";
+
+// ConnectionView
+"ConnectionView_Title" = "Connection";
+"ConnectionView_ConnectedConsole" = "Connected to: %@";
+"ConnectionView_TransferBtn" = "Transfer now";
+"ConnectionView_Connecting" = "Connecting...";
+"ConnectionView_Failed" = "I can’t connect to your game console";
+"ConnectionView_FailedDes" = "Re-scan connecting QR code show on console\nor check your system settings";
+"ConnectionView_RetryBtn" = "Retry";

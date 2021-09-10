@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct starApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      TabView {
+        ConnectionView()
+          .tabItem {
+            Label("Tabs_Connection", systemImage: "link.circle.fill")
+          }
+        AlbumView()
+          .tabItem {
+            Label("Tabs_Album", systemImage: "photo.fill.on.rectangle.fill")
+          }
+      }
     }
+  }
 }
