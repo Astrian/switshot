@@ -30,3 +30,19 @@ func getAllFileName() -> [String]{
   let array = subPaths?.filter({$0 != ".DS_Store"})
   return array!
 }
+
+func deleteFile(folderPath: String, fileName: String) -> Bool {
+  var success = false
+  let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+  let manager = FileManager.default
+  let fileUrl = documentPath as String + "/" + folderPath
+  let subPaths = manager.subpaths(atPath: fileUrl)
+  let removePath = fileUrl + "/" + fileName
+  for fileStr in subPaths!{
+    if fileName == fileStr {
+      try! manager.removeItem(atPath: removePath)
+      success = true
+    }
+  }
+  return success
+}

@@ -33,3 +33,7 @@
 "AlbumView_BtnDelete" = "Delete";
 "AlbumView_BtnSaveToPhoto" = "Save to Photo";
 "AlbumView_BtnShare" = "Share to...";
+"AlbumView_Empty_Title" = "It’s noting";
+"AlbumView_Empty_Desc" = "Try transfer some media into Switshot.";
+"AlbumView_Picker_Image" = "Images";
+"AlbumView_Picker_Video" = "Videos";

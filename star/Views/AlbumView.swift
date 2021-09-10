@@ -8,55 +8,95 @@
 import SwiftUI
 
 struct AlbumView: View {
-  @State private var media = [Data]()
+  @State private var images = [String: Data]()
+  @State private var imagesName = [String]()
+  @State private var videos = [String: Data]()
+  @State private var videosName = [String]()
+  @State private var pickerValue = 0
+  var pickerOptions = [
+    String(format: NSLocalizedString("AlbumView_Picker_Image", comment: "")),
+    String(format: NSLocalizedString("AlbumView_Picker_Video", comment: ""))
+  ]
 
   var body: some View {
     NavigationView {
-      ScrollView {
-        let column = [GridItem(), GridItem()]
-        LazyVGrid(columns: column) {
-          ForEach (media, id: \.self) { item in
-            Image(uiImage: (UIImage(data: item) ?? UIImage(systemName: "photo"))!)
-              .resizable()
-              .scaledToFill()
-              .frame(width: ((UIScreen.screenWidth - 36) / 2))
-              .clipped()
-              .contextMenu{
-                Button(action: {
-                   // bla
-                }) {
-                  HStack {
-                    Text("AlbumView_BtnDelete")
-                    Image(systemName: "trash")
-                  }
-                }
-                
-                Button(action: {
-                   // bla
-                }) {
-                  HStack {
-                    Text("AlbumView_BtnSaveToPhoto")
-                    Image(systemName: "square.and.arrow.down")
-                  }
-                }
-                
-                Button(action: {
-                   // bla
-                }) {
-                  HStack {
-                    Text("AlbumView_BtnShare")
-                    Image(systemName: "square.and.arrow.up")
-                  }
+      Group {
+        if (pickerValue == 0 && imagesName.count != 0) || (pickerValue == 1 && videosName.count != 0) {
+          ScrollView {
+            let column = [GridItem(), GridItem()]
+            LazyVGrid(columns: column) {
+              ForEach (imagesName, id: \.self) { item in
+                if pickerValue == 0 {
+                  Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: ((UIScreen.screenWidth - 36) / 2))
+                    .clipped()
+                    .contextMenu{
+                      Button(action: {
+                         // bla
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnDelete")
+                          Image(systemName: "trash")
+                        }
+                      }
+                      
+                      Button(action: {
+                         // bla
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnSaveToPhoto")
+                          Image(systemName: "square.and.arrow.down")
+                        }
+                      }
+                      
+                      Button(action: {
+                         // bla
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnShare")
+                          Image(systemName: "square.and.arrow.up")
+                        }
+                      }
+                    }
                 }
               }
+            }
+            .padding(.horizontal)
+          }
+        } else {
+          VStack {
+            Spacer()
+            Text("📂")
+              .font(.custom("", size: 80))
+              .padding(.bottom)
+            Text("AlbumView_Empty_Title")
+              .font(.headline)
+              .padding(.bottom)
+            Text("AlbumView_Empty_Desc")
+            Spacer()
+            Spacer()
           }
         }
       }
       .frame(minWidth: 0, maxWidth: .infinity)
       .navigationTitle("AlbumView_Title")
-      .padding(.horizontal)
+      .toolbar {
+        ToolbarItem {
+          Picker("Picker", selection: $pickerValue) {
+            ForEach(0..<pickerOptions.count) { index in
+              Text(pickerOptions[index]).tag(index)
+            }
+          }.pickerStyle(SegmentedPickerStyle())
+        }
+      }
     }
     .onAppear{
+      images = [String: Data]()
+      imagesName = [String]()
+      videos = [String: Data]()
+      videosName = [String]()
       let array = getAllFileName()
       let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
       let fileUrl = documentPath as String
@@ -65,7 +105,13 @@ struct AlbumView: View {
         guard let data = manager.contents(atPath: "\(fileUrl)/\(item)") else {
           continue
         }
-        media.append(data)
+        if item.split(separator: ".")[1] == "jpg" {
+          imagesName.append(item)
+          images.updateValue(data, forKey: item)
+        } else if item.split(separator: ".")[1] == "mp4" {
+          videosName.append(item)
+          videos.updateValue(data, forKey: item)
+        }
       }
     }
   }
