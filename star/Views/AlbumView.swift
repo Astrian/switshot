@@ -46,7 +46,7 @@ struct AlbumView: View {
                       }
                       
                       Button(action: {
-                         // bla
+                        saveImage(images[item]!)
                       }) {
                         HStack {
                           Text("AlbumView_BtnSaveToPhoto")
@@ -114,7 +114,7 @@ struct AlbumView: View {
     refresh()
   }
   
-  func refresh() {
+  private func refresh() {
     images = [String: Data]()
     imagesName = [String]()
     videos = [String: Data]()
@@ -135,6 +135,10 @@ struct AlbumView: View {
         videos.updateValue(data, forKey: item)
       }
     }
+  }
+  
+  private func saveImage(_ inputImage: Data) {
+    UIImageWriteToSavedPhotosAlbum(UIImage(data: inputImage)!, nil, nil, nil)
   }
 }
 

@@ -6,9 +6,6 @@
   
 */
 
-// Local network permission description
-"LocalNetworkPermission_Description" = "... in order to connect to your console!";
-
 // Tabs
 "Tabs_Connection" = "Connection";
 "Tabs_Album" = "Album";
@@ -31,7 +28,7 @@
 // AlbumView
 "AlbumView_Title" = "Media Album";
 "AlbumView_BtnDelete" = "Delete";
-"AlbumView_BtnSaveToPhoto" = "Save to Photo";
+"AlbumView_BtnSaveToPhoto" = "Save to Photo Library";
 "AlbumView_BtnShare" = "Share to...";
 "AlbumView_Empty_Title" = "It’s noting";
 "AlbumView_Empty_Desc" = "Try transfer some media into Switshot.";

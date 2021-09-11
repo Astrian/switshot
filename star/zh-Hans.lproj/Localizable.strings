@@ -6,9 +6,6 @@
   
 */
 
-// Local network permission description
-"LocalNetworkPermission_Description" = "…… 以连接至你的游戏主机！";
-
 // Tabs
 "Tabs_Connection" = "连接";
 "Tabs_Album" = "相册";
@@ -31,7 +28,7 @@
 // AlbumView
 "AlbumView_Title" = "媒体相册";
 "AlbumView_BtnDelete" = "删除";
-"AlbumView_BtnSaveToPhoto" = "存储至照片";
+"AlbumView_BtnSaveToPhoto" = "存储至照片图库";
 "AlbumView_BtnShare" = "分享至……";
 "AlbumView_Empty_Title" = "空空如也";
 "AlbumView_Empty_Desc" = "试着转移一些媒体到 Switshot 吧。";

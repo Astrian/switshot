@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  star
+
+  Created by Astrian Zheng on 2021/9/11.
+  
+*/
+
+"NSLocalNetworkUsageDescription" = "... in order to connect to your console!";
+"NSPhotoLibraryAddUsageDescription" = "Save your media into photo library.";

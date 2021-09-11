@@ -26,6 +26,8 @@
 	<true/>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>PhotoLibraryPermission_Description</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
