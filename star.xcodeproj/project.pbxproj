@@ -16,6 +16,7 @@
 		454480E826EBA34D003B0AFE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 454480E726EBA34D003B0AFE /* AlertToast */; };
 		454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480EA26EBBA21003B0AFE /* ImageLoader.swift */; };
 		4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D79C26EC3A1600556DF7 /* Introspect */; };
+		4573D7A126EC525B00556DF7 /* ImageViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D7A026EC525B00556DF7 /* ImageViewer */; };
 		4576F10026EC31E0006597CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576F10226EC31E0006597CC /* InfoPlist.strings */; };
 		4576F10526EC355E006597CC /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576F10426EC355E006597CC /* ImageDetailView.swift */; };
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4573D7A126EC525B00556DF7 /* ImageViewer in Frameworks */,
 				454480DE26EB8FE7003B0AFE /* Alamofire in Frameworks */,
 				4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */,
 				454480E826EBA34D003B0AFE /* AlertToast in Frameworks */,
@@ -138,6 +140,7 @@
 				454480DD26EB8FE7003B0AFE /* Alamofire */,
 				454480E726EBA34D003B0AFE /* AlertToast */,
 				4573D79C26EC3A1600556DF7 /* Introspect */,
+				4573D7A026EC525B00556DF7 /* ImageViewer */,
 			);
 			productName = star;
 			productReference = 45AA096F26EB8A5C001043AE /* star.app */;
@@ -171,6 +174,7 @@
 				454480DC26EB8FE7003B0AFE /* XCRemoteSwiftPackageReference "Alamofire" */,
 				454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */,
 				4573D79B26EC3A1600556DF7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				4573D79F26EC525B00556DF7 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */,
 			);
 			productRefGroup = 45AA097026EB8A5C001043AE /* Products */;
 			projectDirPath = "";
@@ -370,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -446,6 +450,14 @@
 				minimumVersion = 0.1.3;
 			};
 		};
+		4573D79F26EC525B00556DF7 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jake-Short/swiftui-image-viewer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -463,6 +475,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4573D79B26EC3A1600556DF7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		4573D7A026EC525B00556DF7 /* ImageViewer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4573D79F26EC525B00556DF7 /* XCRemoteSwiftPackageReference "swiftui-image-viewer" */;
+			productName = ImageViewer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

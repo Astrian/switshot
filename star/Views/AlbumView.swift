@@ -7,6 +7,8 @@
 
 import SwiftUI
 import AlertToast
+import ImageViewer
+import Introspect
 
 struct AlbumView: View {
   @State private var images = [String: Data]()
@@ -16,6 +18,8 @@ struct AlbumView: View {
   @State private var pickerValue = 0
   @State private var showToast = false
   @State private var alertContent = ""
+  @State private var imagePreview = Image(systemName: "image")
+  @State private var showPreview = false
   var pickerOptions = [
     String(format: NSLocalizedString("AlbumView_Picker_Image", comment: "")),
     String(format: NSLocalizedString("AlbumView_Picker_Video", comment: ""))
@@ -30,42 +34,44 @@ struct AlbumView: View {
             LazyVGrid(columns: column) {
               ForEach (imagesName, id: \.self) { item in
                 if pickerValue == 0 {
-                  NavigationLink(destination: ImageDetailView(image: images[item]!, filename: item, refresh: refresh)) {
-                    Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
-                      .resizable()
-                      .scaledToFill()
-                      .frame(width: ((UIScreen.screenWidth - 36) / 2))
-                      .clipped()
-                  }
-                  .contextMenu{
-                    Button(action: {
-                      self.delete(item: item)
-                    }) {
-                      HStack {
-                        Text("AlbumView_BtnDelete")
-                        Image(systemName: "trash")
+                  Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: ((UIScreen.screenWidth - 36) / 2))
+                    .clipped()
+                    .onTapGesture{
+                      imagePreview = Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
+                      showPreview = true
+                    }
+                    .contextMenu{
+                      Button(action: {
+                        self.delete(item: item)
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnDelete")
+                          Image(systemName: "trash")
+                        }
+                      }
+                      
+                      Button(action: {
+                        saveImage(images[item]!)
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnSaveToPhoto")
+                          Image(systemName: "square.and.arrow.down")
+                        }
+                      }
+                      
+                      Button(action: {
+                        let activityController = UIActivityViewController(activityItems: [UIImage(data: images[item]!) as Any], applicationActivities: nil)
+                        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnShare")
+                          Image(systemName: "square.and.arrow.up")
+                        }
                       }
                     }
-                    
-                    Button(action: {
-                      saveImage(images[item]!)
-                    }) {
-                      HStack {
-                        Text("AlbumView_BtnSaveToPhoto")
-                        Image(systemName: "square.and.arrow.down")
-                      }
-                    }
-                    
-                    Button(action: {
-                      let activityController = UIActivityViewController(activityItems: [UIImage(data: images[item]!) as Any], applicationActivities: nil)
-                      UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
-                    }) {
-                      HStack {
-                        Text("AlbumView_BtnShare")
-                        Image(systemName: "square.and.arrow.up")
-                      }
-                    }
-                  }
                 }
               }
             }
@@ -100,6 +106,11 @@ struct AlbumView: View {
       .toast(isPresenting: $showToast){
         AlertToast(type: .regular, title: alertContent)
       }
+      .navigationBarHidden(showPreview)
+      .introspectTabBarController { (UITabBarController) in
+        UITabBarController.tabBar.isHidden = showPreview
+      }
+      .overlay(ImageViewer(image: $imagePreview, viewerShown: self.$showPreview))
     }
     .onAppear{
       refresh()

@@ -17,13 +17,24 @@ struct ImageDetailView: View {
   @State private var alertContent = ""
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   var refresh: () -> Void
+  @GestureState var magnifyBy = CGFloat(1.0)
+  
+  var magnification: some Gesture {
+    MagnificationGesture()
+      .updating ($magnifyBy) {
+        currentState, gestureState,
+        transaction in
+        gestureState = currentState
+      }
+  }
   
   var body: some View {
-    Group {
+    ScrollView ([.horizontal, .vertical]) {
       Image(uiImage: UIImage(data: image)!)
         .resizable()
         .aspectRatio(contentMode: .fit)
-        .frame(width: UIScreen.screenWidth)
+        .frame(width: UIScreen.screenWidth * magnifyBy)
+        .gesture(magnification)
     }
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
