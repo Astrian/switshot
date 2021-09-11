@@ -10,6 +10,8 @@ import AlertToast
 import ImageViewer
 import Introspect
 import AVFoundation
+import Photos
+import AVKit
 
 struct AlbumView: View {
   @State private var images = [String: Data]()
@@ -21,6 +23,8 @@ struct AlbumView: View {
   @State private var alertContent = ""
   @State private var imagePreview = Image(systemName: "image")
   @State private var showPreview = false
+  @State private var showVideo = false
+  @State private var showVideoName = ""
   var pickerOptions = [
     String(format: NSLocalizedString("AlbumView_Picker_Image", comment: "")),
     String(format: NSLocalizedString("AlbumView_Picker_Video", comment: ""))
@@ -76,15 +80,15 @@ struct AlbumView: View {
                 }
               } else if pickerValue == 1 {
                 ForEach (videosName, id: \.self) { item in
-                  Image(uiImage: (videos[item] ?? UIImage(systemName: "photo"))!)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: ((UIScreen.screenWidth - 36) / 2))
-                    .clipped()
-                    .onTapGesture{
-                      // imagePreview = Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
-                      // showPreview = true
-                    }
+                  let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+                  let fileUrl = documentPath as String
+                  NavigationLink(destination: VideoPlayerView(url: "\(fileUrl)/\(item)")) {
+                    Image(uiImage: (videos[item] ?? UIImage(systemName: "photo"))!)
+                      .resizable()
+                      .scaledToFill()
+                      .frame(width: ((UIScreen.screenWidth - 36) / 2))
+                      .clipped()
+                  }
                     .contextMenu{
                       Button(action: {
                         self.delete(item: item)
@@ -96,7 +100,7 @@ struct AlbumView: View {
                       }
                       
                       Button(action: {
-                        saveImage(images[item]!)
+                        saveVideo(item)
                       }) {
                         HStack {
                           Text("AlbumView_BtnSaveToPhoto")
@@ -211,6 +215,15 @@ struct AlbumView: View {
   
   private func saveImage(_ inputImage: Data) {
     UIImageWriteToSavedPhotosAlbum(UIImage(data: inputImage)!, nil, nil, nil)
+  }
+  
+  
+  private func saveVideo(_ inputVideo: String) {
+    let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+    let fileUrl = documentPath as String
+    PHPhotoLibrary.shared().performChanges({
+      PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: "\(fileUrl)/\(inputVideo)"))
+    }) { saved, error in }
   }
 }
 
