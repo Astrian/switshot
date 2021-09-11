@@ -17,6 +17,7 @@ struct ConnectionView: View {
   @State private var files = [String]()
   @State private var showAlert = false
   @State private var alertContent = ""
+  @State private var showAbout = false
   
   var body: some View {
     NavigationView {
@@ -105,12 +106,22 @@ struct ConnectionView: View {
       }
         .padding(.horizontal)
         .navigationTitle("ConnectionView_Title")
+        .toolbar {
+          ToolbarItem {
+            Button(action: { showAbout = true }) {
+              Image(systemName: "info.circle")
+            }
+          }
+        }
     }
     .onAppear {
       req()
     }
     .toast(isPresenting: $showAlert){
       AlertToast(type: .regular, title: alertContent)
+    }
+    .sheet(isPresented: $showAbout) {
+      AboutView()
     }
   }
   

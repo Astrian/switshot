@@ -23,6 +23,7 @@
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
 		45AEA2F926EC625F008B06AA /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEA2F826EC625F008B06AA /* VideoPlayerView.swift */; };
+		45AEA2FB26EC649E008B06AA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEA2FA26EC649E008B06AA /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		45AA097926EB8A5D001043AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45AA097B26EB8A5D001043AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45AEA2F826EC625F008B06AA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		45AEA2FA26EC649E008B06AA /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				454480E226EB9C65003B0AFE /* AlbumView.swift */,
 				4576F10426EC355E006597CC /* ImageDetailView.swift */,
 				45AEA2F826EC625F008B06AA /* VideoPlayerView.swift */,
+				45AEA2FA26EC649E008B06AA /* AboutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				4576F10526EC355E006597CC /* ImageDetailView.swift in Sources */,
 				454480E126EB90CF003B0AFE /* Debug.swift in Sources */,
 				454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */,
+				45AEA2FB26EC649E008B06AA /* AboutView.swift in Sources */,
 				454480E526EB9F95003B0AFE /* Files.swift in Sources */,
 				454480E326EB9C65003B0AFE /* AlbumView.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
