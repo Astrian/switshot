@@ -15,7 +15,9 @@
 		454480E526EB9F95003B0AFE /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480E426EB9F95003B0AFE /* Files.swift */; };
 		454480E826EBA34D003B0AFE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 454480E726EBA34D003B0AFE /* AlertToast */; };
 		454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480EA26EBBA21003B0AFE /* ImageLoader.swift */; };
+		4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D79C26EC3A1600556DF7 /* Introspect */; };
 		4576F10026EC31E0006597CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576F10226EC31E0006597CC /* InfoPlist.strings */; };
+		4576F10526EC355E006597CC /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576F10426EC355E006597CC /* ImageDetailView.swift */; };
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
@@ -32,6 +34,7 @@
 		454480EA26EBBA21003B0AFE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4576F10126EC31E0006597CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4576F10326EC31E1006597CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4576F10426EC355E006597CC /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		45AA096F26EB8A5C001043AE /* star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AA097226EB8A5C001043AE /* starApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starApp.swift; sourceTree = "<group>"; };
 		45AA097626EB8A5D001043AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				454480DE26EB8FE7003B0AFE /* Alamofire in Frameworks */,
+				4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */,
 				454480E826EBA34D003B0AFE /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +61,7 @@
 			children = (
 				454480D326EB8B49003B0AFE /* ConnectionView.swift */,
 				454480E226EB9C65003B0AFE /* AlbumView.swift */,
+				4576F10426EC355E006597CC /* ImageDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			packageProductDependencies = (
 				454480DD26EB8FE7003B0AFE /* Alamofire */,
 				454480E726EBA34D003B0AFE /* AlertToast */,
+				4573D79C26EC3A1600556DF7 /* Introspect */,
 			);
 			productName = star;
 			productReference = 45AA096F26EB8A5C001043AE /* star.app */;
@@ -164,6 +170,7 @@
 			packageReferences = (
 				454480DC26EB8FE7003B0AFE /* XCRemoteSwiftPackageReference "Alamofire" */,
 				454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */,
+				4573D79B26EC3A1600556DF7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 45AA097026EB8A5C001043AE /* Products */;
 			projectDirPath = "";
@@ -194,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				454480D426EB8B49003B0AFE /* ConnectionView.swift in Sources */,
+				4576F10526EC355E006597CC /* ImageDetailView.swift in Sources */,
 				454480E126EB90CF003B0AFE /* Debug.swift in Sources */,
 				454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */,
 				454480E526EB9F95003B0AFE /* Files.swift in Sources */,
@@ -430,6 +438,14 @@
 				kind = branch;
 			};
 		};
+		4573D79B26EC3A1600556DF7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -442,6 +458,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		4573D79C26EC3A1600556DF7 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4573D79B26EC3A1600556DF7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

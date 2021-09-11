@@ -36,3 +36,9 @@
 "AlbumView_Picker_Video" = "视频";
 "AlbumView_Error_CannotDelete" = "无法删除选定的媒体";
 "AlbumView_Toast_Deleted" = "媒体已被删除";
+
+// ImageDetailView
+"ImageDetailView_BtnShare" = "分享至……";
+"ImageDetailView_BtnDelete" = "删除";
+"ImageDetailView_BtnSaveToPhoto" = "存至图库";
+"ImageDetailView_Toast_Saved" = "截屏已存储至照片图库";

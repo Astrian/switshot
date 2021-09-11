@@ -30,40 +30,42 @@ struct AlbumView: View {
             LazyVGrid(columns: column) {
               ForEach (imagesName, id: \.self) { item in
                 if pickerValue == 0 {
-                  Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: ((UIScreen.screenWidth - 36) / 2))
-                    .clipped()
-                    .contextMenu{
-                      Button(action: {
-                        self.delete(item: item)
-                      }) {
-                        HStack {
-                          Text("AlbumView_BtnDelete")
-                          Image(systemName: "trash")
-                        }
-                      }
-                      
-                      Button(action: {
-                        saveImage(images[item]!)
-                      }) {
-                        HStack {
-                          Text("AlbumView_BtnSaveToPhoto")
-                          Image(systemName: "square.and.arrow.down")
-                        }
-                      }
-                      
-                      Button(action: {
-                        let activityController = UIActivityViewController(activityItems: [UIImage(data: images[item]!) as Any], applicationActivities: nil)
-                        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
-                      }) {
-                        HStack {
-                          Text("AlbumView_BtnShare")
-                          Image(systemName: "square.and.arrow.up")
-                        }
+                  NavigationLink(destination: ImageDetailView(image: images[item]!, filename: item, refresh: refresh)) {
+                    Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
+                      .resizable()
+                      .scaledToFill()
+                      .frame(width: ((UIScreen.screenWidth - 36) / 2))
+                      .clipped()
+                  }
+                  .contextMenu{
+                    Button(action: {
+                      self.delete(item: item)
+                    }) {
+                      HStack {
+                        Text("AlbumView_BtnDelete")
+                        Image(systemName: "trash")
                       }
                     }
+                    
+                    Button(action: {
+                      saveImage(images[item]!)
+                    }) {
+                      HStack {
+                        Text("AlbumView_BtnSaveToPhoto")
+                        Image(systemName: "square.and.arrow.down")
+                      }
+                    }
+                    
+                    Button(action: {
+                      let activityController = UIActivityViewController(activityItems: [UIImage(data: images[item]!) as Any], applicationActivities: nil)
+                      UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+                    }) {
+                      HStack {
+                        Text("AlbumView_BtnShare")
+                        Image(systemName: "square.and.arrow.up")
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -104,7 +106,7 @@ struct AlbumView: View {
     }
   }
   
-  func delete(item media: String) {
+  private func delete(item media: String) {
     guard deleteFile(fileName: media) else {
       showToast = true
       alertContent = "AlbumView_Error_CannotDelete"

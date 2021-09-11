@@ -36,3 +36,9 @@
 "AlbumView_Picker_Video" = "Videos";
 "AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
 "AlbumView_Toast_Deleted" = "Media have been deleted";
+
+// ImageDetailView
+"ImageDetailView_BtnShare" = "Share to...";
+"ImageDetailView_BtnDelete" = "Delete";
+"ImageDetailView_BtnSaveToPhoto" = "Save to library";
+"ImageDetailView_Toast_Saved" = "This screenshot is saved to your photo library";
