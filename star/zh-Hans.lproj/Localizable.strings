@@ -36,6 +36,8 @@
 "AlbumView_Picker_Video" = "视频";
 "AlbumView_Error_CannotDelete" = "无法删除选定的媒体";
 "AlbumView_Toast_Deleted" = "媒体已被删除";
+"AlbumView_Count_Image" = "%@ 张图片";
+"AlbumView_Count_Video" = "%@ 段视频";
 
 // ImageDetailView
 "ImageDetailView_BtnShare" = "分享至……";

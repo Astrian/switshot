@@ -9,11 +9,12 @@ import SwiftUI
 import AlertToast
 import ImageViewer
 import Introspect
+import AVFoundation
 
 struct AlbumView: View {
   @State private var images = [String: Data]()
   @State private var imagesName = [String]()
-  @State private var videos = [String: Data]()
+  @State private var videos = [String: UIImage]()
   @State private var videosName = [String]()
   @State private var pickerValue = 0
   @State private var showToast = false
@@ -32,8 +33,8 @@ struct AlbumView: View {
           ScrollView {
             let column = [GridItem(), GridItem()]
             LazyVGrid(columns: column) {
-              ForEach (imagesName, id: \.self) { item in
-                if pickerValue == 0 {
+              if pickerValue == 0 {
+                ForEach (imagesName, id: \.self) { item in
                   Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
                     .resizable()
                     .scaledToFill()
@@ -73,9 +74,61 @@ struct AlbumView: View {
                       }
                     }
                 }
+              } else if pickerValue == 1 {
+                ForEach (videosName, id: \.self) { item in
+                  Image(uiImage: (videos[item] ?? UIImage(systemName: "photo"))!)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: ((UIScreen.screenWidth - 36) / 2))
+                    .clipped()
+                    .onTapGesture{
+                      // imagePreview = Image(uiImage: (UIImage(data: images[item]!) ?? UIImage(systemName: "photo"))!)
+                      // showPreview = true
+                    }
+                    .contextMenu{
+                      Button(action: {
+                        self.delete(item: item)
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnDelete")
+                          Image(systemName: "trash")
+                        }
+                      }
+                      
+                      Button(action: {
+                        saveImage(images[item]!)
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnSaveToPhoto")
+                          Image(systemName: "square.and.arrow.down")
+                        }
+                      }
+                      
+                      Button(action: {
+                        let activityController = UIActivityViewController(activityItems: [UIImage(data: images[item]!) as Any], applicationActivities: nil)
+                        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+                      }) {
+                        HStack {
+                          Text("AlbumView_BtnShare")
+                          Image(systemName: "square.and.arrow.up")
+                        }
+                      }
+                    }
+                }
               }
             }
             .padding(.horizontal)
+            if pickerValue == 0 {
+              Text(String(format: NSLocalizedString("AlbumView_Count_Image", comment: ""), "\(imagesName.count)"))
+                .padding(.top)
+                .font(Font.custom("", size: 20))
+                .foregroundColor(Color.gray)
+            } else if pickerValue == 1 {
+              Text(String(format: NSLocalizedString("AlbumView_Count_Video", comment: ""), "\(videosName.count)"))
+                .padding(.top)
+                .font(Font.custom("", size: 20))
+                .foregroundColor(Color.gray)
+            }
           }
         } else {
           VStack {
@@ -131,7 +184,7 @@ struct AlbumView: View {
   private func refresh() {
     images = [String: Data]()
     imagesName = [String]()
-    videos = [String: Data]()
+    videos = [String: UIImage]()
     videosName = [String]()
     let array = getAllFileName()
     let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
@@ -146,7 +199,12 @@ struct AlbumView: View {
         images.updateValue(data, forKey: item)
       } else if item.split(separator: ".")[1] == "mp4" {
         videosName.append(item)
-        videos.updateValue(data, forKey: item)
+        debug("\(fileUrl)/\(item)")
+        imageFromVideo(url: URL(fileURLWithPath:"\(fileUrl)/\(item)"), at: 0) { image in
+          videos.updateValue(image! , forKey: item)
+          // Do something with the image here
+        }
+        // videos.updateValue(imageFromVideo(url: URL(string: "\(fileUrl)/\(item)")!, at: 0)!, forKey: item)
       }
     }
   }
@@ -160,4 +218,27 @@ extension UIScreen{
    static let screenWidth = UIScreen.main.bounds.size.width
    static let screenHeight = UIScreen.main.bounds.size.height
    static let screenSize = UIScreen.main.bounds.size
+}
+
+func imageFromVideo(url: URL, at time: TimeInterval, completion: @escaping (UIImage?) -> Void) {
+  DispatchQueue.global(qos: .background).async {
+    let asset = AVURLAsset(url: url)
+
+    let assetIG = AVAssetImageGenerator(asset: asset)
+    assetIG.appliesPreferredTrackTransform = true
+    assetIG.apertureMode = AVAssetImageGenerator.ApertureMode.encodedPixels
+
+    let cmTime = CMTime(seconds: time, preferredTimescale: 60)
+    let thumbnailImageRef: CGImage
+    do {
+      thumbnailImageRef = try assetIG.copyCGImage(at: cmTime, actualTime: nil)
+    } catch let error {
+      debug("Error: \(error)")
+      return completion(nil)
+    }
+
+    DispatchQueue.main.async {
+      completion(UIImage(cgImage: thumbnailImageRef))
+    }
+  }
 }

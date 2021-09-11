@@ -36,6 +36,8 @@
 "AlbumView_Picker_Video" = "Videos";
 "AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
 "AlbumView_Toast_Deleted" = "Media have been deleted";
+"AlbumView_Count_Image" = "%@ images";
+"AlbumView_Count_Video" = "%@ videos";
 
 // ImageDetailView
 "ImageDetailView_BtnShare" = "Share to...";
