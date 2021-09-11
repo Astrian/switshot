@@ -55,7 +55,8 @@ struct AlbumView: View {
                       }
                       
                       Button(action: {
-                         // bla
+                        let activityController = UIActivityViewController(activityItems: [UIImage(data: images[item]!) as Any], applicationActivities: nil)
+                        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
                       }) {
                         HStack {
                           Text("AlbumView_BtnShare")
