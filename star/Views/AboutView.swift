@@ -30,7 +30,7 @@ struct AboutView: View {
             Text("AboutView_SystemSettings")
           }
           Button(action: {
-            guard let settingsUrl = URL(string: "https://github.com/Astrian/switshoot") else {
+            guard let settingsUrl = URL(string: "https://github.com/Astrian/switshot") else {
               return
             }
             UIApplication.shared.open(settingsUrl)
