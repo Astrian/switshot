@@ -7,7 +7,7 @@ English
 
 <p align="center">Console Media Manager</p>
 
-Switshot is a game media manager helps you transfer your game media from Nintendo Swtch to your phone, and manage your media just few taps.
+Switshot is a game media manager helps you transfer your game media from Nintendo Switch to your phone, and manage your media just few taps.
 
 ## Feature
 
@@ -43,7 +43,7 @@ Because I hope somebody can help me to cover my App Store Developer paid tier fe
 
 <p align="center">主机游戏媒体管理员</p>
 
-Switshot 是一个能够帮助你快速管理游戏主机中的截屏与录制等媒体的工具。
+Switshot 是一个能够帮助你快速管理 Nintendo Switch 中的截屏与录制等媒体的工具。
 
 ## 功能
 
@@ -60,7 +60,7 @@ Switshot 是一个能够帮助你快速管理游戏主机中的截屏与录制�
 
 ## 使用方法
 
-- 在游戏主机上打开「相册」，选择你需要转移的截屏或录制，选择「发送到智能手机」
+- 在 Nintendo Switch 上打开「相册」，选择你需要转移的截屏或录制，选择「发送到智能手机」
 - 扫描游戏主机上出现的二维码
 - 启动 Switshot，根据屏幕提示进行转移操作
 
