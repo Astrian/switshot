@@ -1,0 +1,53 @@
+/* 
+  i18n.strings
+  star
+
+  Created by Eana Hufwe on 2021/9/13.
+  
+*/
+
+// Tabs
+"Tabs_Connection" = "接続";
+"Tabs_Album" = "アルバム";
+
+// ConnectionView
+"ConnectionView_Title" = "接続";
+"ConnectionView_ConnectedConsole" = "%@ へ接続完了";
+"ConnectionView_TransferBtn" = "ダウンロード";
+"ConnectionView_Connecting" = "接続中…";
+"ConnectionView_Failed" = "ゲーム機への接続はできません";
+"ConnectionView_FailedDes" = "もう一度 QR コードを読み取るか、システム設定を確認してください";
+"ConnectionView_RetryBtn" = "再試行";
+"ConnectionView_Error_CannotCreateFolder" = "メディアフォルダを作成できません";
+"ConnectionView_Transfering" = "転送中…";
+"ConnectionView_Transfering_Desc" = "しばらくお待ちください。";
+"ConnectionView_Transferred" = "転送完了！";
+"ConnectionView_Transferred_Desc" = "「アルバム」にて送ってきたメディアをご覧ください。";
+"ConnectionView_TransferMoreBtn" = "さらに転送";
+
+// AlbumView
+"AlbumView_Title" = "メディアアルバム";
+"AlbumView_BtnDelete" = "削除";
+"AlbumView_BtnSaveToPhoto" = "写真ライブラリに保存";
+"AlbumView_BtnShare" = "共有…";
+"AlbumView_Empty_Title" = "まだ何もありません";
+"AlbumView_Empty_Desc" = "Switshot で何かを転送しましょうか。";
+"AlbumView_Picker_Image" = "画像";
+"AlbumView_Picker_Video" = "動画";
+"AlbumView_Error_CannotDelete" = "選択されたメディアを削除できません";
+"AlbumView_Toast_Deleted" = "選択されたメディアを削除しました";
+
+// ImageDetailView
+"ImageDetailView_BtnShare" = "共有…";
+"ImageDetailView_BtnDelete" = "削除";
+"ImageDetailView_BtnSaveToPhoto" = "ライブラリに保存";
+"ImageDetailView_Toast_Saved" = "画像を写真ライブラリに保存しました";
+"AlbumView_Count_Image" = "%@ 枚の画像";
+"AlbumView_Count_Video" = "%@ 件の動画";
+
+// AboutView
+"AboutView_Title" = "Switshot について";
+"AboutView_Version" = "バージョン";
+"AboutView_SystemSettings" = "設定";
+"AboutView_Repo" = "GitHub リポジトリへ";
+"AboutView_OpenSource" = "Switshot はオープンソースアプリです。";
