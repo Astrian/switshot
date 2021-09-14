@@ -21,6 +21,7 @@ Switshot is a game media manager helps you transfer your game media from Nintend
 - Download IAP file from [release page](https://github.com/Astrian/switshot/releases/), sideload with [AltStore](https://altstore.io) or other similar way (not guarteed)
 - Download source code and compile by yourself with Xcode
 - Contect me if you can (it easiser than you think XD)
+- Use alternative [like this shortcut](https://www.icloud.com/shortcuts/0b50c1db46fb42fea23f1ee1cf4b01f4) (yes, it is also made by me)
 
 ## How to use
 
@@ -57,6 +58,7 @@ Switshot 是一个能够帮助你快速管理 Nintendo Switch 中的截屏与录
 - 从 [分发版本页](https://github.com/Astrian/switshot/releases/) 下载 IPA 文件，并使用诸如 [AltStore](https://altstore.io) 等工具侧加载（不保证能用）
 - 下载源码，自己用 Xcode 编译
 - 直接联系我（想要找到我其实很简单 XD）
+- 用别的替代品，[比如这个快捷指令](https://www.icloud.com/shortcuts/0b50c1db46fb42fea23f1ee1cf4b01f4)（也是我做的）
 
 ## 使用方法
 
