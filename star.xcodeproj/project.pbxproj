@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452C408B26F191F7000607D9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 452C408A26F191F7000607D9 /* Settings.bundle */; };
 		454480D426EB8B49003B0AFE /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480D326EB8B49003B0AFE /* ConnectionView.swift */; };
 		454480D726EB8B98003B0AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 454480D926EB8B98003B0AFE /* Localizable.strings */; };
 		454480DE26EB8FE7003B0AFE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 454480DD26EB8FE7003B0AFE /* Alamofire */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452C408A26F191F7000607D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		454480D326EB8B49003B0AFE /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		454480D826EB8B98003B0AFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		454480DA26EB8B99003B0AFE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		45AA097126EB8A5C001043AE /* star */ = {
 			isa = PBXGroup;
 			children = (
+				452C408A26F191F7000607D9 /* Settings.bundle */,
 				454480E926EBA4CC003B0AFE /* star.entitlements */,
 				454480DF26EB90C2003B0AFE /* Utils */,
 				454480DB26EB8C2F003B0AFE /* Views */,
@@ -198,6 +201,7 @@
 			files = (
 				45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */,
 				4576F10026EC31E0006597CC /* InfoPlist.strings in Resources */,
+				452C408B26F191F7000607D9 /* Settings.bundle in Resources */,
 				454480D726EB8B98003B0AFE /* Localizable.strings in Resources */,
 				45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */,
 			);
