@@ -1,0 +1,53 @@
+/*
+  i18n.strings
+  star
+
+  Created by Eana Hufwe on 2021/9/13.
+  
+*/
+
+// Tabs
+"Tabs_Connection" = "連接";
+"Tabs_Album" = "相簿";
+
+// ConnectionView
+"ConnectionView_Title" = "連接";
+"ConnectionView_ConnectedConsole" = "已連接至：%@";
+"ConnectionView_TransferBtn" = "現在傳送";
+"ConnectionView_Connecting" = "正連接……";
+"ConnectionView_Failed" = "無法連接至你的遊戲主機";
+"ConnectionView_FailedDes" = "重新拍攝主機上的QR碼\n或者檢查系統設定";
+"ConnectionView_RetryBtn" = "重試";
+"ConnectionView_Error_CannotCreateFolder" = "無法建立媒體資料夾";
+"ConnectionView_Transfering" = "正在傳送……";
+"ConnectionView_Transfering_Desc" = "很快就好，稍安勿躁。";
+"ConnectionView_Transferred" = "完成！";
+"ConnectionView_Transferred_Desc" = "前往「相簿」檢視從主機傳送的媒體。";
+"ConnectionView_TransferMoreBtn" = "傳送更多媒體";
+
+// AlbumView
+"AlbumView_Title" = "媒體相簿";
+"AlbumView_BtnDelete" = "刪除";
+"AlbumView_BtnSaveToPhoto" = "儲存至相片圖庫";
+"AlbumView_BtnShare" = "分享至……";
+"AlbumView_Empty_Title" = "空空如也";
+"AlbumView_Empty_Desc" = "試著轉移一些媒體到Switshot吧。";
+"AlbumView_Picker_Image" = "圖片";
+"AlbumView_Picker_Video" = "影片";
+"AlbumView_Error_CannotDelete" = "無法刪除選定的媒體";
+"AlbumView_Toast_Deleted" = "媒體已被刪除";
+"AlbumView_Count_Image" = "%@張圖片";
+"AlbumView_Count_Video" = "%@段影片";
+
+// ImageDetailView
+"ImageDetailView_BtnShare" = "分享至……";
+"ImageDetailView_BtnDelete" = "刪除";
+"ImageDetailView_BtnSaveToPhoto" = "存至圖庫";
+"ImageDetailView_Toast_Saved" = "圖片已儲存至相片圖庫";
+
+// AboutView
+"AboutView_Title" = "關於Switshot";
+"AboutView_Version" = "版本號";
+"AboutView_SystemSettings" = "設定";
+"AboutView_Repo" = "前往GitHub倉庫";
+"AboutView_OpenSource" = "Switshot是一款開放原始碼軟體。";

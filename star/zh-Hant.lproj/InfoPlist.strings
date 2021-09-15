@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  star
+
+  Created by Eana Hufwe on 2021/9/13.
+  
+*/
+
+"NSPhotoLibraryAddUsageDescription" = "儲存媒體至照片相簿。";
+"NSLocalNetworkUsageDescription" = "……以連線至你的遊戲主機！";

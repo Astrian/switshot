@@ -14,40 +14,38 @@
 "ConnectionView_Title" = "Connection";
 "ConnectionView_ConnectedConsole" = "Connected to: %@";
 "ConnectionView_TransferBtn" = "Transfer now";
-"ConnectionView_Connecting" = "Connecting...";
+"ConnectionView_Connecting" = "Connecting…";
 "ConnectionView_Failed" = "I can’t connect to your game console";
-"ConnectionView_FailedDes" = "Re-scan connecting QR code show on console\nor check your system settings";
+"ConnectionView_FailedDes" = "Re-scan the QR code on your console or check your system settings";
 "ConnectionView_RetryBtn" = "Retry";
 "ConnectionView_Error_CannotCreateFolder" = "Cannot create media folder";
-"ConnectionView_Transfering" = "Transfering...";
-"ConnectionView_Transfering_Desc" = "It will not take long time.";
-"ConnectionView_Transferred" = "Completed!";
-"ConnectionView_Transferred_Desc" = "Go to “Album” to view all your media from console.";
-"ConnectionView_TransferMoreBtn" = "Transfer more media";
+"ConnectionView_Transfering" = "Transferring…";
+"ConnectionView_Transfering_Desc" = "It won’t take too long.";
+"ConnectionView_Transferred" = "Done!";
+"ConnectionView_Transferred_Desc" = "Go to “Album” to view all your media from the console.";
+"ConnectionView_TransferMoreBtn" = "Transfer more";
 
 // AlbumView
 "AlbumView_Title" = "Media Album";
 "AlbumView_BtnDelete" = "Delete";
 "AlbumView_BtnSaveToPhoto" = "Save to Photo Library";
-"AlbumView_BtnShare" = "Share to...";
-"AlbumView_Empty_Title" = "It’s noting";
-"AlbumView_Empty_Desc" = "Try transfer some media into Switshot.";
+"AlbumView_BtnShare" = "Share to…";
+"AlbumView_Empty_Title" = "There’s nothing";
+"AlbumView_Empty_Desc" = "Try transfer something to Switshot.";
 "AlbumView_Picker_Image" = "Images";
 "AlbumView_Picker_Video" = "Videos";
 "AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
-"AlbumView_Toast_Deleted" = "Media have been deleted";
-"AlbumView_Count_Image" = "%@ images";
-"AlbumView_Count_Video" = "%@ videos";
+"AlbumView_Toast_Deleted" = "Media has been deleted";
 
 // ImageDetailView
-"ImageDetailView_BtnShare" = "Share to...";
+"ImageDetailView_BtnShare" = "Share to…";
 "ImageDetailView_BtnDelete" = "Delete";
 "ImageDetailView_BtnSaveToPhoto" = "Save to library";
-"ImageDetailView_Toast_Saved" = "This screenshot is saved to your photo library";
+"ImageDetailView_Toast_Saved" = "This image is saved to your photo library";
 
 // AboutView
 "AboutView_Title" = "About Switshot";
 "AboutView_Version" = "Version";
 "AboutView_SystemSettings" = "Settings";
 "AboutView_Repo" = "Go to GitHub Repository";
-"AboutView_OpenSource" = "Switshot is opensorced.";
+"AboutView_OpenSource" = "Switshot is an open source project.";

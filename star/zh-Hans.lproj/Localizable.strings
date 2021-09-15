@@ -31,23 +31,23 @@
 "AlbumView_BtnSaveToPhoto" = "存储至照片图库";
 "AlbumView_BtnShare" = "分享至……";
 "AlbumView_Empty_Title" = "空空如也";
-"AlbumView_Empty_Desc" = "试着转移一些媒体到 Switshot 吧。";
+"AlbumView_Empty_Desc" = "试着转移一些媒体到Switshot吧。";
 "AlbumView_Picker_Image" = "图片";
 "AlbumView_Picker_Video" = "视频";
 "AlbumView_Error_CannotDelete" = "无法删除选定的媒体";
 "AlbumView_Toast_Deleted" = "媒体已被删除";
-"AlbumView_Count_Image" = "%@ 张图片";
-"AlbumView_Count_Video" = "%@ 段视频";
+"AlbumView_Count_Image" = "%@张图片";
+"AlbumView_Count_Video" = "%@段视频";
 
 // ImageDetailView
 "ImageDetailView_BtnShare" = "分享至……";
 "ImageDetailView_BtnDelete" = "删除";
 "ImageDetailView_BtnSaveToPhoto" = "存至图库";
-"ImageDetailView_Toast_Saved" = "截屏已存储至照片图库";
+"ImageDetailView_Toast_Saved" = "图片已存储至照片图库";
 
 // AboutView
-"AboutView_Title" = "关于 Switshot";
+"AboutView_Title" = "关于Switshot";
 "AboutView_Version" = "版本号";
 "AboutView_SystemSettings" = "设置";
-"AboutView_Repo" = "前往 GitHub 仓库";
-"AboutView_OpenSource" = "Switshot 是一款开源软件。";
+"AboutView_Repo" = "前往GitHub仓库";
+"AboutView_OpenSource" = "Switshot是一款开源软件。";
