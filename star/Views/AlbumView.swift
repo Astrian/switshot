@@ -123,12 +123,12 @@ struct AlbumView: View {
             }
             .padding(.horizontal)
             if pickerValue == 0 {
-              Text(String(format: NSLocalizedString("AlbumView_Count_Image", comment: ""), "\(imagesName.count)"))
+              Text(String(format: NSLocalizedString("AlbumView_Count_Image", comment: ""), imagesName.count))
                 .padding(.top)
                 .font(Font.custom("", size: 20))
                 .foregroundColor(Color.gray)
             } else if pickerValue == 1 {
-              Text(String(format: NSLocalizedString("AlbumView_Count_Video", comment: ""), "\(videosName.count)"))
+              Text(String(format: NSLocalizedString("AlbumView_Count_Video", comment: ""), videosName.count))
                 .padding(.top)
                 .font(Font.custom("", size: 20))
                 .foregroundColor(Color.gray)

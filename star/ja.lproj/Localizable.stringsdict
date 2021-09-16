@@ -13,11 +13,11 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>zero</key>
-			<string>没有图片</string>
+			<string>画像をなし</string>
 			<key>one</key>
-			<string>%d张图片</string>
+			<string>%d枚の画像</string>
 			<key>other</key>
-			<string>%d张图片</string>
+			<string>%d枚の画像</string>
 		</dict>
 	</dict>
 	<key>AlbumView_Count_Video</key>
@@ -31,11 +31,11 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>zero</key>
-			<string>没有视频</string>
+			<string>動画をなし</string>
 			<key>one</key>
-			<string>%d段视频</string>
+			<string>%d件の動画</string>
 			<key>other</key>
-			<string>%d段视频</string>
+			<string>%d件の動画</string>
 		</dict>
 	</dict>
 </dict>
