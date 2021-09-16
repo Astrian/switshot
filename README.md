@@ -18,7 +18,7 @@ Switshot is a game media manager helps you transfer your game media from Nintend
 ## Install
 
 - Purchase from [App Store](https://apps.apple.com/cn/app/switshot/id1585470023)
-- Download IAP file from [release page](https://github.com/Astrian/switshot/releases/), sideload with [AltStore](https://altstore.io) or other similar way (not guarteed)
+- Download IPA file from [release page](https://github.com/Astrian/switshot/releases/), sideload with [AltStore](https://altstore.io) or other similar way (not guarteed)
 - Download source code and compile by yourself with Xcode
 - Contect me if you can (it easiser than you think XD)
 - Use alternative [like this shortcut](https://www.icloud.com/shortcuts/0b50c1db46fb42fea23f1ee1cf4b01f4) (yes, it is also made by me)
