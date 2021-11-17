@@ -59,11 +59,11 @@
 				<array>
 					<dict>
 						<key>INIntentResponseCodeConciseFormatString</key>
-						<string>${result}</string>
+						<string>Transfered media from ${consoleName}</string>
 						<key>INIntentResponseCodeConciseFormatStringID</key>
 						<string>UB5leK</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>${result}</string>
+						<string>Transfered media from ${consoleName}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>XFS3AP</string>
 						<key>INIntentResponseCodeName</key>
@@ -75,24 +75,54 @@
 						<key>INIntentResponseCodeName</key>
 						<string>failure</string>
 					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Unable transfer, because you may not connected to console.</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>vnbjx8</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Unable transfer, because you may not connected to console.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>WP4C72</string>
+						<key>INIntentResponseCodeName</key>
+						<string>connectionError</string>
+					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>1</integer>
+				<integer>7</integer>
+				<key>INIntentResponseOutput</key>
+				<string>media</string>
 				<key>INIntentResponseParameters</key>
 				<array>
 					<dict>
 						<key>INIntentResponseParameterDisplayName</key>
-						<string>Result</string>
+						<string>Console Name</string>
 						<key>INIntentResponseParameterDisplayNameID</key>
-						<string>OG7nvi</string>
+						<string>KRRB7P</string>
 						<key>INIntentResponseParameterDisplayPriority</key>
 						<integer>1</integer>
 						<key>INIntentResponseParameterName</key>
-						<string>result</string>
+						<string>consoleName</string>
 						<key>INIntentResponseParameterTag</key>
-						<integer>1</integer>
+						<integer>4</integer>
 						<key>INIntentResponseParameterType</key>
 						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Media</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>BJFtuJ</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>media</string>
+						<key>INIntentResponseParameterSupportsMultipleValues</key>
+						<true/>
+						<key>INIntentResponseParameterTag</key>
+						<integer>7</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>File</string>
 					</dict>
 				</array>
 			</dict>

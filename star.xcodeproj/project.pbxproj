@@ -22,6 +22,7 @@
 		45506DC52744BAFC008E30C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC42744BAFC008E30C0 /* Intents.intentdefinition */; };
 		45506DC62744BAFC008E30C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC42744BAFC008E30C0 /* Intents.intentdefinition */; };
 		45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC72744BBD2008E30C0 /* TransferMediaIntentHandler.swift */; };
+		45506DCA2744BEE6008E30C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 45506DC92744BEE6008E30C0 /* Alamofire */; };
 		4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D79C26EC3A1600556DF7 /* Introspect */; };
 		4573D7A126EC525B00556DF7 /* ImageViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D7A026EC525B00556DF7 /* ImageViewer */; };
 		4576F10026EC31E0006597CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576F10226EC31E0006597CC /* InfoPlist.strings */; };
@@ -100,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */,
+				45506DCA2744BEE6008E30C0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +223,9 @@
 			dependencies = (
 			);
 			name = hifumitogo;
+			packageProductDependencies = (
+				45506DC92744BEE6008E30C0 /* Alamofire */,
+			);
 			productName = hifumitogo;
 			productReference = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -694,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 454480E626EBA34D003B0AFE /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		45506DC92744BEE6008E30C0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 454480DC26EB8FE7003B0AFE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		4573D79C26EC3A1600556DF7 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
