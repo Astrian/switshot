@@ -16,6 +16,11 @@
 		454480E526EB9F95003B0AFE /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480E426EB9F95003B0AFE /* Files.swift */; };
 		454480E826EBA34D003B0AFE /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 454480E726EBA34D003B0AFE /* AlertToast */; };
 		454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480EA26EBBA21003B0AFE /* ImageLoader.swift */; };
+		45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45506DB72744BAD5008E30C0 /* Intents.framework */; };
+		45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45506DBA2744BAD5008E30C0 /* IntentHandler.swift */; };
+		45506DBF2744BAD5008E30C0 /* hifumitogo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45506DC52744BAFC008E30C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC42744BAFC008E30C0 /* Intents.intentdefinition */; };
+		45506DC62744BAFC008E30C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC42744BAFC008E30C0 /* Intents.intentdefinition */; };
 		4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D79C26EC3A1600556DF7 /* Introspect */; };
 		4573D7A126EC525B00556DF7 /* ImageViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D7A026EC525B00556DF7 /* ImageViewer */; };
 		4576F10026EC31E0006597CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576F10226EC31E0006597CC /* InfoPlist.strings */; };
@@ -27,6 +32,30 @@
 		45AEA2FB26EC649E008B06AA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AEA2FA26EC649E008B06AA /* AboutView.swift */; };
 		DFB1E46526EFF2E60035A8F3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DFB1E46726EFF2E60035A8F3 /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45506DBD2744BAD5008E30C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45AA096726EB8A5C001043AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45506DB42744BAD5008E30C0;
+			remoteInfo = hifumitogo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45506DC02744BAD5008E30C0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				45506DBF2744BAD5008E30C0 /* hifumitogo.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		452C408A26F191F7000607D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -41,6 +70,11 @@
 		454480E426EB9F95003B0AFE /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		454480E926EBA4CC003B0AFE /* star.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = star.entitlements; sourceTree = "<group>"; };
 		454480EA26EBBA21003B0AFE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		45506DB52744BAD5008E30C0 /* hifumitogo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = hifumitogo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		45506DB72744BAD5008E30C0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		45506DBA2744BAD5008E30C0 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		45506DBC2744BAD5008E30C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45506DC42744BAFC008E30C0 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		4576F10126EC31E0006597CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4576F10326EC31E1006597CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4576F10426EC355E006597CC /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
@@ -59,6 +93,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		45506DB22744BAD5008E30C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45AA096C26EB8A5C001043AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,10 +137,30 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		45506DB62744BAD5008E30C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45506DB72744BAD5008E30C0 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45506DB92744BAD5008E30C0 /* hifumitogo */ = {
+			isa = PBXGroup;
+			children = (
+				45506DBA2744BAD5008E30C0 /* IntentHandler.swift */,
+				45506DBC2744BAD5008E30C0 /* Info.plist */,
+			);
+			path = hifumitogo;
+			sourceTree = "<group>";
+		};
 		45AA096626EB8A5C001043AE = {
 			isa = PBXGroup;
 			children = (
+				45506DC42744BAFC008E30C0 /* Intents.intentdefinition */,
 				45AA097126EB8A5C001043AE /* star */,
+				45506DB92744BAD5008E30C0 /* hifumitogo */,
+				45506DB62744BAD5008E30C0 /* Frameworks */,
 				45AA097026EB8A5C001043AE /* Products */,
 			);
 			indentWidth = 2;
@@ -109,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				45AA096F26EB8A5C001043AE /* star.app */,
+				45506DB52744BAD5008E30C0 /* hifumitogo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +205,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		45506DB42744BAD5008E30C0 /* hifumitogo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45506DC32744BAD5008E30C0 /* Build configuration list for PBXNativeTarget "hifumitogo" */;
+			buildPhases = (
+				45506DB12744BAD5008E30C0 /* Sources */,
+				45506DB22744BAD5008E30C0 /* Frameworks */,
+				45506DB32744BAD5008E30C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hifumitogo;
+			productName = hifumitogo;
+			productReference = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		45AA096E26EB8A5C001043AE /* star */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45AA097E26EB8A5D001043AE /* Build configuration list for PBXNativeTarget "star" */;
@@ -149,10 +229,12 @@
 				45AA096B26EB8A5C001043AE /* Sources */,
 				45AA096C26EB8A5C001043AE /* Frameworks */,
 				45AA096D26EB8A5C001043AE /* Resources */,
+				45506DC02744BAD5008E30C0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45506DBE2744BAD5008E30C0 /* PBXTargetDependency */,
 			);
 			name = star;
 			packageProductDependencies = (
@@ -171,9 +253,12 @@
 		45AA096726EB8A5C001043AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					45506DB42744BAD5008E30C0 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					45AA096E26EB8A5C001043AE = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -202,11 +287,19 @@
 			projectRoot = "";
 			targets = (
 				45AA096E26EB8A5C001043AE /* star */,
+				45506DB42744BAD5008E30C0 /* hifumitogo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		45506DB32744BAD5008E30C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45AA096D26EB8A5C001043AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +316,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		45506DB12744BAD5008E30C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45506DC62744BAFC008E30C0 /* Intents.intentdefinition in Sources */,
+				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45AA096B26EB8A5C001043AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,11 +337,20 @@
 				454480E526EB9F95003B0AFE /* Files.swift in Sources */,
 				454480E326EB9C65003B0AFE /* AlbumView.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
+				45506DC52744BAFC008E30C0 /* Intents.intentdefinition in Sources */,
 				45AEA2F926EC625F008B06AA /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45506DBE2744BAD5008E30C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45506DB42744BAD5008E30C0 /* hifumitogo */;
+			targetProxy = 45506DBD2744BAD5008E30C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		454480D926EB8B98003B0AFE /* Localizable.strings */ = {
@@ -278,6 +389,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		45506DC12744BAD5008E30C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hifumitogo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = hifumitogo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45506DC22744BAD5008E30C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hifumitogo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = hifumitogo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		45AA097C26EB8A5D001043AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,6 +564,7 @@
 		45AA097F26EB8A5D001043AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
@@ -424,6 +590,7 @@
 		45AA098026EB8A5D001043AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
@@ -449,6 +616,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		45506DC32744BAD5008E30C0 /* Build configuration list for PBXNativeTarget "hifumitogo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45506DC12744BAD5008E30C0 /* Debug */,
+				45506DC22744BAD5008E30C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45AA096A26EB8A5C001043AE /* Build configuration list for PBXProject "star" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
