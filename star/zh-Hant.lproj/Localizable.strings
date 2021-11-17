@@ -24,6 +24,7 @@
 "ConnectionView_Transferred" = "完成！";
 "ConnectionView_Transferred_Desc" = "前往「相簿」檢視從主機傳送的媒體。";
 "ConnectionView_TransferMoreBtn" = "傳送更多媒體";
+"ConnectionView_HelpBtn" = "幫助";
 
 // AlbumView
 "AlbumView_Title" = "媒體相簿";

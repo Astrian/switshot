@@ -24,6 +24,7 @@
 "ConnectionView_Transferred" = "Done!";
 "ConnectionView_Transferred_Desc" = "Go to “Album” to view all your media from the console.";
 "ConnectionView_TransferMoreBtn" = "Transfer more";
+"ConnectionView_HelpBtn" = "Help";
 
 // AlbumView
 "AlbumView_Title" = "Media Album";

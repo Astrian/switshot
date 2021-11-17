@@ -24,6 +24,7 @@
 "ConnectionView_Transferred" = "完成！";
 "ConnectionView_Transferred_Desc" = "前往「相册」查看从主机转移的媒体。";
 "ConnectionView_TransferMoreBtn" = "转移更多媒体";
+"ConnectionView_HelpBtn" = "帮助";
 
 // AlbumView
 "AlbumView_Title" = "媒体相册";

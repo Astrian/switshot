@@ -24,6 +24,7 @@
 "ConnectionView_Transferred" = "転送完了！";
 "ConnectionView_Transferred_Desc" = "「アルバム」にて送ってきたメディアをご覧ください。";
 "ConnectionView_TransferMoreBtn" = "さらに転送";
+"ConnectionView_HelpBtn" = "ヘルプ";
 
 // AlbumView
 "AlbumView_Title" = "メディアアルバム";

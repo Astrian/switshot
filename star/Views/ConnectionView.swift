@@ -39,6 +39,7 @@ struct ConnectionView: View {
               .padding(.bottom)
             Text(String(format: NSLocalizedString("ConnectionView_Transferred_Desc", comment: ""), consoleName))
               .padding(.bottom)
+              .multilineTextAlignment(.center)
             Button(action: {
               connected = 0
               transfered = 0
@@ -100,6 +101,15 @@ struct ConnectionView: View {
           .background(Color("AccentColor"))
           .foregroundColor(Color(.white))
           .cornerRadius(25)
+          Button(action: {
+            guard let settingsUrl = URL(string: "https://github.com/Astrian/switshot/wiki/How-to-connect-to-my-Nintendo-Switch") else {
+              return
+            }
+            UIApplication.shared.open(settingsUrl)
+          }) {
+            Text("ConnectionView_HelpBtn")
+          }
+          .padding(.top)
         }
         Spacer()
         Spacer()
