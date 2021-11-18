@@ -32,7 +32,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Transfer media${saveToLibrary}save to Photo Library</string>
+					<string>Transfer media ${saveToLibrary} save to Photo Library</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>SyZMU6</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -61,7 +61,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Transfer media${saveToLibrary}save to Photo Library</string>
+					<string>Transfer media ${saveToLibrary} save to Photo Library</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>XeyI2k</string>
 				</dict>

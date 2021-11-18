@@ -164,6 +164,7 @@
 		45506DB92744BAD5008E30C0 /* hifumitogo */ = {
 			isa = PBXGroup;
 			children = (
+				45506DC42744BAFC008E30C0 /* Intents.intentdefinition */,
 				45116D1627450686002D278D /* hifumitogo.entitlements */,
 				45506DBA2744BAD5008E30C0 /* IntentHandler.swift */,
 				45506DBC2744BAD5008E30C0 /* Info.plist */,
@@ -176,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				45116D17274516DB002D278D /* Shared code */,
-				45506DC42744BAFC008E30C0 /* Intents.intentdefinition */,
 				45AA097126EB8A5C001043AE /* star */,
 				45506DB92744BAD5008E30C0 /* hifumitogo */,
 				45506DB62744BAD5008E30C0 /* Frameworks */,
