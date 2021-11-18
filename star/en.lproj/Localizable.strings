@@ -38,6 +38,9 @@
 "AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
 "AlbumView_Toast_Deleted" = "Media has been deleted";
 
+// MediaCollectionView
+"MediaCollectionView_Title" = "Media Album";
+
 // ImageDetailView
 "ImageDetailView_BtnShare" = "Share to…";
 "ImageDetailView_BtnDelete" = "Delete";

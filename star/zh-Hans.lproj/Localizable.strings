@@ -40,6 +40,9 @@
 "AlbumView_Count_Image" = "%@张图片";
 "AlbumView_Count_Video" = "%@段视频";
 
+// MediaCollectionView
+"MediaCollectionView_Title" = "媒体相册";
+
 // ImageDetailView
 "ImageDetailView_BtnShare" = "分享至……";
 "ImageDetailView_BtnDelete" = "删除";

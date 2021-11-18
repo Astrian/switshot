@@ -16,7 +16,7 @@ struct starApp: App {
           .tabItem {
             Label("Tabs_Connection", systemImage: "link.circle.fill")
           }
-        AlbumView()
+        MediaCollectionView()
           .tabItem {
             Label("Tabs_Album", systemImage: "photo.fill.on.rectangle.fill")
           }

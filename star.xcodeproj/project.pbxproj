@@ -11,6 +11,7 @@
 		45116D1A274516F2002D278D /* importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* importer.swift */; };
 		45116D202745EA40002D278D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45116D232745EA40002D278D /* Intents.intentdefinition */; };
 		45116D212745EA40002D278D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45116D232745EA40002D278D /* Intents.intentdefinition */; };
+		45116D2D2745EFB6002D278D /* MediaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D2C2745EFB6002D278D /* MediaCollectionView.swift */; };
 		452C408B26F191F7000607D9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 452C408A26F191F7000607D9 /* Settings.bundle */; };
 		454480D426EB8B49003B0AFE /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480D326EB8B49003B0AFE /* ConnectionView.swift */; };
 		454480D726EB8B98003B0AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 454480D926EB8B98003B0AFE /* Localizable.strings */; };
@@ -69,6 +70,7 @@
 		45116D272745EA61002D278D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Intents.strings"; sourceTree = "<group>"; };
 		45116D292745ECE7002D278D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Intents.strings"; sourceTree = "<group>"; };
 		45116D2B2745ECE8002D278D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
+		45116D2C2745EFB6002D278D /* MediaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionView.swift; sourceTree = "<group>"; };
 		452C408A26F191F7000607D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		452C408C26F2FBD8000607D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		452C408D26F2FBDB000607D9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				4576F10426EC355E006597CC /* ImageDetailView.swift */,
 				45AEA2F826EC625F008B06AA /* VideoPlayerView.swift */,
 				45AEA2FA26EC649E008B06AA /* AboutView.swift */,
+				45116D2C2745EFB6002D278D /* MediaCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */,
 				45AEA2FB26EC649E008B06AA /* AboutView.swift in Sources */,
 				454480E526EB9F95003B0AFE /* Files.swift in Sources */,
+				45116D2D2745EFB6002D278D /* MediaCollectionView.swift in Sources */,
 				454480E326EB9C65003B0AFE /* AlbumView.swift in Sources */,
 				45116D19274516F2002D278D /* importer.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
@@ -436,7 +440,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hifumitogo/Info.plist;
@@ -448,7 +452,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -464,7 +468,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hifumitogo/Info.plist;
@@ -476,7 +480,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -612,7 +616,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
 				ENABLE_PREVIEWS = YES;
@@ -622,7 +626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -638,7 +642,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
 				ENABLE_PREVIEWS = YES;
@@ -648,7 +652,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
