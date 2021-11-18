@@ -1,17 +1,17 @@
-"711AEI" = "Transfer media from connected console";
+"711AEI" = "Transfer media from a connected console";
 "BJFtuJ" = "Media";
-"BxpPA1" = "Transfer screenshots and screen recording from connected console into Switshot, and also output the array of transferred media files into next action of Shortcut. You can define should Switshot save your transferred media into your Photo Library or not. Make sure your device is connecting to your game console before trigger this command.";
+"BxpPA1" = "Transfer screenshots and screen recordings from a connected console to Switshot, and output the list of transferred media files to the next action in the Shortcut. You can also choose to save your transferred media into your Photo Library. Make sure your device is connected to your game console before triggering this action.";
 "GeDePJ" = "Do you want to save transfered media into your Photo Library at the same time?";
 "KRRB7P" = "Console Name";
-"SyZMU6" = "Transfer media ${saveToLibrary} save to Photo Library";
-"UB5leK" = "Transfered media from ${consoleName}";
-"WP4C72" = "Unable transfer, because you may not connected to console.";
-"XFS3AP" = "Transfered media from ${consoleName}";
-"XeyI2k-qM3V4H" = "Transfer media but don't save to Photo Library";
+"SyZMU6" = "Transfer media, ${saveToLibrary} to Photo Library";
+"UB5leK" = "Transfered media from ${consoleName}.";
+"WP4C72" = "Unable to transfer. Your device might have not connected to a console.";
+"XFS3AP" = "Transfered media from ${consoleName}.";
+"XeyI2k-qM3V4H" = "Transfer media without saving to Photo Library";
 "XeyI2k-qhuyOY" = "Transfer media and also save to Photo Library";
 "a7EmUl" = "Transfer media from connected console";
 "aA0rZI" = "Also save to Photo Library";
-"qM3V4H" = "but don't";
-"qhuyOY" = "and also";
-"vnbjx8" = "Unable transfer, because you may not connected to console.";
+"qM3V4H" = "without saving";
+"qhuyOY" = "and also save";
+"vnbjx8" = "Unable to transfer. Your device might have not connected to a console.";
 

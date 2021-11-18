@@ -1,32 +1,17 @@
-"711AEI" = "Transfer media from connected console";
-
-"BJFtuJ" = "Media";
-
-"BxpPA1" = "Transfer screenshots and screen recording into Switshot, and also output the array of transferred media files. You can define should Switshot save your transferred media into your Photo Library or not. Make sure your device is connecting to your game console before trigger this command.";
-
-"GeDePJ" = "Do you want to save transfered media into your Photo Library at the same time?";
-
-"KRRB7P" = "Console Name";
-
-"SyZMU6" = "Transfer media ${saveToLibrary} save to Photo Library";
-
-"UB5leK" = "Transfered media from ${consoleName}";
-
-"WP4C72" = "Unable transfer, because you may not connected to console.";
-
-"XFS3AP" = "Transfered media from ${consoleName}";
-
-"XeyI2k-qM3V4H" = "Transfer media but don't save to Photo Library";
-
-"XeyI2k-qhuyOY" = "Transfer media and also save to Photo Library";
-
-"a7EmUl" = "Transfer Media";
-
-"aA0rZI" = "Also save to Photo Library";
-
-"qM3V4H" = "but don't";
-
-"qhuyOY" = "and also";
-
-"vnbjx8" = "Unable transfer, because you may not connected to console.";
+"711AEI" = "從連接的主機傳送媒體";
+"BJFtuJ" = "媒體";
+"BxpPA1" = "從連接的遊戲主機傳送媒體到Switshot，並將這組媒體檔案傳到捷徑的下一動作中。可以選擇是否在轉移媒體的同時將這些媒體儲存至相片圖庫。執行前，請確保裝置已連接至遊戲主機。";
+"GeDePJ" = "是否需要同時將傳送的媒體儲存至相片圖庫？";
+"KRRB7P" = "主機名稱";
+"SyZMU6" = "轉移媒體，${saveToLibrary}儲存至相片圖庫";
+"UB5leK" = "已從主機${consoleName}中轉移媒體。";
+"WP4C72" = "無法轉移媒體，因為你可能沒有正確連接至遊戲主機。";
+"XFS3AP" = "已從主機${consoleName}中轉移媒體。";
+"XeyI2k-qM3V4H" = "轉移媒體，但不要儲存至相片圖庫";
+"XeyI2k-qhuyOY" = "轉移媒體，同時儲存至相片圖庫";
+"a7EmUl" = "從連接的主機中轉移媒體";
+"aA0rZI" = "同時儲存至相片圖庫";
+"qM3V4H" = "但不要";
+"qhuyOY" = "同時";
+"vnbjx8" = "無法轉移媒體，因為你可能沒有正確連接至遊戲主機。";
 
