@@ -21,6 +21,8 @@
 			<string>generic</string>
 			<key>INIntentConfigurable</key>
 			<true/>
+			<key>INIntentDescription</key>
+			<string>Transfer screenshots and screen recording into Switshot, and also output the array of transferred media files. You can define should Switshot save your transferred media into your Photo Library or not. Make sure your device is connecting to your game console before trigger this command.</string>
 			<key>INIntentDescriptionID</key>
 			<string>BxpPA1</string>
 			<key>INIntentLastParameterTag</key>
@@ -191,7 +193,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Transfer Media</string>
+			<string>Transfer media from connected console</string>
 			<key>INIntentTitleID</key>
 			<string>a7EmUl</string>
 			<key>INIntentType</key>

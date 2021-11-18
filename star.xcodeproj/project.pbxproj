@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		45116D19274516F2002D278D /* importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* importer.swift */; };
 		45116D1A274516F2002D278D /* importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* importer.swift */; };
+		45116D202745EA40002D278D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45116D232745EA40002D278D /* Intents.intentdefinition */; };
+		45116D212745EA40002D278D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45116D232745EA40002D278D /* Intents.intentdefinition */; };
 		452C408B26F191F7000607D9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 452C408A26F191F7000607D9 /* Settings.bundle */; };
 		454480D426EB8B49003B0AFE /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480D326EB8B49003B0AFE /* ConnectionView.swift */; };
 		454480D726EB8B98003B0AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 454480D926EB8B98003B0AFE /* Localizable.strings */; };
@@ -21,8 +23,6 @@
 		45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45506DB72744BAD5008E30C0 /* Intents.framework */; };
 		45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45506DBA2744BAD5008E30C0 /* IntentHandler.swift */; };
 		45506DBF2744BAD5008E30C0 /* hifumitogo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		45506DC52744BAFC008E30C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC42744BAFC008E30C0 /* Intents.intentdefinition */; };
-		45506DC62744BAFC008E30C0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC42744BAFC008E30C0 /* Intents.intentdefinition */; };
 		45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45506DC72744BBD2008E30C0 /* TransferMediaIntentHandler.swift */; };
 		45506DCA2744BEE6008E30C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 45506DC92744BEE6008E30C0 /* Alamofire */; };
 		4573D79D26EC3A1600556DF7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D79C26EC3A1600556DF7 /* Introspect */; };
@@ -64,6 +64,11 @@
 /* Begin PBXFileReference section */
 		45116D1627450686002D278D /* hifumitogo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hifumitogo.entitlements; sourceTree = "<group>"; };
 		45116D18274516F2002D278D /* importer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importer.swift; sourceTree = "<group>"; };
+		45116D222745EA40002D278D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		45116D252745EA42002D278D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
+		45116D272745EA61002D278D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Intents.strings"; sourceTree = "<group>"; };
+		45116D292745ECE7002D278D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Intents.strings"; sourceTree = "<group>"; };
+		45116D2B2745ECE8002D278D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Intents.strings; sourceTree = "<group>"; };
 		452C408A26F191F7000607D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		452C408C26F2FBD8000607D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		452C408D26F2FBDB000607D9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
@@ -80,7 +85,6 @@
 		45506DB72744BAD5008E30C0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		45506DBA2744BAD5008E30C0 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		45506DBC2744BAD5008E30C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45506DC42744BAFC008E30C0 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		45506DC72744BBD2008E30C0 /* TransferMediaIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMediaIntentHandler.swift; sourceTree = "<group>"; };
 		4576F10126EC31E0006597CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4576F10326EC31E1006597CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -164,7 +168,7 @@
 		45506DB92744BAD5008E30C0 /* hifumitogo */ = {
 			isa = PBXGroup;
 			children = (
-				45506DC42744BAFC008E30C0 /* Intents.intentdefinition */,
+				45116D232745EA40002D278D /* Intents.intentdefinition */,
 				45116D1627450686002D278D /* hifumitogo.entitlements */,
 				45506DBA2744BAD5008E30C0 /* IntentHandler.swift */,
 				45506DBC2744BAD5008E30C0 /* Info.plist */,
@@ -342,7 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45506DC62744BAFC008E30C0 /* Intents.intentdefinition in Sources */,
+				45116D212745EA40002D278D /* Intents.intentdefinition in Sources */,
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
 				45116D1A274516F2002D278D /* importer.swift in Sources */,
@@ -362,7 +366,7 @@
 				454480E326EB9C65003B0AFE /* AlbumView.swift in Sources */,
 				45116D19274516F2002D278D /* importer.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
-				45506DC52744BAFC008E30C0 /* Intents.intentdefinition in Sources */,
+				45116D202745EA40002D278D /* Intents.intentdefinition in Sources */,
 				45AEA2F926EC625F008B06AA /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +382,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		45116D232745EA40002D278D /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45116D222745EA40002D278D /* Base */,
+				45116D252745EA42002D278D /* en */,
+				45116D272745EA61002D278D /* zh-Hans */,
+				45116D292745ECE7002D278D /* zh-Hant */,
+				45116D2B2745ECE8002D278D /* ja */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
 		454480D926EB8B98003B0AFE /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
