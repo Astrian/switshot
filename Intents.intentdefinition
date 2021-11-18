@@ -23,14 +23,16 @@
 			<true/>
 			<key>INIntentDescriptionID</key>
 			<string>BxpPA1</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>2</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key></key>
+				<key>saveToLibrary</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Transfer media</string>
+					<string>Transfer media${saveToLibrary}save to Photo Library</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>SyZMU6</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -48,11 +50,73 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Transfer media</string>
+					<string>Transfer media from connected console</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>711AEI</string>
 				</dict>
+				<key>saveToLibrary</key>
+				<dict>
+					<key>INIntentParameterCombinationIsLinked</key>
+					<true/>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Transfer media${saveToLibrary}save to Photo Library</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>XeyI2k</string>
+				</dict>
 			</dict>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Also save to Photo Library</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>aA0rZI</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataFalseDisplayName</key>
+						<string>but don't</string>
+						<key>INIntentParameterMetadataFalseDisplayNameID</key>
+						<string>qM3V4H</string>
+						<key>INIntentParameterMetadataTrueDisplayName</key>
+						<string>and also</string>
+						<key>INIntentParameterMetadataTrueDisplayNameID</key>
+						<string>qhuyOY</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>saveToLibrary</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Do you want to save transfered media into your Photo Library at the same time?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>GeDePJ</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>Boolean</string>
+				</dict>
+			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>

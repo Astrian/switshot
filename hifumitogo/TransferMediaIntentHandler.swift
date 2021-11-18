@@ -10,6 +10,10 @@ import Intents
 import Alamofire
 
 class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
+  func resolveSaveToLibrary(for intent: TransferMediaIntent, with completion: @escaping (INBooleanResolutionResult) -> Void) {
+    completion(INBooleanResolutionResult.success(with: (intent.saveToLibrary == 1)))
+  }
+  
   func handle(intent: TransferMediaIntent, completion: @escaping (TransferMediaIntentResponse) -> Void) {
     AF.request("http://192.168.0.1/data.json").responseJSON() { res in
       switch res.result {
@@ -22,7 +26,7 @@ class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
               if let url = URL(string: "http://192.168.0.1/img/\(media)") {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 filesRaw.append(INFile(data: data, filename: media, typeIdentifier: nil))
-                importer(name: media, data: data, saveCopy: false)
+                importer(name: media, data: data, saveCopy: (intent.saveToLibrary == 1))
               }
             }
             // connected = 1
