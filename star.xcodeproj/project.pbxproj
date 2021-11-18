@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45116D19274516F2002D278D /* importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* importer.swift */; };
+		45116D1A274516F2002D278D /* importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* importer.swift */; };
 		452C408B26F191F7000607D9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 452C408A26F191F7000607D9 /* Settings.bundle */; };
 		454480D426EB8B49003B0AFE /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454480D326EB8B49003B0AFE /* ConnectionView.swift */; };
 		454480D726EB8B98003B0AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 454480D926EB8B98003B0AFE /* Localizable.strings */; };
@@ -60,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45116D1627450686002D278D /* hifumitogo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hifumitogo.entitlements; sourceTree = "<group>"; };
+		45116D18274516F2002D278D /* importer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importer.swift; sourceTree = "<group>"; };
 		452C408A26F191F7000607D9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		452C408C26F2FBD8000607D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		452C408D26F2FBDB000607D9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45116D17274516DB002D278D /* Shared code */ = {
+			isa = PBXGroup;
+			children = (
+				45116D18274516F2002D278D /* importer.swift */,
+			);
+			path = "Shared code";
+			sourceTree = "<group>";
+		};
 		454480DB26EB8C2F003B0AFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +164,7 @@
 		45506DB92744BAD5008E30C0 /* hifumitogo */ = {
 			isa = PBXGroup;
 			children = (
+				45116D1627450686002D278D /* hifumitogo.entitlements */,
 				45506DBA2744BAD5008E30C0 /* IntentHandler.swift */,
 				45506DBC2744BAD5008E30C0 /* Info.plist */,
 				45506DC72744BBD2008E30C0 /* TransferMediaIntentHandler.swift */,
@@ -162,6 +175,7 @@
 		45AA096626EB8A5C001043AE = {
 			isa = PBXGroup;
 			children = (
+				45116D17274516DB002D278D /* Shared code */,
 				45506DC42744BAFC008E30C0 /* Intents.intentdefinition */,
 				45AA097126EB8A5C001043AE /* star */,
 				45506DB92744BAD5008E30C0 /* hifumitogo */,
@@ -331,6 +345,7 @@
 				45506DC62744BAFC008E30C0 /* Intents.intentdefinition in Sources */,
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
+				45116D1A274516F2002D278D /* importer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +360,7 @@
 				45AEA2FB26EC649E008B06AA /* AboutView.swift in Sources */,
 				454480E526EB9F95003B0AFE /* Files.swift in Sources */,
 				454480E326EB9C65003B0AFE /* AlbumView.swift in Sources */,
+				45116D19274516F2002D278D /* importer.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
 				45506DC52744BAFC008E30C0 /* Intents.intentdefinition in Sources */,
 				45AEA2F926EC625F008B06AA /* VideoPlayerView.swift in Sources */,
@@ -402,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
@@ -429,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AEV7JY3XBK;

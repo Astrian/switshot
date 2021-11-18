@@ -7,8 +7,12 @@
 
 import Foundation
 
+func getAppGroupSpacePath() -> String {
+  return (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+}
+
 func createFolderIfNotExisits(folderPath : String) -> Bool {
-  let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+  let documentPath = getAppGroupSpacePath()
   let fileManager = FileManager.default
   let filePath = documentPath as String + "/" + folderPath
   let exist = fileManager.fileExists(atPath: filePath)
@@ -23,8 +27,8 @@ func createFolderIfNotExisits(folderPath : String) -> Bool {
 }
 
 func getAllFileName() -> [String]{
-  let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
   let manager = FileManager.default
+  let documentPath = getAppGroupSpacePath()
   let fileUrl = documentPath as String
   let subPaths = manager.subpaths(atPath: fileUrl)
   let array = subPaths?.filter({$0 != ".DS_Store"})
@@ -33,7 +37,7 @@ func getAllFileName() -> [String]{
 
 func deleteFile(fileName: String) -> Bool {
   var success = false
-  let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+  let documentPath = getAppGroupSpacePath()
   let manager = FileManager.default
   let fileUrl = documentPath as String + "/"
   let subPaths = manager.subpaths(atPath: fileUrl)

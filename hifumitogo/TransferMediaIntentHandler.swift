@@ -22,6 +22,7 @@ class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
               if let url = URL(string: "http://192.168.0.1/img/\(media)") {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 filesRaw.append(INFile(data: data, filename: media, typeIdentifier: nil))
+                importer(name: media, data: data, saveCopy: false)
               }
             }
             // connected = 1

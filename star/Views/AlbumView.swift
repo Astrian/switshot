@@ -191,8 +191,7 @@ struct AlbumView: View {
     videos = [String: UIImage]()
     videosName = [String]()
     let array = getAllFileName()
-    let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
-    let fileUrl = documentPath as String
+    let fileUrl = getAppGroupSpacePath()
     let manager = FileManager.default
     for item in array {
       guard let data = manager.contents(atPath: "\(fileUrl)/\(item)") else {

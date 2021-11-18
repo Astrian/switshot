@@ -160,13 +160,7 @@ struct ConnectionView: View {
     for media in files {
       AF.download("http://192.168.0.1/img/\(media)" ).responseData { response in
         if response.error == nil {
-          let manager = FileManager.default
-          let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
-          let fileUrl = documentPath as String
-          manager.createFile(atPath: "\(fileUrl)/\(media)", contents: response.value, attributes: nil)
-          if UserDefaults.standard.bool(forKey: "pref_savecopy") {
-            UIImageWriteToSavedPhotosAlbum(UIImage(data: response.value!)!, nil, nil, nil)
-          }
+          importer(name: media, data: response.value!, saveCopy: UserDefaults.standard.bool(forKey: "pref_savecopy"))
         }
       }
     }
