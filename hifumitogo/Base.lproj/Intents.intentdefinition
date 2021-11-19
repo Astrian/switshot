@@ -153,6 +153,30 @@
 						<key>INIntentResponseCodeName</key>
 						<string>connectionError</string>
 					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Unable transfer, because Switshot cannot read the data. It might happened that the manufacturer of game console changed their media format.</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>5LXfpi</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Unable transfer, because Switshot cannot read the data. It might happened that the manufacturer of game console changed their media format.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>oshieb</string>
+						<key>INIntentResponseCodeName</key>
+						<string>dataNotSupported</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Unable to transfer, because Switshot doesn't get the file list from console. It might happened when you connected to another devices but not game console, or the manufacturer of game console changed their data format.</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>bUsPya</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Unable to transfer, because Switshot doesn't get the file list from console. It might happened when you connected to another devices but not game console, or the manufacturer of game console changed their data format.</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>QsFvIk</string>
+						<key>INIntentResponseCodeName</key>
+						<string>missingData</string>
+					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
 				<integer>7</integer>

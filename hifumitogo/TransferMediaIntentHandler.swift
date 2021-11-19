@@ -10,38 +10,28 @@ import Intents
 import Alamofire
 
 class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
-  func resolveSaveToLibrary(for intent: TransferMediaIntent, with completion: @escaping (INBooleanResolutionResult) -> Void) {
-    completion(INBooleanResolutionResult.success(with: (intent.saveToLibrary == 1)))
+  func handle(intent: TransferMediaIntent) async -> TransferMediaIntentResponse {
+    do {
+      let transferResult = try await transfer(saveCopy: intent.saveToLibrary as? Bool)
+      let result = TransferMediaIntentResponse(code: .success, userActivity: nil)
+      result.media = [INFile]()
+      for (uuid, data) in transferResult.data {
+        result.media?.append(INFile(data: data, filename: "\(uuid.uuidString).\(transferResult.mediaType == "photo" ? "jpg" : "mp4")", typeIdentifier: nil))
+      }
+      result.consoleName = transferResult.consoleName
+      return result
+    } catch TransferringError.cannotConnectToConsole {
+      return TransferMediaIntentResponse(code: .connectionError, userActivity: nil)
+    } catch TransferringError.dataNotSupported {
+      return TransferMediaIntentResponse(code: .dataNotSupported, userActivity: nil)
+    } catch TransferringError.missingData {
+      return TransferMediaIntentResponse(code: .missingData, userActivity: nil)
+    } catch {
+      return TransferMediaIntentResponse(code: .failure, userActivity: nil)
+    }
   }
   
-  func handle(intent: TransferMediaIntent, completion: @escaping (TransferMediaIntentResponse) -> Void) {
-    AF.request("http://192.168.0.1/data.json").responseJSON() { res in
-      switch res.result {
-        case .success(let json):
-          Task {
-            let consoleName = (json as AnyObject).value(forKey: "ConsoleName")! as! String
-            let files = (json as AnyObject).value(forKey: "FileNames")! as! [String]
-            var filesRaw = [INFile]()
-            for media in files {
-              if let url = URL(string: "http://192.168.0.1/img/\(media)") {
-                let (data, _) = try await URLSession.shared.data(from: url)
-                filesRaw.append(INFile(data: data, filename: media, typeIdentifier: nil))
-                importer(name: media, data: data, saveCopy: (intent.saveToLibrary == 1))
-              }
-            }
-            // connected = 1
-            let response = TransferMediaIntentResponse(code: .success, userActivity: nil)
-            response.consoleName = consoleName
-            response.media = filesRaw
-            completion(response)
-          }
-      case .failure(_):
-          //debug("error:\(error)")
-          //connected = -1
-          let response = TransferMediaIntentResponse(code: .connectionError, userActivity: nil)
-          completion(response)
-          break
-      }
-    }
+  func resolveSaveToLibrary(for intent: TransferMediaIntent, with completion: @escaping (INBooleanResolutionResult) -> Void) {
+    completion(INBooleanResolutionResult.success(with: (intent.saveToLibrary == 1)))
   }
 }
