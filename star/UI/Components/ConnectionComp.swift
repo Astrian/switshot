@@ -13,23 +13,23 @@ struct ConnectionComp: View {
   
   var body: some View {
     VStack(alignment: .leading) {
-      Text("Transfer").font(.title).bold().padding(.bottom, 4)
+      Text("HomeView_ConnectionComp_Title").font(.title).bold().padding(.bottom, 4)
       
       // Checking connection
       if status == 0 {
         HStack(spacing: 4) {
           ProgressView()
-          Text("Checking connection...").foregroundColor(Color.gray)
+          Text("HomeView_ConnectionComp_CheckingConnection").foregroundColor(Color.gray)
         }.padding(.bottom, 8)
       }
       
       // Connected and wait for transfer
       else if status == 1 {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Ready to transfer").font(Font.title2)
-          Text("You’re now connected to “\(consoleName)”.").foregroundColor(Color.gray)
-          Button(action: {}) {
-            Text("Transfer").bold().padding([.horizontal], 18)
+          Text("HomeView_ConnectionComp_Ready").font(Font.title2)
+          Text(String(format: NSLocalizedString("HomeView_ConnectionComp_Ready_Desc", comment: ""), consoleName)).foregroundColor(Color.gray)
+          Button(action: { transferNow() }) {
+            Text("HomeView_ConnectionComp_Ready_TransferBtn").bold().padding([.horizontal], 18)
           }.frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
         }
       }
@@ -38,17 +38,17 @@ struct ConnectionComp: View {
       else if status == 2 {
         HStack(spacing: 4) {
           ProgressView()
-          Text("Transferring...").foregroundColor(Color.gray)
+          Text("HomeView_ConnectionComp_Transferring").foregroundColor(Color.gray)
         }.padding(.bottom, 8)
       }
       
-      // Connected and wait for transfer
+      // Transferred
       else if status == 3 {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Done!").font(Font.title2)
-          Text("View your transfered media in Gallery session below.").foregroundColor(Color.gray)
-          Button(action: {}) {
-            Text("Transfer more media")
+          Text("HomeView_ConnectionComp_Done").font(Font.title2)
+          Text("HomeView_ConnectionComp_Done_Desc").foregroundColor(Color.gray)
+          Button(action: { prepareTransfer() }) {
+            Text("HomeView_ConnectionComp_Done_MoreBtn")
           }
         }
       }
@@ -56,14 +56,14 @@ struct ConnectionComp: View {
       // Cannot connect to console
       else if status == -1 {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Cannot connect to console").font(Font.title2)
-          Text("Make sure that your device is connecting to the local connection established by your console.").foregroundColor(.gray)
+          Text("HomeView_ConnectionComp_Error").font(Font.title2)
+          Text("HomeView_ConnectionComp_Error_Noconn").foregroundColor(.gray)
           HStack{
             Button(action: { prepareTransfer() }) {
-              Text("Try again").bold().padding([.horizontal], 18)
+              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18)
             }.frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
             Button(action: {}) {
-              Text("Need help")
+              Text("HomeView_ConnectionComp_Error_HelpBtn")
             }
           }
         }
@@ -72,14 +72,14 @@ struct ConnectionComp: View {
       // Unknown Error
       else {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Cannot connect to console").font(Font.title2)
-          Text("There are some unhandled errors. Try again later or contact developer.").foregroundColor(.gray)
+          Text("HomeView_ConnectionComp_Error").font(Font.title2)
+          Text("HomeView_ConnectionComp_Error_Unknown").foregroundColor(.gray)
           HStack{
             Button(action: { prepareTransfer() }) {
-              Text("Try again").bold().padding([.horizontal], 18)
+              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18)
             }.frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
             Button(action: {}) {
-              Text("Need help")
+              Text("HomeView_ConnectionComp_Error_HelpBtn")
             }
           }
         }
@@ -109,6 +109,18 @@ struct ConnectionComp: View {
         let res = try JSONDecoder().decode(ConsoleResponse.self, from: data)
         consoleName = res.ConsoleName
         status = 1
+      } catch {
+        status = -1
+      }
+    }
+  }
+  
+  func transferNow() {
+    status = 2
+    Task {
+      do {
+        let _ = try await transfer(saveCopy: UserDefaults.standard.bool(forKey: "pref_savecopy"))
+        status = 3
       } catch {
         status = -1
       }

@@ -64,3 +64,19 @@
 
 // HomeView
 "HomeView_Title" = "Switshot";
+
+// ConnectionComp
+"HomeView_ConnectionComp_Title" = "转移";
+"HomeView_ConnectionComp_CheckingConnection" = "检查连接…";
+"HomeView_ConnectionComp_Ready" = "准备转移";
+"HomeView_ConnectionComp_Ready_Desc" = "已连接至「%@」。";
+"HomeView_ConnectionComp_Ready_TransferBtn" = "开始转移";
+"HomeView_ConnectionComp_Transferring" = "转移…";
+"HomeView_ConnectionComp_Done" = "完成！";
+"HomeView_ConnectionComp_Done_Desc" = "从下方的相册部分查看转移的媒体。";
+"HomeView_ConnectionComp_Done_MoreBtn" = "转移更多媒体";
+"HomeView_ConnectionComp_Error" = "无法连接至主机";
+"HomeView_ConnectionComp_Error_Noconn" = "请确认你的设备已连接至主机的本地联机网络。";
+"HomeView_ConnectionComp_Error_Unknown" = "遇到无法处理的错误。过会儿再试试，或者联系一下开发者。";
+"HomeView_ConnectionComp_Error_TryAgainBtn" = "重试";
+"HomeView_ConnectionComp_Error_HelpBtn" = "需要帮助";

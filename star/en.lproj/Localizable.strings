@@ -69,3 +69,19 @@
 
 // HomeView
 "HomeView_Title" = "Switshot";
+
+// ConnectionComp
+"HomeView_ConnectionComp_Title" = "Transfer";
+"HomeView_ConnectionComp_CheckingConnection" = "Checking connection...";
+"HomeView_ConnectionComp_Ready" = "Ready to transfer";
+"HomeView_ConnectionComp_Ready_Desc" = "You’re now connected to “%@”.";
+"HomeView_ConnectionComp_Ready_TransferBtn" = "Transfer";
+"HomeView_ConnectionComp_Transferring" = "Transferring...";
+"HomeView_ConnectionComp_Done" = "Done!";
+"HomeView_ConnectionComp_Done_Desc" = "View your transfered media in Gallery session below.";
+"HomeView_ConnectionComp_Done_MoreBtn" = "Transfer more media";
+"HomeView_ConnectionComp_Error" = "Cannot connect to console";
+"HomeView_ConnectionComp_Error_Noconn" = "Make sure that your device is connecting to the local connection established by your console.";
+"HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact developer.";
+"HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
+"HomeView_ConnectionComp_Error_HelpBtn" = "Need help";

@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-@available(iOS 15.0, *)
 func transfer(saveCopy: Bool?) async throws -> TransferResult {
   guard let consoleUrl = URL(string: "http://192.168.0.1/data.json") else { throw TransferringError.missingData }
   let request = URLRequest(url: consoleUrl)
