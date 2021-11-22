@@ -6,6 +6,12 @@
   
 */
 
+/*
+ * ┌─────────────────────┐
+ * │     OLD STRINGS     │
+ * └─────────────────────┘
+ */
+
 // Tabs
 "Tabs_Connection" = "Connection";
 "Tabs_Album" = "Album";
@@ -53,3 +59,13 @@
 "AboutView_SystemSettings" = "Settings";
 "AboutView_Repo" = "Go to GitHub Repository";
 "AboutView_OpenSource" = "Switshot is an open source project.";
+
+
+/*
+ * ┌─────────────────────┐
+ * │     NEW STRINGS     │
+ * └─────────────────────┘
+ */
+
+// HomeView
+"HomeView_Title" = "Switshot";

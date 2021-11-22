@@ -55,3 +55,12 @@
 "AboutView_SystemSettings" = "设置";
 "AboutView_Repo" = "前往GitHub仓库";
 "AboutView_OpenSource" = "Switshot是一款开源软件。";
+
+/*
+ * ┌─────────────────────┐
+ * │     NEW STRINGS     │
+ * └─────────────────────┘
+ */
+
+// HomeView
+"HomeView_Title" = "Switshot";
