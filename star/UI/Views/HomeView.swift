@@ -18,7 +18,7 @@ struct HomeView: View {
           
           Divider()
           
-          GallaryComp()
+          GalleryComp()
           
           // Gallary (transfer history)
         }.frame(maxWidth: .infinity).padding([.horizontal])

@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct GallaryComp: View {
+struct GalleryComp: View {
   var body: some View {
     VStack {
-      Text("Gallary").font(.title).bold()
+      Text("Gallery").font(.title).bold()
     }
   }
 }
 
 struct GallaryComp_Previews: PreviewProvider {
   static var previews: some View {
-    GallaryComp()
+    GalleryComp()
   }
 }

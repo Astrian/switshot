@@ -28,7 +28,7 @@
 		4573D7A126EC525B00556DF7 /* ImageViewer in Frameworks */ = {isa = PBXBuildFile; productRef = 4573D7A026EC525B00556DF7 /* ImageViewer */; };
 		4576F10026EC31E0006597CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576F10226EC31E0006597CC /* InfoPlist.strings */; };
 		457ED7E6274B1BE8003C2958 /* ConnectionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457ED7E5274B1BE8003C2958 /* ConnectionComp.swift */; };
-		457ED7E8274B2188003C2958 /* GallaryComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457ED7E7274B2188003C2958 /* GallaryComp.swift */; };
+		457ED7E8274B2188003C2958 /* GalleryComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457ED7E7274B2188003C2958 /* GalleryComp.swift */; };
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
@@ -86,7 +86,7 @@
 		4576F10126EC31E0006597CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4576F10326EC31E1006597CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		457ED7E5274B1BE8003C2958 /* ConnectionComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionComp.swift; sourceTree = "<group>"; };
-		457ED7E7274B2188003C2958 /* GallaryComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryComp.swift; sourceTree = "<group>"; };
+		457ED7E7274B2188003C2958 /* GalleryComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryComp.swift; sourceTree = "<group>"; };
 		45AA096F26EB8A5C001043AE /* star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AA097226EB8A5C001043AE /* starApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starApp.swift; sourceTree = "<group>"; };
 		45AA097626EB8A5D001043AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				457ED7E5274B1BE8003C2958 /* ConnectionComp.swift */,
-				457ED7E7274B2188003C2958 /* GallaryComp.swift */,
+				457ED7E7274B2188003C2958 /* GalleryComp.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 				454480E126EB90CF003B0AFE /* Debug.swift in Sources */,
 				4500C19A27472E3100A7A048 /* HomeView.swift in Sources */,
 				454480EB26EBBA21003B0AFE /* ImageLoader.swift in Sources */,
-				457ED7E8274B2188003C2958 /* GallaryComp.swift in Sources */,
+				457ED7E8274B2188003C2958 /* GalleryComp.swift in Sources */,
 				454480E526EB9F95003B0AFE /* Files.swift in Sources */,
 				45116D19274516F2002D278D /* transfer.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
@@ -462,7 +462,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -490,7 +490,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -625,7 +625,7 @@
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = star/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +651,7 @@
 				DEVELOPMENT_TEAM = AEV7JY3XBK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = star/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
