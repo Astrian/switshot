@@ -10,7 +10,7 @@ import SwiftUI
 struct GalleryComp: View {
   var body: some View {
     VStack {
-      Text("Gallery").font(.title).bold()
+      Text("HomeView_GalleryComp_Title").font(.title).bold()
     }
   }
 }

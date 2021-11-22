@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct starApp: App {
+struct starApp: SwiftUI.App {
   var body: some Scene {
     WindowGroup {
       HomeView()
+        .environment(\.realmConfiguration, Realm.Configuration( /* ... */ ))
     }
   }
 }

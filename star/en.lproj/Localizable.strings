@@ -85,3 +85,6 @@
 "HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact developer.";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
 "HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
+
+// GalleryComp
+"HomeView_GalleryComp_Title" = "Gallery";
