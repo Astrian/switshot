@@ -125,6 +125,7 @@ struct ConnectionComp: View {
         var i = 0
         let log = TransferLog()
         for (uuid, _) in transferRes.data {
+          print("uuid = \(uuid)")
           let media = TransferedMedia()
           media.code = i
           media.id = uuid

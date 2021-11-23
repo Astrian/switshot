@@ -17,8 +17,18 @@ func transfer(saveCopy: Bool?) async throws -> TransferResult {
   var files = [UUID: Data]()
   let manager = FileManager.default
   let path = (manager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+  let exist = manager.fileExists(atPath: "\(path)/media")
+  if !exist {
+    do {
+      try manager.createDirectory(atPath: "\(path)/media", withIntermediateDirectories: true, attributes: nil)
+    } catch {
+      return TransferResult(consoleName: "", data: [UUID: Data](), mediaType: "")
+    }
+  }
   var i = 0
   for item in res.FileNames {
+    print("Transferring")
+    print("http://192.168.0.1/img/\(item)")
     guard let fileUrl = URL(string: "http://192.168.0.1/img/\(item)") else { continue }
     let fileRequest = URLRequest(url: fileUrl)
     let (fileData, fileResponse) = try await URLSession.shared.data(for: fileRequest)
@@ -26,8 +36,9 @@ func transfer(saveCopy: Bool?) async throws -> TransferResult {
     let fileUuid = UUID()
     files[fileUuid] = fileData
     let fileName = (fileUuid.uuidString) + "." + String(item.split(separator: ".")[1])
-    manager.createFile(atPath: "\(String(describing: path))/media/\(fileName)", contents: data, attributes: nil)
-    if (saveCopy ?? false) { UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil) }
+    print("fileName = \(fileName)")
+    manager.createFile(atPath: "\(String(describing: path))/media/\(fileName)", contents: fileData, attributes: nil)
+    if (saveCopy ?? false) { UIImageWriteToSavedPhotosAlbum(UIImage(data: fileData)!, nil, nil, nil) }
     i += 1
   }
   let transferResult = TransferResult(consoleName: res.ConsoleName, data: files, mediaType: res.FileType)
