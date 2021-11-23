@@ -91,3 +91,6 @@
 "HomeView_GalleryComp_Title" = "Gallery";
 "HomeView_GalleryComp_Empty" = "Nothing Here";
 "HomeView_GalleryComp_Empty_Desc" = "Try transfer some media first.";
+
+// DetailView
+"DetailView_Title" = "Detail";

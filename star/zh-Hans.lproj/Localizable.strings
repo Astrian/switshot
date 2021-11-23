@@ -86,3 +86,6 @@
 "HomeView_GalleryComp_Title" = "图库";
 "HomeView_GalleryComp_Empty" = "空空如也";
 "HomeView_GalleryComp_Empty_Desc" = "先试着转移一些媒体吧。";
+
+// DetailView
+"DetailView_Title" = "详情";

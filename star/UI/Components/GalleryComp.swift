@@ -21,7 +21,7 @@ struct GalleryComp: View {
       if list.logs.count != 0 {
         VStack(spacing: 18) {
           ForEach(list.logs) { log in
-            NavigationLink(destination: DetailView()) {
+            NavigationLink(destination: DetailView(log: log)) {
               VStack(alignment: .leading, spacing: 0) {
                 Image(uiImage: getPreview(log: log)!).resizable().aspectRatio(contentMode: .fit)
                 HStack(spacing: 0) {
