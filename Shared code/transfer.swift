@@ -15,6 +15,9 @@ func transfer(saveCopy: Bool?) async throws -> TransferResult {
   guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw TransferringError.cannotConnectToConsole }
   let res = try JSONDecoder().decode(ConsoleResponse.self, from: data)
   var files = [UUID: Data]()
+  let manager = FileManager.default
+  let path = (manager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+  var i = 0
   for item in res.FileNames {
     guard let fileUrl = URL(string: "http://192.168.0.1/img/\(item)") else { continue }
     let fileRequest = URLRequest(url: fileUrl)
@@ -22,26 +25,25 @@ func transfer(saveCopy: Bool?) async throws -> TransferResult {
     guard (fileResponse as? HTTPURLResponse)?.statusCode == 200 else { continue }
     let fileUuid = UUID()
     files[fileUuid] = fileData
-    let manager = FileManager.default
-    let path = (manager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
     let fileName = (fileUuid.uuidString) + "." + String(item.split(separator: ".")[1])
-    manager.createFile(atPath: "\(String(describing: path))/\(fileName)", contents: data, attributes: nil)
+    manager.createFile(atPath: "\(String(describing: path))/media/\(fileName)", contents: data, attributes: nil)
     if (saveCopy ?? false) { UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil) }
+    i += 1
   }
   let transferResult = TransferResult(consoleName: res.ConsoleName, data: files, mediaType: res.FileType)
   return transferResult
-}
-
-struct TransferResult {
-  var consoleName: String
-  var data: [UUID: Data]
-  var mediaType: String
 }
 
 enum TransferringError: Error {
   case missingData
   case cannotConnectToConsole
   case dataNotSupported
+}
+
+struct TransferResult {
+  var consoleName: String
+  var data: [UUID: Data]
+  var mediaType: String
 }
 
 struct ConsoleResponse: Codable {

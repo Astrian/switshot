@@ -64,6 +64,7 @@
 
 // HomeView
 "HomeView_Title" = "Switshot";
+"HomeView_Initial" = "初始化…";
 
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "转移";
@@ -83,3 +84,5 @@
 
 // GalleryComp
 "HomeView_GalleryComp_Title" = "图库";
+"HomeView_GalleryComp_Empty" = "空空如也";
+"HomeView_GalleryComp_Empty_Desc" = "先试着转移一些媒体吧。";

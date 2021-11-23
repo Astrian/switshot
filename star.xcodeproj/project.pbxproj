@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4500C19A27472E3100A7A048 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4500C19927472E3100A7A048 /* HomeView.swift */; };
 		45116D19274516F2002D278D /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* transfer.swift */; };
-		45116D1A274516F2002D278D /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* transfer.swift */; };
 		45116D202745EA40002D278D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45116D232745EA40002D278D /* Intents.intentdefinition */; };
 		45116D212745EA40002D278D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 45116D232745EA40002D278D /* Intents.intentdefinition */; };
 		452C408B26F191F7000607D9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 452C408A26F191F7000607D9 /* Settings.bundle */; };
@@ -23,6 +22,9 @@
 		454D644A274B7DA100C9B2CC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 454D6449274B7DA100C9B2CC /* RealmSwift */; };
 		454D644C274B7DB100C9B2CC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 454D644B274B7DB100C9B2CC /* Realm */; };
 		454D644E274B7DB100C9B2CC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 454D644D274B7DB100C9B2CC /* RealmSwift */; };
+		454D6450274BCBD900C9B2CC /* TransferedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D644F274BCBD900C9B2CC /* TransferedMedia.swift */; };
+		454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D644F274BCBD900C9B2CC /* TransferedMedia.swift */; };
+		454D6452274C774000C9B2CC /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* transfer.swift */; };
 		45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45506DB72744BAD5008E30C0 /* Intents.framework */; };
 		45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45506DBA2744BAD5008E30C0 /* IntentHandler.swift */; };
 		45506DBF2744BAD5008E30C0 /* hifumitogo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -84,6 +86,7 @@
 		454480E426EB9F95003B0AFE /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		454480E926EBA4CC003B0AFE /* star.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = star.entitlements; sourceTree = "<group>"; };
 		454480EA26EBBA21003B0AFE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		454D644F274BCBD900C9B2CC /* TransferedMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferedMedia.swift; sourceTree = "<group>"; };
 		45506DB52744BAD5008E30C0 /* hifumitogo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = hifumitogo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		45506DB72744BAD5008E30C0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		45506DBA2744BAD5008E30C0 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				457ED7F3274B7957003C2958 /* TransferLogs.swift */,
+				454D644F274BCBD900C9B2CC /* TransferedMedia.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -381,11 +385,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454D6452274C774000C9B2CC /* transfer.swift in Sources */,
 				457ED7F5274B7A84003C2958 /* TransferLogs.swift in Sources */,
 				45116D212745EA40002D278D /* Intents.intentdefinition in Sources */,
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
+				454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
-				45116D1A274516F2002D278D /* transfer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +407,7 @@
 				45116D19274516F2002D278D /* transfer.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
 				457ED7E6274B1BE8003C2958 /* ConnectionComp.swift in Sources */,
+				454D6450274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45116D202745EA40002D278D /* Intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

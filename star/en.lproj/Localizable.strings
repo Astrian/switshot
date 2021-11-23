@@ -69,6 +69,7 @@
 
 // HomeView
 "HomeView_Title" = "Switshot";
+"HomeView_Initial" = "Initialisation in progress...";
 
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "Transfer";
@@ -88,3 +89,5 @@
 
 // GalleryComp
 "HomeView_GalleryComp_Title" = "Gallery";
+"HomeView_GalleryComp_Empty" = "Nothing Here";
+"HomeView_GalleryComp_Empty_Desc" = "Try transfer some media first.";

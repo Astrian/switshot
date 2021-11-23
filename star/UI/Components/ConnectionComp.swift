@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ConnectionComp: View {
   @State var status = 0
   @State var consoleName = ""
+  @ObservedRealmObject var list: TransferLogList
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -119,7 +121,18 @@ struct ConnectionComp: View {
     status = 2
     Task {
       do {
-        let _ = try await transfer(saveCopy: UserDefaults.standard.bool(forKey: "pref_savecopy"))
+        let transferRes = try await transfer(saveCopy: UserDefaults.standard.bool(forKey: "pref_savecopy"))
+        var i = 0
+        let log = TransferLog()
+        for (uuid, _) in transferRes.data {
+          let media = TransferedMedia()
+          media.code = i
+          media.id = uuid
+          media.type = transferRes.mediaType
+          log.media.append(media)
+          i += 1
+        }
+        $list.logs.append(log)
         status = 3
       } catch {
         status = -1
@@ -128,8 +141,8 @@ struct ConnectionComp: View {
   }
 }
 
-struct ConnectionComp_Previews: PreviewProvider {
+/* struct ConnectionComp_Previews: PreviewProvider {
   static var previews: some View {
-    ConnectionComp()
+    // ConnectionComp()
   }
-}
+} */
