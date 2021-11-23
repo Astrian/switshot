@@ -21,14 +21,16 @@ struct GalleryComp: View {
       if list.logs.count != 0 {
         VStack(spacing: 18) {
           ForEach(list.logs) { log in
-            VStack(alignment: .leading, spacing: 0) {
-              Image(uiImage: getPreview(log: log)!).resizable().aspectRatio(contentMode: .fit)
-              HStack(spacing: 0) {
-                Text(dateFormatter(date: log.date))
-                Text(" · ")
-                Text("\(log.media.count) 份媒体")
-              }.padding()
-            }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 1)
+            NavigationLink(destination: EmptyView()) {
+              VStack(alignment: .leading, spacing: 0) {
+                Image(uiImage: getPreview(log: log)!).resizable().aspectRatio(contentMode: .fit)
+                HStack(spacing: 0) {
+                  Text(dateFormatter(date: log.date))
+                  Text(" · ")
+                  Text("\(log.media.count) 份媒体")
+                }.foregroundColor(Color.primary).padding()
+              }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 1)
+            }
           }
           Text("❦").foregroundColor(Color.gray).padding()
         }
