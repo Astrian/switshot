@@ -21,13 +21,15 @@ struct GalleryComp: View {
       if list.logs.count != 0 {
         VStack(spacing: 18) {
           ForEach(list.logs) { log in
-            NavigationLink(destination: EmptyView()) {
+            NavigationLink(destination: DetailView()) {
               VStack(alignment: .leading, spacing: 0) {
                 Image(uiImage: getPreview(log: log)!).resizable().aspectRatio(contentMode: .fit)
                 HStack(spacing: 0) {
                   Text(dateFormatter(date: log.date))
-                  Text(" · ")
-                  Text("\(log.media.count) 份媒体")
+                  if log.media.count > 1{
+                    Text(" · ")
+                    Text("+\(log.media.count - 1)")
+                  }
                 }.foregroundColor(Color.primary).padding()
               }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 1)
             }

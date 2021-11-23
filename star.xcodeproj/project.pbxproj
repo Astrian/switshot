@@ -21,6 +21,7 @@
 		454D6450274BCBD900C9B2CC /* TransferedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D644F274BCBD900C9B2CC /* TransferedMedia.swift */; };
 		454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D644F274BCBD900C9B2CC /* TransferedMedia.swift */; };
 		454D6452274C774000C9B2CC /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45116D18274516F2002D278D /* transfer.swift */; };
+		454D645D274D25C200C9B2CC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D645C274D25C200C9B2CC /* DetailView.swift */; };
 		45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45506DB72744BAD5008E30C0 /* Intents.framework */; };
 		45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45506DBA2744BAD5008E30C0 /* IntentHandler.swift */; };
 		45506DBF2744BAD5008E30C0 /* hifumitogo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -78,6 +79,7 @@
 		454480DA26EB8B99003B0AFE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		454480E926EBA4CC003B0AFE /* star.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = star.entitlements; sourceTree = "<group>"; };
 		454D644F274BCBD900C9B2CC /* TransferedMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferedMedia.swift; sourceTree = "<group>"; };
+		454D645C274D25C200C9B2CC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		45506DB52744BAD5008E30C0 /* hifumitogo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = hifumitogo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		45506DB72744BAD5008E30C0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		45506DBA2744BAD5008E30C0 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				4500C19927472E3100A7A048 /* HomeView.swift */,
+				454D645C274D25C200C9B2CC /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4500C19A27472E3100A7A048 /* HomeView.swift in Sources */,
+				454D645D274D25C200C9B2CC /* DetailView.swift in Sources */,
 				457ED7E8274B2188003C2958 /* GalleryComp.swift in Sources */,
 				457ED7F4274B7957003C2958 /* TransferLogs.swift in Sources */,
 				45116D19274516F2002D278D /* transfer.swift in Sources */,
