@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 
-struct GalleryComp: View {
+struct RecentComp: View {
   @ObservedRealmObject var list: TransferLogList
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   

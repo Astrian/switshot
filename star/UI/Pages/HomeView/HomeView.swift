@@ -19,7 +19,7 @@ struct HomeView: View {
           if let list = lists.first {
             ConnectionComp(list: list)
             Divider()
-            GalleryComp(list: list)
+            RecentComp(list: list)
           } else {
             HStack {
               ProgressView().onAppear{ $lists.append(TransferLogList()) }
