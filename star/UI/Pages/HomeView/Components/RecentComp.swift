@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import Alamofire
 
 struct RecentComp: View {
   @ObservedRealmObject var list: TransferLogList
@@ -18,9 +19,9 @@ struct RecentComp: View {
         Text("HomeView_GalleryComp_Title").font(.title).bold().padding(.bottom, 4)
         Spacer()
       }
-      if list.logs.count != 0 {
+      if sortedList().count != 0 {
         VStack(spacing: 18) {
-          ForEach(list.logs) { log in
+          ForEach(sortedList()) { log in
             NavigationLink(destination: DetailView(log: log)) {
               VStack(alignment: .leading, spacing: 0) {
                 Image(uiImage: getPreview(log: log)!).resizable().aspectRatio(contentMode: .fit)
@@ -71,6 +72,12 @@ struct RecentComp: View {
     } else {
       print("Unknown format")
       return nil
+    }
+  }
+  
+  func sortedList() -> [TransferLog] {
+    return list.logs.sorted { (f, s) -> Bool in
+      return f.date > s.date ? true : false
     }
   }
 }
