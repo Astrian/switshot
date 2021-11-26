@@ -10,7 +10,10 @@ import SwiftUI
 struct DetailView: View {
   @State var log: TransferLog
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+  @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
   private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
+  @State var showQL = false
+  @State var fileUrl: URL?
   
   var body: some View {
     ScrollView {
@@ -21,6 +24,10 @@ struct DetailView: View {
             Image(uiImage: image)
               .resizable()
               .scaledToFit()
+              .onTapGesture {
+                fileUrl = URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
+                showQL.toggle()
+              }
           }
         }
       }
@@ -41,6 +48,16 @@ struct DetailView: View {
             }
           }
         }
+      }
+      .sheet(isPresented: $showQL) {
+        if fileUrl != nil {
+          PreviewController(url: fileUrl!)
+        } else {
+          EmptyView()
+        }
+      }
+      .onAppear {
+        fileUrl = URL(string: "\(fullPath)/media/\(log.media[0].id.uuidString).\(log.media[0].type == "photo" ? "jpg" : "mp4")")
       }
   }
   
