@@ -12,5 +12,6 @@ final class TransferedMedia: Object, ObjectKeyIdentifiable {
   @Persisted(primaryKey: true) var id: UUID
   @Persisted var code: Int
   @Persisted var type: String
+  @Persisted var date = Date()
   @Persisted(originProperty: "media") var log: LinkingObjects<TransferLog>
 }

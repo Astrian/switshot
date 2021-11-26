@@ -32,8 +32,8 @@ struct RecentComp: View {
                     Text("+\(log.media.count - 1)")
                   }
                 }.foregroundColor(Color.primary).padding()
-              }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 1)
-            }
+              }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+            }.transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
           }
           Text("❦").foregroundColor(Color.gray).padding()
         }
