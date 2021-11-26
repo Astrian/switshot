@@ -13,7 +13,7 @@ struct DetailView: View {
   @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
   private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   @State var showQL = false
-  @State var fileUrl: URL?
+  @State var QLFilename = ""
   
   var body: some View {
     ScrollView {
@@ -21,13 +21,11 @@ struct DetailView: View {
         LazyVGrid(columns: columnGrid) {
           ForEach(log.media) { media in
             let image = getPreview(media: media.id, type: media.type)!
-            Image(uiImage: image)
-              .resizable()
-              .scaledToFit()
-              .onTapGesture {
-                fileUrl = URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
-                showQL.toggle()
-              }
+            NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
+              Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+            }
           }
         }
       }
@@ -37,9 +35,12 @@ struct DetailView: View {
         ToolbarItem(placement: .navigationBarTrailing) {
           HStack {
             Button(action: {}) {
-              Label("DetailView_Shareall", systemImage: "square.and.arrow.up").labelStyle(.titleAndIcon).padding(4).background(Color.gray.opacity(0.1)).cornerRadius(8)
+              Label("DetailView_Shareall", systemImage: "square.and.arrow.up").labelStyle(.titleAndIcon).padding(.vertical, 4).padding(.horizontal, 6).background(.ultraThinMaterial).cornerRadius(8)
             }
             Menu {
+              Button {} label: {
+                Label("Save all to Library", systemImage: "square.and.arrow.down.on.square")
+              }
               Button(role: .destructive) {} label: {
                 Label("DetailView_Menu_Delete", systemImage: "trash")
               }
@@ -48,16 +49,6 @@ struct DetailView: View {
             }
           }
         }
-      }
-      .sheet(isPresented: $showQL) {
-        if fileUrl != nil {
-          PreviewController(url: fileUrl!)
-        } else {
-          EmptyView()
-        }
-      }
-      .onAppear {
-        fileUrl = URL(string: "\(fullPath)/media/\(log.media[0].id.uuidString).\(log.media[0].type == "photo" ? "jpg" : "mp4")")
       }
   }
   
