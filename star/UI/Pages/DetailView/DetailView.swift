@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LinkPresentation
 
 struct DetailView: View {
   @State var log: TransferLog
@@ -14,6 +15,7 @@ struct DetailView: View {
   private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   @State var showQL = false
   @State var QLFilename = ""
+  @State var showShareAllActionSheet = false
   
   var body: some View {
     ScrollView {
@@ -34,7 +36,9 @@ struct DetailView: View {
       .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
           HStack {
-            Button(action: {}) {
+            Button(action: {
+              showShareAllActionSheet.toggle()
+            }) {
               Label("DetailView_Shareall", systemImage: "square.and.arrow.up").labelStyle(.titleAndIcon).padding(.vertical, 4).padding(.horizontal, 6).background(.ultraThinMaterial).cornerRadius(8)
             }
             Menu {
@@ -49,6 +53,9 @@ struct DetailView: View {
             }
           }
         }
+      }
+      .sheet(isPresented: $showShareAllActionSheet) {
+        ActivityViewController(activityItems: getAllMediaMeta())
       }
   }
   
@@ -69,5 +76,22 @@ struct DetailView: View {
       print("Unknown format")
       return nil
     }
+  }
+  
+  func getAllMediaMeta() -> [LinkPresentationItemSource] {
+    var metadatas = [LinkPresentationItemSource]()
+    for item in log.media {
+      let manager = FileManager.default
+      guard let data = manager.contents(atPath: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")") else {
+        print("No such file")
+        continue
+      }
+      let metadata = LPLinkMetadata()
+      metadata.iconProvider = NSItemProvider(contentsOf: URL(string: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!)
+      metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
+      metadata.originalURL = URL(string: "\(fullPath)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!
+      metadatas.append(LinkPresentationItemSource(linkMetaData: metadata, shareData: data))
+    }
+    return metadatas
   }
 }
