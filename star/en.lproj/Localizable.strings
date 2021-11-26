@@ -96,6 +96,7 @@
 "DetailView_Title" = "Detail";
 "DetailView_Shareall" = "Share all";
 "DetailView_Menu_Delete" = "Delete this transfer";
+"DetailView_Saveall" = "Save all to library";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "Dismiss";

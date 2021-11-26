@@ -46,7 +46,7 @@ struct QuickLookComp: View {
         }
       }.ignoresSafeArea()
       .sheet(isPresented: $showActionSheet) {
-        ActivityViewController(activityItems: [getShareMedia()])
+        ActivityViewController(activityItems: [getShareMedia()]).ignoresSafeArea()
       }
   }
   

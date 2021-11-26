@@ -91,6 +91,7 @@
 "DetailView_Title" = "详情";
 "DetailView_Shareall" = "分享全部";
 "DetailView_Menu_Delete" = "删除此转移";
+"DetailView_Saveall" = "存储所有至图库";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "关闭";

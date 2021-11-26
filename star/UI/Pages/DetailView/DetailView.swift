@@ -39,11 +39,11 @@ struct DetailView: View {
             Button(action: {
               showShareAllActionSheet.toggle()
             }) {
-              Label("DetailView_Shareall", systemImage: "square.and.arrow.up").labelStyle(.titleAndIcon).padding(.vertical, 4).padding(.horizontal, 6).background(.ultraThinMaterial).cornerRadius(8)
+              Label("DetailView_Shareall", systemImage: "square.and.arrow.up.on.square")
             }
             Menu {
               Button {} label: {
-                Label("Save all to Library", systemImage: "square.and.arrow.down.on.square")
+                Label("DetailView_Saveall", systemImage: "square.and.arrow.down.on.square")
               }
               Button(role: .destructive) {} label: {
                 Label("DetailView_Menu_Delete", systemImage: "trash")
@@ -55,7 +55,7 @@ struct DetailView: View {
         }
       }
       .sheet(isPresented: $showShareAllActionSheet) {
-        ActivityViewController(activityItems: getAllMediaMeta())
+        ActivityViewController(activityItems: getAllMediaMeta()).ignoresSafeArea()
       }
   }
   
