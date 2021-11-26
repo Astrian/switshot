@@ -91,3 +91,10 @@
 "DetailView_Title" = "详情";
 "DetailView_Shareall" = "分享全部";
 "DetailView_Menu_Delete" = "删除此转移";
+
+// QuickLookComp
+"DetailView_QuickLookComp_Dismiss" = "关闭";
+"DetailView_QuickLookComp_Share" = "分享";
+"DetailView_QuickLookComp_Menu_Save" = "保存至图库";
+"DetailView_QuickLookComp_Menu_Delete" = "删除";
+"DetailView_QuickLookComp_Share_Title" = "游戏媒体";

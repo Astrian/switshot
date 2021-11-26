@@ -96,3 +96,10 @@
 "DetailView_Title" = "Detail";
 "DetailView_Shareall" = "Share all";
 "DetailView_Menu_Delete" = "Delete this transfer";
+
+// QuickLookComp
+"DetailView_QuickLookComp_Dismiss" = "Dismiss";
+"DetailView_QuickLookComp_Share" = "Share";
+"DetailView_QuickLookComp_Menu_Save" = "Save to library";
+"DetailView_QuickLookComp_Menu_Delete" = "Delete";
+"DetailView_QuickLookComp_Share_Title" = "Game media";
