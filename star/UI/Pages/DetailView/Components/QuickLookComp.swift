@@ -46,7 +46,7 @@ struct QuickLookComp: View {
         }
       }.ignoresSafeArea()
       .sheet(isPresented: $showActionSheet) {
-        ActivityViewController(activityItems: [getUIImage()], metaDatas: [getMetadata()])
+        ActivityViewController(activityItems: [getShareMedia()])
       }
   }
   
@@ -56,10 +56,11 @@ struct QuickLookComp: View {
     return UIImage(data: shareData)!
   }
   
-  func getMetadata() -> LPLinkMetadata {
+  func getShareMedia() -> LinkPresentationItemSource {
     let metadata = LPLinkMetadata()
     metadata.iconProvider = NSItemProvider(contentsOf: url)
     metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
-    return metadata
+    metadata.originalURL = url
+    return LinkPresentationItemSource(linkMetaData: metadata, shareData: getUIImage())
   }
 }
