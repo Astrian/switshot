@@ -31,8 +31,8 @@ struct ConnectionComp: View {
           Text("HomeView_ConnectionComp_Ready").font(Font.title2)
           Text(String(format: NSLocalizedString("HomeView_ConnectionComp_Ready_Desc", comment: ""), consoleName)).foregroundColor(Color.gray)
           Button(action: { transferNow() }) {
-            Text("HomeView_ConnectionComp_Ready_TransferBtn").bold().padding([.horizontal], 18)
-          }.frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+            Text("HomeView_ConnectionComp_Ready_TransferBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+          }
         }
       }
       
@@ -62,8 +62,8 @@ struct ConnectionComp: View {
           Text("HomeView_ConnectionComp_Error_Noconn").foregroundColor(.gray)
           HStack{
             Button(action: { prepareTransfer() }) {
-              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18)
-            }.frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+            }
             Button(action: {}) {
               Text("HomeView_ConnectionComp_Error_HelpBtn")
             }
@@ -78,8 +78,8 @@ struct ConnectionComp: View {
           Text("HomeView_ConnectionComp_Error_Unknown").foregroundColor(.gray)
           HStack{
             Button(action: { prepareTransfer() }) {
-              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18)
-            }.frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+            }
             Button(action: {}) {
               Text("HomeView_ConnectionComp_Error_HelpBtn")
             }

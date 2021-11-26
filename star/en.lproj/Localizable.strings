@@ -94,3 +94,5 @@
 
 // DetailView
 "DetailView_Title" = "Detail";
+"DetailView_Shareall" = "Share all";
+"DetailView_Menu_Delete" = "Delete this transfer";

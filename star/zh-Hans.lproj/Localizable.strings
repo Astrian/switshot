@@ -89,3 +89,5 @@
 
 // DetailView
 "DetailView_Title" = "详情";
+"DetailView_Shareall" = "分享全部";
+"DetailView_Menu_Delete" = "删除此转移";
