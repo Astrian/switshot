@@ -16,7 +16,7 @@ struct RecentComp: View {
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        Text("HomeView_GalleryComp_Title").font(.title).bold().padding(.bottom, 4)
+        Text("HomeView_RecentComp_Title").font(.title).bold().padding(.bottom, 4)
         Spacer()
       }
       if sortedList().count != 0 {
@@ -39,8 +39,8 @@ struct RecentComp: View {
         }
       } else {
         VStack(spacing: 4) {
-          Text("HomeView_GalleryComp_Empty").font(Font.title2)
-          Text("HomeView_GalleryComp_Empty_Desc").foregroundColor(Color.gray)
+          Text("HomeView_RecentComp_Empty").font(Font.title2)
+          Text("HomeView_RecentComp_Empty_Desc").foregroundColor(Color.gray)
         }.frame(maxWidth: .infinity).padding(.top, 30)
       }
     }.frame(maxWidth: .infinity)

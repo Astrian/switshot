@@ -87,10 +87,10 @@
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
 "HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
 
-// GalleryComp
-"HomeView_GalleryComp_Title" = "Gallery";
-"HomeView_GalleryComp_Empty" = "Nothing Here";
-"HomeView_GalleryComp_Empty_Desc" = "Try transfer some media first.";
+// RecentComp
+"HomeView_RecentComp_Title" = "Recent";
+"HomeView_RecentComp_Empty" = "Nothing Here";
+"HomeView_RecentComp_Empty_Desc" = "Try transfer some media first.";
 
 // DetailView
 "DetailView_Title" = "Detail";
