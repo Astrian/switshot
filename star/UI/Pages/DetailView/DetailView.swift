@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LinkPresentation
+import RealmSwift
 
 struct DetailView: View {
   @State var log: TransferLog
@@ -16,22 +17,23 @@ struct DetailView: View {
   @State var showQL = false
   @State var QLFilename = ""
   @State var showShareAllActionSheet = false
+  @ObservedRealmObject var mediaList: TransferedMediaList
   
   var body: some View {
-    ScrollView {
-      VStack {
-        LazyVGrid(columns: columnGrid) {
-          ForEach(log.media) { media in
-            let image = getPreview(media: media.id, type: media.type)!
-            NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
-              Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
+      ScrollView {
+        VStack {
+          LazyVGrid(columns: columnGrid) {
+            ForEach(log.media) { media in
+              let image = getPreview(media: media.id, type: media.type)!
+              NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
+                Image(uiImage: image)
+                  .resizable()
+                  .scaledToFit()
+              }
             }
           }
         }
       }
-    }
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
@@ -45,9 +47,9 @@ struct DetailView: View {
               Button {} label: {
                 Label("DetailView_Saveall", systemImage: "square.and.arrow.down.on.square")
               }
-              Button(role: .destructive) {} label: {
+              /* Button(role: .destructive) { deleteTransfer() } label: {
                 Label("DetailView_Menu_Delete", systemImage: "trash")
-              }
+              } */
             } label: {
               Image(systemName: "ellipsis.circle")
             }

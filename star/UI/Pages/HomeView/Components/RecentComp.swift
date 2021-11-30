@@ -11,7 +11,9 @@ import Alamofire
 
 struct RecentComp: View {
   @ObservedRealmObject var list: TransferLogList
+  @ObservedRealmObject var mediaList: TransferedMediaList
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+  @State var showDetail = false
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -21,15 +23,14 @@ struct RecentComp: View {
       }
       if sortedList().count != 0 {
         VStack(spacing: 18) {
-          ForEach(sortedList()) { log in
-            NavigationLink(destination: DetailView(log: log)) {
+          ForEach(0 ..< sortedList().count) { index in
+            NavigationLink(destination: DetailView(log: sortedList()[index], mediaList: mediaList)) {
               VStack(alignment: .leading, spacing: 0) {
-                Image(uiImage: getPreview(log: log)!).resizable().aspectRatio(contentMode: .fit)
+                Image(uiImage: getPreview(log: sortedList()[index])!).resizable().aspectRatio(contentMode: .fit)
                 HStack(spacing: 0) {
-                  Text(dateFormatter(date: log.date))
-                  if log.media.count > 1{
-                    Text(" · ")
-                    Text("+\(log.media.count - 1)")
+                  Text(dateFormatter(date: sortedList()[index].date))
+                  if sortedList()[index].media.count > 1{
+                    Text("+\(sortedList()[index].media.count - 1)")
                   }
                 }.foregroundColor(Color.primary).padding()
               }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
