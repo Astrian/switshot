@@ -91,11 +91,12 @@
 "HomeView_RecentComp_Title" = "Recent";
 "HomeView_RecentComp_Empty" = "Nothing Here";
 "HomeView_RecentComp_Empty_Desc" = "Try transfer some media first.";
+"HomeView_RecentComp_Menu_Delete" = "Delete this transfer";
+"HomeView_RecentComp_Menu_Share" = "Share all medias in transfer";
 
 // DetailView
 "DetailView_Title" = "Detail";
 "DetailView_Shareall" = "Share all";
-"DetailView_Menu_Delete" = "Delete this transfer";
 "DetailView_Saveall" = "Save all to library";
 
 // QuickLookComp

@@ -39,6 +39,7 @@
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
+		45BA08982755CB77003C8F58 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BA08972755CB77003C8F58 /* InteractionView.swift */; };
 		DFB1E46526EFF2E60035A8F3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DFB1E46726EFF2E60035A8F3 /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		45AA097626EB8A5D001043AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45AA097926EB8A5D001043AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45AA097B26EB8A5D001043AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45BA08972755CB77003C8F58 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		DFB1E46626EFF2E60035A8F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		DFB1E46926EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DFB1E46B26EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				45850BE527510859004DCAFC /* LinkPresentationItemSource.swift */,
 				45850BE727510B68004DCAFC /* ActivityViewController.swift */,
+				45BA08972755CB77003C8F58 /* InteractionView.swift */,
 			);
 			path = Utilits;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				4500C19A27472E3100A7A048 /* HomeView.swift in Sources */,
 				454D645D274D25C200C9B2CC /* DetailView.swift in Sources */,
 				45850BE32750C1A7004DCAFC /* QuickLookComp.swift in Sources */,
+				45BA08982755CB77003C8F58 /* InteractionView.swift in Sources */,
 				457ED7E8274B2188003C2958 /* RecentComp.swift in Sources */,
 				457ED7F4274B7957003C2958 /* TransferLogs.swift in Sources */,
 				45116D19274516F2002D278D /* transfer.swift in Sources */,

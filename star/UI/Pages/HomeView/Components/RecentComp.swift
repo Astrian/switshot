@@ -30,11 +30,19 @@ struct RecentComp: View {
                 HStack(spacing: 0) {
                   Text(dateFormatter(date: sortedList()[index].date))
                   if sortedList()[index].media.count > 1{
-                    Text("+\(sortedList()[index].media.count - 1)")
+                    Text(" +\(sortedList()[index].media.count - 1)")
                   }
                 }.foregroundColor(Color.primary).padding()
-              }.background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
-            }.transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
+              }
+              .background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+              .contextMenuWithPreview(actions: [
+                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Delete", comment: ""), image: UIImage(systemName: "trash"), identifier: nil, attributes: UIMenuElement.Attributes.destructive, handler: {_ in }),
+                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up"), identifier: nil, handler: {_ in })
+              ], preview: {
+                DetailView(log: sortedList()[index], mediaList: mediaList)
+              })
+            }
+            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
           }
           Text("❦").foregroundColor(Color.gray).padding()
         }

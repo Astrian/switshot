@@ -86,11 +86,12 @@
 "HomeView_RecentComp_Title" = "最近";
 "HomeView_RecentComp_Empty" = "空空如也";
 "HomeView_RecentComp_Empty_Desc" = "先试着转移一些媒体吧。";
+"HomeView_RecentComp_Menu_Delete" = "删除此转移";
+"HomeView_RecentComp_Menu_Share" = "分享转移中的所有媒体";
 
 // DetailView
 "DetailView_Title" = "详情";
 "DetailView_Shareall" = "分享全部";
-"DetailView_Menu_Delete" = "删除此转移";
 "DetailView_Saveall" = "存储所有至图库";
 
 // QuickLookComp
