@@ -37,7 +37,8 @@ struct RecentComp: View {
               .background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
               .contextMenuWithPreview(actions: [
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Delete", comment: ""), image: UIImage(systemName: "trash"), identifier: nil, attributes: UIMenuElement.Attributes.destructive, handler: {_ in }),
-                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up"), identifier: nil, handler: {_ in })
+                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
+                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
               ], preview: {
                 DetailView(log: sortedList()[index], mediaList: mediaList)
               })

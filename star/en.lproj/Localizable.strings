@@ -92,7 +92,8 @@
 "HomeView_RecentComp_Empty" = "Nothing Here";
 "HomeView_RecentComp_Empty_Desc" = "Try transfer some media first.";
 "HomeView_RecentComp_Menu_Delete" = "Delete this transfer";
-"HomeView_RecentComp_Menu_Share" = "Share all medias in transfer";
+"HomeView_RecentComp_Menu_Share" = "Share all";
+"HomeView_RecentComp_Menu_Save" = "Save all to library";
 
 // DetailView
 "DetailView_Title" = "Detail";

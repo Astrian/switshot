@@ -87,7 +87,8 @@
 "HomeView_RecentComp_Empty" = "空空如也";
 "HomeView_RecentComp_Empty_Desc" = "先试着转移一些媒体吧。";
 "HomeView_RecentComp_Menu_Delete" = "删除此转移";
-"HomeView_RecentComp_Menu_Share" = "分享转移中的所有媒体";
+"HomeView_RecentComp_Menu_Share" = "分享所有";
+"HomeView_RecentComp_Menu_Save" = "保存所有至图库";
 
 // DetailView
 "DetailView_Title" = "详情";
