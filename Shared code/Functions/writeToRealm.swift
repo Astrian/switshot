@@ -8,15 +8,19 @@
 import Foundation
 import RealmSwift
 
-func writeToRealm(log: TransferLog) {
+func writeToRealm(mediaList: [TransferedMedia]) {
   let path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   let config = Realm.Configuration(fileURL: URL(string: "\(String(describing: path))/database.realm")!)
   Realm.Configuration.defaultConfiguration = config
   let realm = try! Realm()
-  try! realm.write {
-    for i in log.media {
+  let log = TransferLog()
+  for i in mediaList {
+    try! realm.write {
       realm.add(i)
     }
+    log.media.append(i)
+  }
+  try! realm.write {
     realm.add(log)
   }
 }
