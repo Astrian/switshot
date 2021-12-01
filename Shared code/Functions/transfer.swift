@@ -5,7 +5,6 @@
 //  Created by Astrian Zheng on 2021/11/17.
 //
 
-import Foundation
 import UIKit
 
 func transfer(saveCopy: Bool?) async throws -> TransferResult {

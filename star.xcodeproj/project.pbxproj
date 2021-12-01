@@ -34,6 +34,8 @@
 		45850BE32750C1A7004DCAFC /* QuickLookComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45850BE22750C1A7004DCAFC /* QuickLookComp.swift */; };
 		45850BE627510859004DCAFC /* LinkPresentationItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45850BE527510859004DCAFC /* LinkPresentationItemSource.swift */; };
 		45850BE827510B68004DCAFC /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45850BE727510B68004DCAFC /* ActivityViewController.swift */; };
+		459F4E632757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
+		459F4E642757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
@@ -97,6 +99,7 @@
 		45850BE22750C1A7004DCAFC /* QuickLookComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookComp.swift; sourceTree = "<group>"; };
 		45850BE527510859004DCAFC /* LinkPresentationItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPresentationItemSource.swift; sourceTree = "<group>"; };
 		45850BE727510B68004DCAFC /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		459F4E622757A853002A2A53 /* writeToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeToRealm.swift; sourceTree = "<group>"; };
 		45AA096F26EB8A5C001043AE /* star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AA097226EB8A5C001043AE /* starApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starApp.swift; sourceTree = "<group>"; };
 		45AA097626EB8A5D001043AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,8 +139,8 @@
 		45116D17274516DB002D278D /* Shared code */ = {
 			isa = PBXGroup;
 			children = (
+				459F4E652757A8D6002A2A53 /* Functions */,
 				457ED7F2274B792E003C2958 /* Structs */,
-				45116D18274516F2002D278D /* transfer.swift */,
 			);
 			path = "Shared code";
 			sourceTree = "<group>";
@@ -240,6 +243,15 @@
 				45BA08972755CB77003C8F58 /* InteractionView.swift */,
 			);
 			path = Utilits;
+			sourceTree = "<group>";
+		};
+		459F4E652757A8D6002A2A53 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				459F4E622757A853002A2A53 /* writeToRealm.swift */,
+				45116D18274516F2002D278D /* transfer.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		45AA096626EB8A5C001043AE = {
@@ -410,6 +422,7 @@
 				454D6452274C774000C9B2CC /* transfer.swift in Sources */,
 				457ED7F5274B7A84003C2958 /* TransferLogs.swift in Sources */,
 				45116D212745EA40002D278D /* Intents.intentdefinition in Sources */,
+				459F4E642757A853002A2A53 /* writeToRealm.swift in Sources */,
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
 				454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
@@ -433,6 +446,7 @@
 				457ED7E6274B1BE8003C2958 /* ConnectionComp.swift in Sources */,
 				454D6450274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45850BE02750BA12004DCAFC /* PreviewController.swift in Sources */,
+				459F4E632757A853002A2A53 /* writeToRealm.swift in Sources */,
 				45116D202745EA40002D278D /* Intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,9 +14,18 @@ class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
       let transferResult = try await transfer(saveCopy: intent.saveToLibrary as? Bool)
       let result = TransferMediaIntentResponse(code: .success, userActivity: nil)
       result.media = [INFile]()
+      let log = TransferLog()
+      var i = 0
       for (uuid, data) in transferResult.data {
         result.media?.append(INFile(data: data, filename: "\(uuid.uuidString).\(transferResult.mediaType == "photo" ? "jpg" : "mp4")", typeIdentifier: nil))
+        let media = TransferedMedia()
+        media.code = i
+        media.id = uuid
+        media.type = transferResult.mediaType
+        log.media.append(media)
+        i += 1
       }
+      writeToRealm(log: log)
       result.consoleName = transferResult.consoleName
       return result
     } catch TransferringError.cannotConnectToConsole {
