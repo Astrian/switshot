@@ -6,67 +6,6 @@
   
 */
 
-/*
- * ┌─────────────────────┐
- * │     OLD STRINGS     │
- * └─────────────────────┘
- */
-
-// Tabs
-"Tabs_Connection" = "Connection";
-"Tabs_Album" = "Album";
-
-// ConnectionView
-"ConnectionView_Title" = "Connection";
-"ConnectionView_ConnectedConsole" = "Connected to: %@";
-"ConnectionView_TransferBtn" = "Transfer now";
-"ConnectionView_Connecting" = "Connecting…";
-"ConnectionView_Failed" = "I can’t connect to your game console";
-"ConnectionView_FailedDes" = "Re-scan the QR code on your console or check your system settings";
-"ConnectionView_RetryBtn" = "Retry";
-"ConnectionView_Error_CannotCreateFolder" = "Cannot create media folder";
-"ConnectionView_Transfering" = "Transferring…";
-"ConnectionView_Transfering_Desc" = "It won’t take too long.";
-"ConnectionView_Transferred" = "Done!";
-"ConnectionView_Transferred_Desc" = "Go to “Album” to view all your media from the console.";
-"ConnectionView_TransferMoreBtn" = "Transfer more";
-"ConnectionView_HelpBtn" = "Help";
-
-// AlbumView
-"AlbumView_Title" = "Media Album";
-"AlbumView_BtnDelete" = "Delete";
-"AlbumView_BtnSaveToPhoto" = "Save to Photo Library";
-"AlbumView_BtnShare" = "Share to…";
-"AlbumView_Empty_Title" = "There’s nothing";
-"AlbumView_Empty_Desc" = "Try transfer something to Switshot.";
-"AlbumView_Picker_Image" = "Images";
-"AlbumView_Picker_Video" = "Videos";
-"AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
-"AlbumView_Toast_Deleted" = "Media has been deleted";
-
-// MediaCollectionView
-"MediaCollectionView_Title" = "Media Album";
-
-// ImageDetailView
-"ImageDetailView_BtnShare" = "Share to…";
-"ImageDetailView_BtnDelete" = "Delete";
-"ImageDetailView_BtnSaveToPhoto" = "Save to library";
-"ImageDetailView_Toast_Saved" = "This image is saved to your photo library";
-
-// AboutView
-"AboutView_Title" = "About Switshot";
-"AboutView_Version" = "Version";
-"AboutView_SystemSettings" = "Settings";
-"AboutView_Repo" = "Go to GitHub Repository";
-"AboutView_OpenSource" = "Switshot is an open source project.";
-
-
-/*
- * ┌─────────────────────┐
- * │     NEW STRINGS     │
- * └─────────────────────┘
- */
-
 // HomeView
 "HomeView_Title" = "Switshot";
 "HomeView_Initial" = "Initialisation in progress...";
