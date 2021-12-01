@@ -56,7 +56,7 @@ struct DetailView: View {
                     Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
                   }
                   Button {
-                    
+                    saveToLibrary([media])
                   } label: {
                     Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
                   }
@@ -83,7 +83,7 @@ struct DetailView: View {
               Label("DetailView_Shareall", systemImage: "square.and.arrow.up.on.square")
             }
             Menu {
-              Button {} label: {
+              Button { saveToLibrary(nil) } label: {
                 Label("DetailView_Saveall", systemImage: "square.and.arrow.down.on.square")
               }
               Button(role: .destructive) {
@@ -226,5 +226,26 @@ struct DetailView: View {
     }
     $logs.remove(log)
     presentationMode.wrappedValue.dismiss()
+  }
+  
+  func saveToLibrary(_ list: [TransferedMedia]?) {
+    let manager = FileManager.default
+    if list != nil {
+      for i in list! {
+        guard let data = manager.contents(atPath: "\(path)/media/\(i.id.uuidString).\(i.type == "photo" ? "jpg" : "mp4")") else {
+          print("No such file")
+          continue
+        }
+        UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+      }
+    } else {
+      for i in log.media {
+        guard let data = manager.contents(atPath: "\(path)/media/\(i.id.uuidString).\(i.type == "photo" ? "jpg" : "mp4")") else {
+          print("No such file")
+          continue
+        }
+        UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+      }
+    }
   }
 }
