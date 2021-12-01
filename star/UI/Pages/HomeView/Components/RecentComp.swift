@@ -13,6 +13,9 @@ struct RecentComp: View {
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   @State var showDetail = false
   @ObservedResults(TransferLog.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var logs
+  @ObservedResults(TransferedMedia.self) var medias
+  @State var showDelAlert = false
+  @State var deleteTarget: TransferLog?
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -28,6 +31,7 @@ struct RecentComp: View {
                 Image(uiImage: getPreview(log: target)!).resizable().aspectRatio(contentMode: .fit)
                 HStack(spacing: 0) {
                   Text(dateFormatter(date: target.date))
+                  Spacer()
                   if target.media.count > 1{
                     Text(" +\(target.media.count - 1)")
                   }
@@ -35,7 +39,15 @@ struct RecentComp: View {
               }
               .background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
               .contextMenuWithPreview(actions: [
-                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Delete", comment: ""), image: UIImage(systemName: "trash"), identifier: nil, attributes: UIMenuElement.Attributes.destructive, handler: {_ in }),
+                UIAction(
+                  title: NSLocalizedString("HomeView_RecentComp_Menu_Delete", comment: ""),
+                  image: UIImage(systemName: "trash"),
+                  identifier: nil,
+                  attributes: UIMenuElement.Attributes.destructive,
+                  handler: {_ in
+                    deleteTarget = target
+                    showDelAlert.toggle()
+                  }),
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
               ], preview: {
@@ -52,7 +64,18 @@ struct RecentComp: View {
           Text("HomeView_RecentComp_Empty_Desc").foregroundColor(Color.gray)
         }.frame(maxWidth: .infinity).padding(.top, 30)
       }
-    }.frame(maxWidth: .infinity)
+    }
+    .frame(maxWidth: .infinity)
+    .alert(isPresented: $showDelAlert) {
+      Alert(
+        title: Text("HomeView_RecentComp_DelAlert_Title"),
+        message: Text("HomeView_RecentComp_DelAlert_Msg"),
+        primaryButton: .default(Text("HomeView_RecentComp_DelAlert_Cancel"), action: { deleteTarget = nil }),
+        secondaryButton: .destructive(Text("HomeView_RecentComp_DelAlert_Confirm"), action: { deleteTransfer() }))
+    }
+    .onAppear {
+      printFileNum()
+    }
   }
   
   func dateFormatter(date: Date) -> String {
@@ -84,9 +107,28 @@ struct RecentComp: View {
     }
   }
   
-  /* func sortedList() -> [TransferLog] {
-    return list.logs.sorted { (f, s) -> Bool in
-      return f.date > s.date ? true : false
+  func deleteTransfer() {
+    guard let target = deleteTarget else { return }
+    let manager = FileManager.default
+    for media in target.media {
+      do {
+        try manager.removeItem(atPath: "\(path)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
+        $medias.remove(media)
+      } catch {
+        continue
+      }
     }
-  } */
+    $logs.remove(target)
+    deleteTarget = nil
+    printFileNum()
+  }
+  
+  func printFileNum() {
+    Task {
+      do {
+        let directoryContents = try FileManager.default.contentsOfDirectory(atPath: "\(path)/media")
+        print("media file nums: \(directoryContents.count)")
+      } catch {}
+    }
+  }
 }

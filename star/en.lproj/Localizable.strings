@@ -25,6 +25,10 @@
 "HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact developer.";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
 "HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
+"HomeView_RecentComp_DelAlert_Title" = "Deleting this transfer";
+"HomeView_RecentComp_DelAlert_Msg" = "All media in this transfer will be wiped out and can’t be recovered.";
+"HomeView_RecentComp_DelAlert_Cancel" = "Don’t Delete";
+"HomeView_RecentComp_DelAlert_Confirm" = "Continue";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "Recent";
