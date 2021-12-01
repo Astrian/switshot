@@ -25,10 +25,6 @@
 "HomeView_ConnectionComp_Error_Unknown" = "遇到无法处理的错误。过会儿再试试，或者联系一下开发者。";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "重试";
 "HomeView_ConnectionComp_Error_HelpBtn" = "需要帮助";
-"HomeView_RecentComp_DelAlert_Title" = "即将删除此转移";
-"HomeView_RecentComp_DelAlert_Msg" = "转移中的所有媒体将被销毁，并无法恢复。";
-"HomeView_RecentComp_DelAlert_Cancel" = "不要删除";
-"HomeView_RecentComp_DelAlert_Confirm" = "继续";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
@@ -37,6 +33,10 @@
 "HomeView_RecentComp_Menu_Delete" = "删除此转移";
 "HomeView_RecentComp_Menu_Share" = "分享所有";
 "HomeView_RecentComp_Menu_Save" = "保存所有至图库";
+"HomeView_RecentComp_DelAlert_Title" = "即将删除此转移";
+"HomeView_RecentComp_DelAlert_Msg" = "转移中的所有媒体将被销毁，并无法恢复。";
+"HomeView_RecentComp_DelAlert_Cancel" = "不要删除";
+"HomeView_RecentComp_DelAlert_Confirm" = "继续";
 
 // DetailView
 "DetailView_Title" = "详情";

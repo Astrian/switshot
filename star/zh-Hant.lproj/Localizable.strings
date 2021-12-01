@@ -6,46 +6,61 @@
   
 */
 
-// Tabs
-"Tabs_Connection" = "連接";
-"Tabs_Album" = "相簿";
+// HomeView
+"HomeView_Title" = "Switshot";
+"HomeView_Initial" = "初始化…";
 
-// ConnectionView
-"ConnectionView_Title" = "連接";
-"ConnectionView_ConnectedConsole" = "已連接至：%@";
-"ConnectionView_TransferBtn" = "現在傳送";
-"ConnectionView_Connecting" = "正連接……";
-"ConnectionView_Failed" = "無法連接至你的遊戲主機";
-"ConnectionView_FailedDes" = "重新拍攝主機上的QR碼\n或者檢查系統設定";
-"ConnectionView_RetryBtn" = "重試";
-"ConnectionView_Error_CannotCreateFolder" = "無法建立媒體資料夾";
-"ConnectionView_Transfering" = "正在傳送……";
-"ConnectionView_Transfering_Desc" = "很快就好，稍安勿躁。";
-"ConnectionView_Transferred" = "完成！";
-"ConnectionView_Transferred_Desc" = "前往「相簿」檢視從主機傳送的媒體。";
-"ConnectionView_TransferMoreBtn" = "傳送更多媒體";
-"ConnectionView_HelpBtn" = "幫助";
+// ConnectionComp
+"HomeView_ConnectionComp_Title" = "轉移";
+"HomeView_ConnectionComp_CheckingConnection" = "檢查連線…";
+"HomeView_ConnectionComp_Ready" = "準備轉移";
+"HomeView_ConnectionComp_Ready_Desc" = "已連接至「%@」。";
+"HomeView_ConnectionComp_Ready_TransferBtn" = "開始轉移";
+"HomeView_ConnectionComp_Transferring" = "轉移…";
+"HomeView_ConnectionComp_Done" = "完成！";
+"HomeView_ConnectionComp_Done_Desc" = "從下方的最近部分查看轉移的媒體。";
+"HomeView_ConnectionComp_Done_MoreBtn" = "轉移更多媒體";
+"HomeView_ConnectionComp_Error" = "無法連線至主機";
+"HomeView_ConnectionComp_Error_Noconn" = "請確認設備已連線至遊戲主機的本地網路。";
+"HomeView_ConnectionComp_Error_Unknown" = "遇到無法處理的錯誤，請稍後再試，或聯繫開發者。";
+"HomeView_ConnectionComp_Error_TryAgainBtn" = "再試";
+"HomeView_ConnectionComp_Error_HelpBtn" = "需要幫助";
 
-// AlbumView
-"AlbumView_Title" = "媒體相簿";
-"AlbumView_BtnDelete" = "刪除";
-"AlbumView_BtnSaveToPhoto" = "儲存至相片圖庫";
-"AlbumView_BtnShare" = "分享至……";
-"AlbumView_Empty_Title" = "空空如也";
-"AlbumView_Empty_Desc" = "試著轉移一些媒體到Switshot吧。";
-"AlbumView_Picker_Image" = "圖片";
-"AlbumView_Picker_Video" = "影片";
-"AlbumView_Error_CannotDelete" = "無法刪除選定的媒體";
-"AlbumView_Toast_Deleted" = "媒體已被刪除";
-"AlbumView_Count_Image" = "%@張圖片";
-"AlbumView_Count_Video" = "%@段影片";
+// RecentComp
+"HomeView_RecentComp_Title" = "最近";
+"HomeView_RecentComp_Empty" = "空空如也";
+"HomeView_RecentComp_Empty_Desc" = "先嘗試轉移一些媒體吧。";
+"HomeView_RecentComp_Menu_Delete" = "刪除此轉移";
+"HomeView_RecentComp_Menu_Share" = "分享所有";
+"HomeView_RecentComp_Menu_Save" = "保存所有至圖庫";
+"HomeView_RecentComp_DelAlert_Title" = "即將刪除此轉移";
+"HomeView_RecentComp_DelAlert_Msg" = "轉移中的所有媒體將被刪除，且無法恢復。";
+"HomeView_RecentComp_DelAlert_Cancel" = "不要刪除";
+"HomeView_RecentComp_DelAlert_Confirm" = "繼續";
 
-// ImageDetailView
-"ImageDetailView_BtnShare" = "分享至……";
-"ImageDetailView_BtnDelete" = "刪除";
-"ImageDetailView_BtnSaveToPhoto" = "存至圖庫";
-"ImageDetailView_Toast_Saved" = "圖片已儲存至相片圖庫";
+// DetailView
+"DetailView_Title" = "詳情";
+"DetailView_Shareall" = "分享所有";
+"DetailView_Saveall" = "保存所有至圖庫";
+"DetailView_ContextMenu_Delete" = "刪除";
+"DetailView_ContextMenu_Save" = "保存至圖庫";
+"DetailView_ContextMenu_Share" = "分享";
+"DetailView_DelOneAlert_Title" = "即將刪除此媒體";
+"DetailView_DelOneAlert_Msg" = "這個操作不能撤銷。";
+"DetailView_DelOneAlert_Cancel" = "不要刪除";
+"DetailView_DelOneAlert_Confirm" = "繼續";
+"DetailView_Menu_Delete" = "刪除此轉移";
+"DetailView_DelEntireAlert_Title" = "即將刪除此轉移";
+"DetailView_DelEntireAlert_Msg" = "轉移中的所有媒體都將被刪除，且無法恢復。";
+"DetailView_DelEntireAlert_Cancel" = "不要刪除";
+"DetailView_DelEntireAlert_Confirm" = "繼續";
 
+// QuickLookComp
+"DetailView_QuickLookComp_Dismiss" = "完成";
+"DetailView_QuickLookComp_Share" = "分享";
+"DetailView_QuickLookComp_Menu_Save" = "保存至圖庫";
+"DetailView_QuickLookComp_Menu_Delete" = "刪除";
+"DetailView_QuickLookComp_Share_Title" = "遊戲媒體";
 // AboutView
 "AboutView_Title" = "關於Switshot";
 "AboutView_Version" = "版本號";

@@ -6,45 +6,59 @@
   
 */
 
-// Tabs
-"Tabs_Connection" = "接続";
-"Tabs_Album" = "アルバム";
+// HomeView
+"HomeView_Title" = "Switshot";
+"HomeView_Initial" = "初期化中...";
 
-// ConnectionView
-"ConnectionView_Title" = "接続";
-"ConnectionView_ConnectedConsole" = "%@ へ接続完了";
-"ConnectionView_TransferBtn" = "ダウンロード";
-"ConnectionView_Connecting" = "接続中…";
-"ConnectionView_Failed" = "ゲーム機への接続はできません";
-"ConnectionView_FailedDes" = "もう一度 QR コードを読み取るか、システム設定を確認してください";
-"ConnectionView_RetryBtn" = "再試行";
-"ConnectionView_Error_CannotCreateFolder" = "メディアフォルダを作成できません";
-"ConnectionView_Transfering" = "転送中…";
-"ConnectionView_Transfering_Desc" = "しばらくお待ちください。";
-"ConnectionView_Transferred" = "転送完了！";
-"ConnectionView_Transferred_Desc" = "「アルバム」にて送ってきたメディアをご覧ください。";
-"ConnectionView_TransferMoreBtn" = "さらに転送";
-"ConnectionView_HelpBtn" = "ヘルプ";
+// ConnectionComp
+"HomeView_ConnectionComp_Title" = "転送";
+"HomeView_ConnectionComp_CheckingConnection" = "接続中…";
+"HomeView_ConnectionComp_Ready" = "転送準備";
+"HomeView_ConnectionComp_Ready_Desc" = "「%@」に接続されています。";
+"HomeView_ConnectionComp_Ready_TransferBtn" = "転送";
+"HomeView_ConnectionComp_Transferring" = "転送する...";
+"HomeView_ConnectionComp_Done" = "完了です！";
+"HomeView_ConnectionComp_Done_Desc" = "最近の転送されたメディアは以下で確認できます。";
+"HomeView_ConnectionComp_Done_MoreBtn" = "より多くのメディアを転送";
+"HomeView_ConnectionComp_Error" = "ゲーム機に接続できない";
+"HomeView_ConnectionComp_Error_Noconn" = "ゲーム機で確立されたローカル接続に、デバイスが接続されていることを確認してください。";
+"HomeView_ConnectionComp_Error_Unknown" = "ハンドリングされていないエラーがあります。後日、再度お試しいただくか、開発者にお問い合わせください。";
+"HomeView_ConnectionComp_Error_TryAgainBtn" = "再試行";
+"HomeView_ConnectionComp_Error_HelpBtn" = "ヘルプ";
 
-// AlbumView
-"AlbumView_Title" = "メディアアルバム";
-"AlbumView_BtnDelete" = "削除";
-"AlbumView_BtnSaveToPhoto" = "写真ライブラリに保存";
-"AlbumView_BtnShare" = "共有…";
-"AlbumView_Empty_Title" = "まだ何もありません";
-"AlbumView_Empty_Desc" = "Switshot で何かを転送しましょうか。";
-"AlbumView_Picker_Image" = "画像";
-"AlbumView_Picker_Video" = "動画";
-"AlbumView_Error_CannotDelete" = "選択されたメディアを削除できません";
-"AlbumView_Toast_Deleted" = "選択されたメディアを削除しました";
+// RecentComp
+"HomeView_RecentComp_Title" = "最近の転送";
+"HomeView_RecentComp_Empty" = "まだ何もありません";
+"HomeView_RecentComp_Empty_Desc" = "何かを転送しましょうか。";
+"HomeView_RecentComp_Menu_Delete" = "転送を削除";
+"HomeView_RecentComp_Menu_Share" = "すべてを共有する";
+"HomeView_RecentComp_Menu_Save" = "すべてを保存しました";
+"HomeView_RecentComp_DelAlert_Title" = "この転送を削除することについて";
+"HomeView_RecentComp_DelAlert_Msg" = "この転送では、すべてのメディアが消去され、復元することはできません。";
+"HomeView_RecentComp_DelAlert_Cancel" = "削除しない";
+"HomeView_RecentComp_DelAlert_Confirm" = "続ける";
 
-// ImageDetailView
-"ImageDetailView_BtnShare" = "共有…";
-"ImageDetailView_BtnDelete" = "削除";
-"ImageDetailView_BtnSaveToPhoto" = "ライブラリに保存";
-"ImageDetailView_Toast_Saved" = "画像を写真ライブラリに保存しました";
-"AlbumView_Count_Image" = "%@ 枚の画像";
-"AlbumView_Count_Video" = "%@ 件の動画";
+// DetailView
+"DetailView_Title" = "詳細";
+"DetailView_Shareall" = "すべてを共有";
+"DetailView_Saveall" = "すべてを保存";
+"DetailView_ContextMenu_Delete" = "削除";
+"DetailView_ContextMenu_Save" = "ライブラリーに保存";
+"DetailView_ContextMenu_Share" = "共有";
+"DetailView_DelOneAlert_Title" = "このメディアを削除する";
+"DetailView_DelOneAlert_Msg" = "この操作を元に戻すことはできません。";
+"DetailView_DelOneAlert_Cancel" = "削除しない";
+"DetailView_DelOneAlert_Confirm" = "続ける";
+"DetailView_Menu_Delete" = "この転送を削除";
+"DetailView_DelEntireAlert_Title" = "この転送を削除することについて";
+"DetailView_DelEntireAlert_Msg" = "この転送では、すべてのメディアが消去され、復元することはできません。";
+
+// QuickLookComp
+"DetailView_QuickLookComp_Dismiss" = "完了";
+"DetailView_QuickLookComp_Share" = "共有";
+"DetailView_QuickLookComp_Menu_Save" = "ライブラリーに保存";
+"DetailView_QuickLookComp_Menu_Delete" = "削除";
+"DetailView_QuickLookComp_Share_Title" = "ゲームメディア";
 
 // AboutView
 "AboutView_Title" = "Switshot について";
