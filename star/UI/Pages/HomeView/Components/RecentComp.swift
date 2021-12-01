@@ -50,9 +50,9 @@ struct RecentComp: View {
                     handler: {_ in
                       deleteTarget = target
                       showDelAlert.toggle()
-                    }),
-                  UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
-                  UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
+                    })
+                  /* UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
+                  UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in }) */
                 ], preview: {
                   DetailView(log: target)
                 })
