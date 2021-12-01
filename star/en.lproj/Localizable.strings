@@ -42,6 +42,9 @@
 "DetailView_Title" = "Detail";
 "DetailView_Shareall" = "Share all";
 "DetailView_Saveall" = "Save all to library";
+"DetailView_ContextMenu_Delete" = "Delete";
+"DetailView_ContextMenu_Save" = "Save to library";
+"DetailView_ContextMenu_Share" = "Share";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "Dismiss";

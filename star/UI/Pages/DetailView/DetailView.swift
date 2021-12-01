@@ -13,10 +13,12 @@ struct DetailView: View {
   @State var log: TransferLog
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
-  private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   @State var showQL = false
   @State var QLFilename = ""
   @State var showShareAllActionSheet = false
+  @State var showShareOneActionSheet = false
+  @State var mediaShouldShare: TransferedMedia?
+  private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   
   var body: some View {
       ScrollView {
@@ -29,6 +31,21 @@ struct DetailView: View {
                   .resizable()
                   .scaledToFit()
               }
+              .contextMenu(menuItems: {
+                Button(role: .destructive) {  } label: {
+                  Label("DetailView_ContextMenu_Delete", systemImage: "trash")
+                }
+                Button(action: {
+                  mediaShouldShare = media
+                  print("\(mediaShouldShare)")
+                  showShareOneActionSheet.toggle()
+                }) {
+                  Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
+                }
+                Button {} label: {
+                  Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
+                }
+              })
             }
           }
         }
@@ -58,6 +75,11 @@ struct DetailView: View {
       .sheet(isPresented: $showShareAllActionSheet) {
         ActivityViewController(activityItems: getAllMediaMeta()).ignoresSafeArea()
       }
+      .sheet(isPresented: $showShareOneActionSheet) {
+        if mediaShouldShare != nil {
+          ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaShouldShare!)).ignoresSafeArea()
+        }
+      }
   }
   
   func getPreview(media: UUID, type: String) -> UIImage? {
@@ -83,7 +105,7 @@ struct DetailView: View {
     var metadatas = [LinkPresentationItemSource]()
     for item in log.media {
       let manager = FileManager.default
-      guard let data = manager.contents(atPath: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")") else {
+      guard let data = manager.contents(atPath: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")  else {
         print("No such file")
         continue
       }
@@ -94,5 +116,21 @@ struct DetailView: View {
       metadatas.append(LinkPresentationItemSource(linkMetaData: metadata, shareData: data))
     }
     return metadatas
+  }
+  
+  func getOneImageMediaMeta(item: TransferedMedia) -> [LinkPresentationItemSource] {
+    let manager = FileManager.default
+    let filepath = "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")"
+    print(item.type)
+    guard let data = manager.contents(atPath: filepath)  else {
+      print("No such file")
+      print(filepath)
+      return [LinkPresentationItemSource]()
+    }
+    let metadata = LPLinkMetadata()
+    metadata.iconProvider = NSItemProvider(contentsOf: URL(string: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!)
+    metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
+    metadata.originalURL = URL(string: "\(fullPath)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!
+    return [LinkPresentationItemSource(linkMetaData: metadata, shareData: data)]
   }
 }

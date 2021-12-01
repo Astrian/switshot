@@ -42,6 +42,9 @@
 "DetailView_Title" = "详情";
 "DetailView_Shareall" = "分享全部";
 "DetailView_Saveall" = "存储所有至图库";
+"DetailView_ContextMenu_Delete" = "删除";
+"DetailView_ContextMenu_Save" = "保存至图库";
+"DetailView_ContextMenu_Share" = "分享";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "关闭";
