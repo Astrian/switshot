@@ -27,7 +27,7 @@ struct RecentComp: View {
         VStack(spacing: 18) {
           ForEach(0 ..< logs.elements.count) { index in
             let target = logs.elements[index]
-            NavigationLink(destination: DetailView(log: target, logIndex: index)) {
+            NavigationLink(destination: DetailView(log: target)) {
               VStack(alignment: .leading, spacing: 0) {
                 Image(uiImage: getPreview(log: target)!).resizable().aspectRatio(contentMode: .fit)
                 HStack(spacing: 0) {
@@ -52,7 +52,7 @@ struct RecentComp: View {
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
               ], preview: {
-                DetailView(log: target, logIndex: index)
+                DetailView(log: target)
               })
             }
             .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))

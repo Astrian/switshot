@@ -49,6 +49,9 @@
 "DetailView_DelOneAlert_Msg" = "This operation cannot be undone.";
 "DetailView_DelOneAlert_Cancel" = "Don’t delete";
 "DetailView_DelOneAlert_Confirm" = "Continue";
+"DetailView_Menu_Delete" = "Delete this transfer";
+"DetailView_DelEntireAlert_Title" = "Deleting this transfer";
+"DetailView_DelEntireAlert_Msg" = "All media in this transfer will be wiped out and can’t be recovered.";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "Dismiss";

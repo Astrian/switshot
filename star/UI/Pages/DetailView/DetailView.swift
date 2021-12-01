@@ -11,68 +11,73 @@ import RealmSwift
 
 struct DetailView: View {
   @State var log: TransferLog
-  @State var logIndex: Int
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
   @State var showQL = false
   @State var QLFilename = ""
-  @State var showShareAllActionSheet = false
-  @State var showShareOneActionSheet = false
-  @State var showDeleteOneConfirm = false
+  @State var shareAllActionSheetVisible = false
+  @State var shareOneActionSheetVisible = false
+  @State var deleteOneConfirmVisible = false
+  @State var deleteEntireConfirmVisible = false
   @State var mediaOperating: TransferedMedia?
   @State var mediaOperatingIndex: Int?
   @ObservedResults(TransferedMedia.self) var medias
   @ObservedResults(TransferLog.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var logs
+  @Environment(\.presentationMode) private var presentationMode
   private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   
   var body: some View {
-      ScrollView {
-        VStack {
-          LazyVGrid(columns: columnGrid) {
-            ForEach(0 ..< log.media.count) { index in
-              let media = log.media[index]
-              if getPreview(media: media.id, type: media.type) != nil {
-                let image = getPreview(media: media.id, type: media.type)!
-                NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
-                  Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                }
-                .contextMenu(menuItems: {
-                  Button(role: .destructive) {
+    ScrollView {
+      VStack {
+        LazyVGrid(columns: columnGrid) {
+          ForEach(0 ..< log.media.count) { index in
+            let media = log.media[index]
+            if getPreview(media: media.id, type: media.type) != nil {
+              let image = getPreview(media: media.id, type: media.type)!
+              NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
+                Image(uiImage: image)
+                  .resizable()
+                  .scaledToFit()
+              }
+              .contextMenu(menuItems: {
+                Button(role: .destructive) {
+                  if (log.media.count <= 1) {
                     mediaOperating = media
                     mediaOperatingIndex = index
-                    showDeleteOneConfirm.toggle()
-                  } label: {
-                    Label("DetailView_ContextMenu_Delete", systemImage: "trash")
+                    deleteOneConfirmVisible.toggle()
+                  } else {
+                    deleteEntireConfirmVisible.toggle()
                   }
-                  Button(action: {
-                    mediaOperating = media
-                    showShareOneActionSheet.toggle()
-                  }) {
-                    Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
-                  }
-                  Button {
-                    
-                  } label: {
-                    Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
-                  }
-                })
-              }
+                } label: {
+                  Label("DetailView_ContextMenu_Delete", systemImage: "trash")
+                }
+                Button(action: {
+                  mediaOperating = media
+                  shareOneActionSheetVisible.toggle()
+                }) {
+                  Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
+                }
+                Button {
+                  
+                } label: {
+                  Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
+                }
+              })
             }
           }
-          
-          // TODO: If you not to use @State variables in here, it will not updated in sheets.
-          if mediaOperating != nil { Text(mediaOperating!.id.uuidString).foregroundColor(.primary.opacity(0)).frame(width: 0, height: 0) }
-          
         }
+        
+        // TODO: If you not to use @State variables in here, it will not updated in sheets.
+        if mediaOperating != nil { Text(mediaOperating!.id.uuidString).foregroundColor(.primary.opacity(0)).frame(width: 0, height: 0) }
+        
       }
+    }
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
           HStack {
             Button(action: {
-              showShareAllActionSheet.toggle()
+              shareAllActionSheetVisible.toggle()
             }) {
               Label("DetailView_Shareall", systemImage: "square.and.arrow.up.on.square")
             }
@@ -80,27 +85,35 @@ struct DetailView: View {
               Button {} label: {
                 Label("DetailView_Saveall", systemImage: "square.and.arrow.down.on.square")
               }
-              /* Button(role: .destructive) { deleteTransfer() } label: {
+              Button(role: .destructive) { deleteEntireConfirmVisible.toggle() } label: {
                 Label("DetailView_Menu_Delete", systemImage: "trash")
-              } */
+              }
             } label: {
               Image(systemName: "ellipsis.circle")
             }
           }
         }
       }
-      .sheet(isPresented: $showShareAllActionSheet) {
+      .sheet(isPresented: $shareAllActionSheetVisible) {
         ActivityViewController(activityItems: getAllMediaMeta()).ignoresSafeArea()
       }
-      .sheet(isPresented: $showShareOneActionSheet) {
+      .sheet(isPresented: $shareOneActionSheetVisible) {
         ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
       }
-      .alert(isPresented: $showDeleteOneConfirm) {
+      .alert(isPresented: $deleteOneConfirmVisible) {
         Alert(
           title: Text("DetailView_DelOneAlert_Title"),
           message: Text("DetailView_DelOneAlert_Msg"),
           primaryButton: .default(Text("DetailView_DelOneAlert_Cancel"), action: { mediaOperating = nil }),
           secondaryButton: .destructive(Text("DetailView_DelOneAlert_Confirm"), action: { deleteSingle() })
+        )
+      }
+      .alert(isPresented: $deleteEntireConfirmVisible) {
+        Alert(
+          title: Text("DetailView_DelEntireAlert_Title"),
+          message: Text("DetailView_DelEntireAlert_Msg"),
+          primaryButton: .default(Text("DetailView_DelEntireAlert_Cancel"), action: { mediaOperating = nil }),
+          secondaryButton: .destructive(Text("DetailView_DelEntireAlert_Confirm"), action: { deleteEntire() })
         )
       }
   }
@@ -161,13 +174,31 @@ struct DetailView: View {
     guard let media = mediaOperating else { return }
     do {
       let manager = FileManager.default
+      print("Removing file")
+      try manager.removeItem(atPath: "\(path)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
       print("Removing media in log")
       $log.media.remove(at: mediaOperatingIndex!)
       print("Removing entire media in database")
       $medias.remove(media)
-      print("Removing file")
-      try manager.removeItem(atPath: "\(path)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
       mediaOperating = nil
     } catch { return }
+  }
+  
+  func deleteEntire() {
+    let manager = FileManager.default
+    for item in log.media {
+      do {
+        print("Removing file")
+        try manager.removeItem(atPath: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")
+        print("Removing media in log")
+        $log.media.remove(at: 0)
+        print("Removing entire media in database")
+        $medias.remove(item)
+      } catch {
+        continue
+      }
+    }
+    $logs.remove(log)
+    presentationMode.wrappedValue.dismiss()
   }
 }

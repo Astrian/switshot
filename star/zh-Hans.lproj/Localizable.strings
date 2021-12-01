@@ -49,6 +49,11 @@
 "DetailView_DelOneAlert_Msg" = "此操作不可被撤销。";
 "DetailView_DelOneAlert_Cancel" = "不要删除";
 "DetailView_DelOneAlert_Confirm" = "继续";
+"DetailView_Menu_Delete" = "删除此转移";
+"DetailView_DelEntireAlert_Title" = "即将删除此转移";
+"DetailView_DelEntireAlert_Msg" = "转移中的所有媒体将被销毁，并无法恢复。";
+"DetailView_DelEntireAlert_Cancel" = "不要删除";
+"DetailView_DelEntireAlert_Confirm" = "继续";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "关闭";
