@@ -12,18 +12,18 @@ import Alamofire
 struct RecentComp: View {
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   @State var showDetail = false
-  @ObservedResults(TransferLog.self) var logs
+  @ObservedResults(TransferLog.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var logs
   
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
         Text("HomeView_RecentComp_Title").font(.title).bold().padding(.bottom, 4)
         Spacer()
+        Text("\(logs.elements.count)")
       }
       if logs.elements.count != 0 {
         VStack(spacing: 18) {
-          ForEach(0 ..< logs.elements.count) { index in
-            let target = logs.elements[index]
+          ForEach(logs.elements) { target in
             NavigationLink(destination: DetailView(log: target)) {
               VStack(alignment: .leading, spacing: 0) {
                 Image(uiImage: getPreview(log: target)!).resizable().aspectRatio(contentMode: .fit)
