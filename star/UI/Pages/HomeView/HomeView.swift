@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct HomeView: View {
+  @State var aboutVisible = false
   
   var body: some View {
     NavigationView {
@@ -19,9 +20,23 @@ struct HomeView: View {
           Divider()
           RecentComp()
         }.frame(maxWidth: .infinity).padding([.horizontal])
-      }.navigationTitle("HomeView_Title")
+      }
+      .navigationTitle("HomeView_Title")
+      .toolbar {
+        ToolbarItem(placement: .navigationBarTrailing) {
+          Button {
+            aboutVisible.toggle()
+          } label: {
+            Image(systemName: "info.circle")
+          }
+        }
+      }
+    }
+    .sheet(isPresented: $aboutVisible) {
+      AboutView()
     }
   }
+  
 }
 
 struct HomeView_Previews: PreviewProvider {

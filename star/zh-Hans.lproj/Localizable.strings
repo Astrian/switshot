@@ -61,3 +61,10 @@
 "DetailView_QuickLookComp_Menu_Save" = "保存至图库";
 "DetailView_QuickLookComp_Menu_Delete" = "删除";
 "DetailView_QuickLookComp_Share_Title" = "游戏媒体";
+
+// AboutView
+"AboutView_Title" = "关于Switshot";
+"AboutView_Version" = "版本号";
+"AboutView_SystemSettings" = "设置";
+"AboutView_Repo" = "前往GitHub仓库";
+"AboutView_OpenSource" = "Switshot是一款开源软件。";

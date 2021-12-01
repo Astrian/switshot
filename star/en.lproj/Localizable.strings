@@ -59,3 +59,10 @@
 "DetailView_QuickLookComp_Menu_Save" = "Save to library";
 "DetailView_QuickLookComp_Menu_Delete" = "Delete";
 "DetailView_QuickLookComp_Share_Title" = "Game media";
+
+// AboutView
+"AboutView_Title" = "About Switshot";
+"AboutView_Version" = "Version";
+"AboutView_SystemSettings" = "Settings";
+"AboutView_Repo" = "Go to GitHub Repository";
+"AboutView_OpenSource" = "Switshot is an open source project.";
