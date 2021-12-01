@@ -17,7 +17,7 @@ struct DetailView: View {
   @State var QLFilename = ""
   @State var showShareAllActionSheet = false
   @State var showShareOneActionSheet = false
-  @State var mediaShouldShare: TransferedMedia?
+  @State var mediaOperating: TransferedMedia?
   private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   
   var body: some View {
@@ -36,8 +36,8 @@ struct DetailView: View {
                   Label("DetailView_ContextMenu_Delete", systemImage: "trash")
                 }
                 Button(action: {
-                  mediaShouldShare = media
-                  print("\(mediaShouldShare)")
+                  print("selected media: \(media.id.uuidString)")
+                  mediaOperating = media
                   showShareOneActionSheet.toggle()
                 }) {
                   Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
@@ -48,6 +48,10 @@ struct DetailView: View {
               })
             }
           }
+          
+          // TODO: If you not to use @State variables in here, it will not updated in sheets.
+          if mediaOperating != nil { Text(mediaOperating!.id.uuidString).foregroundColor(.primary.opacity(0)).frame(width: 0, height: 0) }
+          
         }
       }
       .navigationBarTitleDisplayMode(.inline)
@@ -76,8 +80,8 @@ struct DetailView: View {
         ActivityViewController(activityItems: getAllMediaMeta()).ignoresSafeArea()
       }
       .sheet(isPresented: $showShareOneActionSheet) {
-        if mediaShouldShare != nil {
-          ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaShouldShare!)).ignoresSafeArea()
+        if mediaOperating != nil {
+          ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
         }
       }
   }
@@ -128,7 +132,7 @@ struct DetailView: View {
       return [LinkPresentationItemSource]()
     }
     let metadata = LPLinkMetadata()
-    metadata.iconProvider = NSItemProvider(contentsOf: URL(string: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!)
+    metadata.iconProvider = NSItemProvider(contentsOf: URL(string: "\(fullPath)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!)
     metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
     metadata.originalURL = URL(string: "\(fullPath)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!
     return [LinkPresentationItemSource(linkMetaData: metadata, shareData: data)]
