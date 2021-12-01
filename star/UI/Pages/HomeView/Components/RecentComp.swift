@@ -11,6 +11,7 @@ import Alamofire
 
 struct RecentComp: View {
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+  @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
   @State var showDetail = false
   @ObservedResults(TransferLog.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var logs
   @ObservedResults(TransferedMedia.self) var medias
@@ -27,35 +28,37 @@ struct RecentComp: View {
         VStack(spacing: 18) {
           ForEach(0 ..< logs.elements.count) { index in
             let target = logs.elements[index]
-            NavigationLink(destination: DetailView(log: target)) {
-              VStack(alignment: .leading, spacing: 0) {
-                Image(uiImage: getPreview(log: target)!).resizable().aspectRatio(contentMode: .fit)
-                HStack(spacing: 0) {
-                  Text(dateFormatter(date: target.date))
-                  Spacer()
-                  if target.media.count > 1{
-                    Text(" +\(target.media.count - 1)")
-                  }
-                }.foregroundColor(Color.primary).padding()
+            if getPreview(log: target) != nil {
+              NavigationLink(destination: DetailView(log: target)) {
+                VStack(alignment: .leading, spacing: 0) {
+                  Image(uiImage: getPreview(log: target)!).resizable().aspectRatio(contentMode: .fit)
+                  HStack(spacing: 0) {
+                    Text(dateFormatter(date: target.date))
+                    Spacer()
+                    if target.media.count > 1{
+                      Text(" +\(target.media.count - 1)")
+                    }
+                  }.foregroundColor(Color.primary).padding()
+                }
+                .background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                .contextMenuWithPreview(actions: [
+                  UIAction(
+                    title: NSLocalizedString("HomeView_RecentComp_Menu_Delete", comment: ""),
+                    image: UIImage(systemName: "trash"),
+                    identifier: nil,
+                    attributes: UIMenuElement.Attributes.destructive,
+                    handler: {_ in
+                      deleteTarget = target
+                      showDelAlert.toggle()
+                    }),
+                  UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
+                  UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
+                ], preview: {
+                  DetailView(log: target)
+                })
               }
-              .background(Color("CardBackground")).cornerRadius(8).clipped().shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
-              .contextMenuWithPreview(actions: [
-                UIAction(
-                  title: NSLocalizedString("HomeView_RecentComp_Menu_Delete", comment: ""),
-                  image: UIImage(systemName: "trash"),
-                  identifier: nil,
-                  attributes: UIMenuElement.Attributes.destructive,
-                  handler: {_ in
-                    deleteTarget = target
-                    showDelAlert.toggle()
-                  }),
-                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
-                UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
-              ], preview: {
-                DetailView(log: target)
-              })
+              .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
             }
-            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
           }
           Text("❦").foregroundColor(Color.gray).padding()
         }
@@ -87,17 +90,20 @@ struct RecentComp: View {
       print("No first")
       return nil
     }
-    guard let data = manager.contents(atPath: "\(path)/media/\(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")") else {
-      print("No such file")
-      print("\(path)/media/ \(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")")
-      return nil
-    }
     if first.type == "photo" {
+      guard let data = manager.contents(atPath: "\(path)/media/\(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")") else {
+        print("No such file")
+        print("\(path)/media/ \(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")")
+        return nil
+      }
       guard let res = UIImage(data: data) else {
         print("cannot read file")
         return nil
       }
       return res
+    } else if first.type == "movie" {
+      print("movie detected")
+      return imageFromVideo(url: URL(string: "\(fullPath)/media/\(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")")!, at: 0)
     } else {
       print("Unknown format")
       return nil

@@ -8,6 +8,7 @@
 import SwiftUI
 import LinkPresentation
 import RealmSwift
+import CoreMedia
 
 struct DetailView: View {
   @State var log: TransferLog
@@ -105,7 +106,7 @@ struct DetailView: View {
         ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
       }
       .sheet(isPresented: $quickLookVisible) {
-        QuickLookComp(url: URL(string: "\(fullPath)/media/\(mediaOperating!.id.uuidString).\(mediaOperating!.type == "photo" ? "jpg" : "mp4")")!)
+        QuickLookComp(url: URL(string: "\(fullPath)/media/\(mediaOperating!.id.uuidString).\(mediaOperating!.type == "photo" ? "jpg" : "mp4")")!, mediaType: mediaOperating!.type)
       }
       .alert(isPresented: $alertVisible) {
         if deleteEntireConfirmVisible {
@@ -141,17 +142,19 @@ struct DetailView: View {
   }
   
   func getPreview(media: UUID, type: String) -> UIImage? {
-    let manager = FileManager.default
-    guard let data = manager.contents(atPath: "\(path)/media/\(media.uuidString).\(type == "photo" ? "jpg" : "mp4")") else {
-      print("No such file")
-      return nil
-    }
     if type == "photo" {
+      let manager = FileManager.default
+      guard let data = manager.contents(atPath: "\(path)/media/\(media.uuidString).\(type == "photo" ? "jpg" : "mp4")") else {
+        print("No such file")
+        return nil
+      }
       guard let res = UIImage(data: data) else {
         print("cannot read file")
         return nil
       }
       return res
+    } else if type == "movie" {
+      return imageFromVideo(url: URL(string: "\(fullPath)/media/\(media.uuidString).\(type == "photo" ? "jpg" : "mp4")")!, at: 0)
     } else {
       print("Unknown format")
       return nil

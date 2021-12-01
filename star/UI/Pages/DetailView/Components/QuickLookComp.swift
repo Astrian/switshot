@@ -10,6 +10,7 @@ import LinkPresentation
 
 struct QuickLookComp: View {
   @State var url: URL
+  @State var mediaType: String
   @State var actionSheetVisible = false
   @Environment(\.presentationMode) private var presentationMode
   
@@ -59,7 +60,11 @@ struct QuickLookComp: View {
   func getUIImage() -> UIImage {
     let manager = FileManager.default
     let shareData = manager.contents(atPath: url.path)!
-    return UIImage(data: shareData)!
+    if mediaType == "image" {
+      return UIImage(data: shareData)!
+    } else {
+      return imageFromVideo(url: url, at: 0)!
+    }
   }
   
   func getShareMedia() -> LinkPresentationItemSource {
