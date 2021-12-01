@@ -7,7 +7,6 @@
 
 import Foundation
 import Intents
-import Alamofire
 
 class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
   func handle(intent: TransferMediaIntent) async -> TransferMediaIntentResponse {
