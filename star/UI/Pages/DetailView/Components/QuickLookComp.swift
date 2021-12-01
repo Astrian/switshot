@@ -10,7 +10,7 @@ import LinkPresentation
 
 struct QuickLookComp: View {
   @State var url: URL
-  @State var showActionSheet = false
+  @State var actionSheetVisible = false
   @Environment(\.presentationMode) private var presentationMode
   
   var body: some View {
@@ -29,7 +29,7 @@ struct QuickLookComp: View {
           Spacer()
           HStack {
             Button(action: {
-              showActionSheet.toggle()
+              actionSheetVisible.toggle()
             }) {
               Label("DetailView_QuickLookComp_Share", systemImage: "square.and.arrow.up").labelStyle(.titleAndIcon).foregroundColor(Color.primary).padding(.horizontal, 18).padding(.vertical, 8).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
             }
@@ -39,9 +39,9 @@ struct QuickLookComp: View {
               } label: {
                 Label("DetailView_QuickLookComp_Menu_Save", systemImage: "square.and.arrow.down")
               }
-              Button(role: .destructive) {} label: {
+              /* Button(role: .destructive) {} label: {
                 Label("DetailView_QuickLookComp_Menu_Delete", systemImage: "trash")
-              }
+              } */
             } label: {
               Image(systemName: "ellipsis.circle").foregroundColor(Color.primary).padding(.horizontal, 18).padding(.vertical, 8).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
             }
@@ -50,9 +50,10 @@ struct QuickLookComp: View {
         Spacer()
       }
     }
-      .sheet(isPresented: $showActionSheet) {
+      .sheet(isPresented: $actionSheetVisible) {
         ActivityViewController(activityItems: [getShareMedia()]).ignoresSafeArea()
       }
+      
   }
   
   func getUIImage() -> UIImage {
