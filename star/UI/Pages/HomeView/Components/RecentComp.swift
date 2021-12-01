@@ -19,7 +19,6 @@ struct RecentComp: View {
       HStack {
         Text("HomeView_RecentComp_Title").font(.title).bold().padding(.bottom, 4)
         Spacer()
-        Text("\(logs.elements.count)")
       }
       if logs.elements.count != 0 {
         VStack(spacing: 18) {

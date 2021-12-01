@@ -131,6 +131,7 @@ struct ConnectionComp: View {
           media.code = i
           media.id = uuid
           media.type = transferRes.mediaType
+          $medias.append(media)
           log.media.append(media)
           i += 1
         }
