@@ -54,7 +54,7 @@
 "DetailView_DelEntireAlert_Msg" = "All media in this transfer will be wiped out and can’t be recovered.";
 
 // QuickLookComp
-"DetailView_QuickLookComp_Dismiss" = "Dismiss";
+"DetailView_QuickLookComp_Dismiss" = "Done";
 "DetailView_QuickLookComp_Share" = "Share";
 "DetailView_QuickLookComp_Menu_Save" = "Save to library";
 "DetailView_QuickLookComp_Menu_Delete" = "Delete";

@@ -14,16 +14,19 @@ struct QuickLookComp: View {
   @Environment(\.presentationMode) private var presentationMode
   
   var body: some View {
-    PreviewController(url: url)
-      .navigationBarTitleDisplayMode(.inline)
-      .navigationBarBackButtonHidden(true)
-      .toolbar {
-        ToolbarItem(placement: .navigationBarLeading) {
+    ZStack {
+      PreviewController(url: url)
+        .background(Color.black)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .ignoresSafeArea()
+      
+      VStack {
+        HStack {
           Button(action: { presentationMode.wrappedValue.dismiss() }) {
-            Label("DetailView_QuickLookComp_Dismiss", systemImage: "xmark").foregroundColor(Color.primary).padding(.horizontal, 18).padding(.vertical, 8).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
+            Text("DetailView_QuickLookComp_Dismiss").foregroundColor(Color.primary).padding(.horizontal, 18).padding(.vertical, 8).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
           }
-        }
-        ToolbarItem(placement: .navigationBarTrailing) {
+          Spacer()
           HStack {
             Button(action: {
               showActionSheet.toggle()
@@ -43,8 +46,10 @@ struct QuickLookComp: View {
               Image(systemName: "ellipsis.circle").foregroundColor(Color.primary).padding(.horizontal, 18).padding(.vertical, 8).background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
             }
           }
-        }
-      }.ignoresSafeArea()
+        }.padding()
+        Spacer()
+      }
+    }
       .sheet(isPresented: $showActionSheet) {
         ActivityViewController(activityItems: [getShareMedia()]).ignoresSafeArea()
       }

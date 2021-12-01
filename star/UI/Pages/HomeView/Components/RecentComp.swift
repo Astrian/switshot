@@ -74,9 +74,6 @@ struct RecentComp: View {
         primaryButton: .default(Text("HomeView_RecentComp_DelAlert_Cancel"), action: { deleteTarget = nil }),
         secondaryButton: .destructive(Text("HomeView_RecentComp_DelAlert_Confirm"), action: { deleteTransfer() }))
     }
-    .onAppear {
-      printFileNum()
-    }
   }
   
   func dateFormatter(date: Date) -> String {
@@ -96,7 +93,6 @@ struct RecentComp: View {
       return nil
     }
     if first.type == "photo" {
-      print(data)
       guard let res = UIImage(data: data) else {
         print("cannot read file")
         return nil
@@ -121,7 +117,6 @@ struct RecentComp: View {
     }
     $logs.remove(target)
     deleteTarget = nil
-    printFileNum()
   }
   
   func printFileNum() {

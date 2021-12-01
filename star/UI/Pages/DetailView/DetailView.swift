@@ -15,13 +15,13 @@ struct DetailView: View {
   @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
   @State var showQL = false
   @State var QLFilename = ""
+  @State var alertVisible = false
   @State var shareAllActionSheetVisible = false
   @State var shareOneActionSheetVisible = false
   @State var deleteOneConfirmVisible = false
   @State var deleteEntireConfirmVisible = false
   @State var quickLookVisible = false
   @State var mediaOperating: TransferedMedia?
-  @State var mediaOperatingIndex: Int?
   @ObservedResults(TransferedMedia.self) var medias
   @ObservedResults(TransferLog.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var logs
   @Environment(\.presentationMode) private var presentationMode
@@ -31,8 +31,7 @@ struct DetailView: View {
     ScrollView {
       VStack {
         LazyVGrid(columns: columnGrid) {
-          ForEach(0 ..< log.media.count) { index in
-            let media = log.media[index]
+          ForEach(log.media) { media in
             if getPreview(media: media.id, type: media.type) != nil {
               let image = getPreview(media: media.id, type: media.type)!
               Image(uiImage: image)
@@ -40,13 +39,13 @@ struct DetailView: View {
                 .scaledToFit()
                 .contextMenu(menuItems: {
                   Button(role: .destructive) {
-                    if (log.media.count <= 1) {
+                    if (log.media.count > 1) {
                       mediaOperating = media
-                      mediaOperatingIndex = index
                       deleteOneConfirmVisible.toggle()
                     } else {
                       deleteEntireConfirmVisible.toggle()
                     }
+                    alertVisible.toggle()
                   } label: {
                     Label("DetailView_ContextMenu_Delete", systemImage: "trash")
                   }
@@ -72,7 +71,6 @@ struct DetailView: View {
         
         // TODO: If you not to use @State variables in here, it will not updated in sheets.
         if mediaOperating != nil { Text(mediaOperating!.id.uuidString).foregroundColor(.primary.opacity(0)).frame(width: 0, height: 0) }
-        
       }
     }
       .navigationBarTitleDisplayMode(.inline)
@@ -88,7 +86,10 @@ struct DetailView: View {
               Button {} label: {
                 Label("DetailView_Saveall", systemImage: "square.and.arrow.down.on.square")
               }
-              Button(role: .destructive) { deleteEntireConfirmVisible.toggle() } label: {
+              Button(role: .destructive) {
+                deleteEntireConfirmVisible.toggle()
+                alertVisible.toggle()
+              } label: {
                 Label("DetailView_Menu_Delete", systemImage: "trash")
               }
             } label: {
@@ -106,21 +107,36 @@ struct DetailView: View {
       .sheet(isPresented: $quickLookVisible) {
         QuickLookComp(url: URL(string: "\(fullPath)/media/\(mediaOperating!.id.uuidString).\(mediaOperating!.type == "photo" ? "jpg" : "mp4")")!)
       }
-      .alert(isPresented: $deleteOneConfirmVisible) {
-        Alert(
-          title: Text("DetailView_DelOneAlert_Title"),
-          message: Text("DetailView_DelOneAlert_Msg"),
-          primaryButton: .default(Text("DetailView_DelOneAlert_Cancel"), action: { mediaOperating = nil }),
-          secondaryButton: .destructive(Text("DetailView_DelOneAlert_Confirm"), action: { deleteSingle() })
-        )
-      }
-      .alert(isPresented: $deleteEntireConfirmVisible) {
-        Alert(
-          title: Text("DetailView_DelEntireAlert_Title"),
-          message: Text("DetailView_DelEntireAlert_Msg"),
-          primaryButton: .default(Text("DetailView_DelEntireAlert_Cancel"), action: { mediaOperating = nil }),
-          secondaryButton: .destructive(Text("DetailView_DelEntireAlert_Confirm"), action: { deleteEntire() })
-        )
+      .alert(isPresented: $alertVisible) {
+        if deleteEntireConfirmVisible {
+          return Alert(
+            title: Text("DetailView_DelEntireAlert_Title"),
+            message: Text("DetailView_DelEntireAlert_Msg"),
+            primaryButton: .default(Text("DetailView_DelEntireAlert_Cancel"), action: {
+              mediaOperating = nil
+              deleteEntireConfirmVisible = false
+            }),
+            secondaryButton: .destructive(Text("DetailView_DelEntireAlert_Confirm"), action: {
+              deleteEntire()
+              deleteEntireConfirmVisible = false
+            })
+          )
+        } else if deleteOneConfirmVisible {
+          return Alert(
+            title: Text("DetailView_DelOneAlert_Title"),
+            message: Text("DetailView_DelOneAlert_Msg"),
+            primaryButton: .default(Text("DetailView_DelOneAlert_Cancel"), action: {
+              mediaOperating = nil
+              deleteOneConfirmVisible = false
+            }),
+            secondaryButton: .destructive(Text("DetailView_DelOneAlert_Confirm"), action: {
+              deleteSingle()
+              deleteOneConfirmVisible = false
+            })
+          )
+        } else {
+          return Alert(title: Text("Unknown operation"))
+        }
       }
   }
   
@@ -131,7 +147,6 @@ struct DetailView: View {
       return nil
     }
     if type == "photo" {
-      print(data)
       guard let res = UIImage(data: data) else {
         print("cannot read file")
         return nil
@@ -183,7 +198,12 @@ struct DetailView: View {
       print("Removing file")
       try manager.removeItem(atPath: "\(path)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
       print("Removing media in log")
-      $log.media.remove(at: mediaOperatingIndex!)
+      for i in (0 ..< log.media.count) {
+        print("i = \(i)")
+        if log.media[i].id.uuidString == media.id.uuidString {
+          $log.media.remove(at: i)
+        }
+      }
       print("Removing entire media in database")
       $medias.remove(media)
       mediaOperating = nil
