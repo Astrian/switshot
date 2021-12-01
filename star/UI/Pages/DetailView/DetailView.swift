@@ -19,6 +19,7 @@ struct DetailView: View {
   @State var shareOneActionSheetVisible = false
   @State var deleteOneConfirmVisible = false
   @State var deleteEntireConfirmVisible = false
+  @State var quickLookVisible = false
   @State var mediaOperating: TransferedMedia?
   @State var mediaOperatingIndex: Int?
   @ObservedResults(TransferedMedia.self) var medias
@@ -34,35 +35,37 @@ struct DetailView: View {
             let media = log.media[index]
             if getPreview(media: media.id, type: media.type) != nil {
               let image = getPreview(media: media.id, type: media.type)!
-              NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
-                Image(uiImage: image)
-                  .resizable()
-                  .scaledToFit()
-              }
-              .contextMenu(menuItems: {
-                Button(role: .destructive) {
-                  if (log.media.count <= 1) {
-                    mediaOperating = media
-                    mediaOperatingIndex = index
-                    deleteOneConfirmVisible.toggle()
-                  } else {
-                    deleteEntireConfirmVisible.toggle()
+              Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .contextMenu(menuItems: {
+                  Button(role: .destructive) {
+                    if (log.media.count <= 1) {
+                      mediaOperating = media
+                      mediaOperatingIndex = index
+                      deleteOneConfirmVisible.toggle()
+                    } else {
+                      deleteEntireConfirmVisible.toggle()
+                    }
+                  } label: {
+                    Label("DetailView_ContextMenu_Delete", systemImage: "trash")
                   }
-                } label: {
-                  Label("DetailView_ContextMenu_Delete", systemImage: "trash")
-                }
-                Button(action: {
+                  Button(action: {
+                    mediaOperating = media
+                    shareOneActionSheetVisible.toggle()
+                  }) {
+                    Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
+                  }
+                  Button {
+                    
+                  } label: {
+                    Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
+                  }
+                })
+                .onTapGesture {
                   mediaOperating = media
-                  shareOneActionSheetVisible.toggle()
-                }) {
-                  Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
+                  quickLookVisible.toggle()
                 }
-                Button {
-                  
-                } label: {
-                  Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
-                }
-              })
             }
           }
         }
@@ -99,6 +102,9 @@ struct DetailView: View {
       }
       .sheet(isPresented: $shareOneActionSheetVisible) {
         ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
+      }
+      .sheet(isPresented: $quickLookVisible) {
+        QuickLookComp(url: URL(string: "\(fullPath)/media/\(mediaOperating!.id.uuidString).\(mediaOperating!.type == "photo" ? "jpg" : "mp4")")!)
       }
       .alert(isPresented: $deleteOneConfirmVisible) {
         Alert(
