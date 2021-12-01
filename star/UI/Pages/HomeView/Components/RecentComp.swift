@@ -10,10 +10,9 @@ import RealmSwift
 import Alamofire
 
 struct RecentComp: View {
-  @ObservedRealmObject var list: TransferLogList
-  @ObservedRealmObject var mediaList: TransferedMediaList
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   @State var showDetail = false
+  @ObservedResults(TransferLog.self) var logs
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -21,16 +20,17 @@ struct RecentComp: View {
         Text("HomeView_RecentComp_Title").font(.title).bold().padding(.bottom, 4)
         Spacer()
       }
-      if sortedList().count != 0 {
+      if logs.elements.count != 0 {
         VStack(spacing: 18) {
-          ForEach(0 ..< sortedList().count) { index in
-            NavigationLink(destination: DetailView(log: sortedList()[index], mediaList: mediaList)) {
+          ForEach(0 ..< logs.elements.count) { index in
+            let target = logs.elements[index]
+            NavigationLink(destination: DetailView(log: target)) {
               VStack(alignment: .leading, spacing: 0) {
-                Image(uiImage: getPreview(log: sortedList()[index])!).resizable().aspectRatio(contentMode: .fit)
+                Image(uiImage: getPreview(log: target)!).resizable().aspectRatio(contentMode: .fit)
                 HStack(spacing: 0) {
-                  Text(dateFormatter(date: sortedList()[index].date))
-                  if sortedList()[index].media.count > 1{
-                    Text(" +\(sortedList()[index].media.count - 1)")
+                  Text(dateFormatter(date: target.date))
+                  if target.media.count > 1{
+                    Text(" +\(target.media.count - 1)")
                   }
                 }.foregroundColor(Color.primary).padding()
               }
@@ -40,7 +40,7 @@ struct RecentComp: View {
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Share", comment: ""), image: UIImage(systemName: "square.and.arrow.up.on.square"), identifier: nil, handler: {_ in }),
                 UIAction(title: NSLocalizedString("HomeView_RecentComp_Menu_Save", comment: ""), image: UIImage(systemName: "square.and.arrow.down.on.square"), identifier: nil, handler: {_ in })
               ], preview: {
-                DetailView(log: sortedList()[index], mediaList: mediaList)
+                DetailView(log: target)
               })
             }
             .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
@@ -85,9 +85,9 @@ struct RecentComp: View {
     }
   }
   
-  func sortedList() -> [TransferLog] {
+  /* func sortedList() -> [TransferLog] {
     return list.logs.sorted { (f, s) -> Bool in
       return f.date > s.date ? true : false
     }
-  }
+  } */
 }

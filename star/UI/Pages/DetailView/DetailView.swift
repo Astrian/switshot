@@ -17,7 +17,6 @@ struct DetailView: View {
   @State var showQL = false
   @State var QLFilename = ""
   @State var showShareAllActionSheet = false
-  @ObservedRealmObject var mediaList: TransferedMediaList
   
   var body: some View {
       ScrollView {

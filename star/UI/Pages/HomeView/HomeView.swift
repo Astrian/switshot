@@ -9,33 +9,15 @@ import SwiftUI
 import RealmSwift
 
 struct HomeView: View {
-  @ObservedResults(TransferLogList.self) var lists
-  @ObservedResults(TransferedMediaList.self) var medias
   
   var body: some View {
     NavigationView {
       ScrollView {
         VStack(alignment: .leading) {
           Divider()
-          if lists.first != nil && medias.first != nil {
-            let list = lists.first!
-            let media = medias.first!
-            ConnectionComp(list: list, mediaList: media)
-            Divider()
-            RecentComp(list: list, mediaList: media)
-          } else {
-            HStack {
-              ProgressView().onAppear{
-                if lists.first == nil {
-                  $lists.append(TransferLogList())
-                }
-                if medias.first == nil {
-                  $medias.append(TransferedMediaList())
-                }
-              }
-              Text("初始化...")
-            }.padding(.top, 100)
-          }
+          ConnectionComp()
+          Divider()
+          RecentComp()
         }.frame(maxWidth: .infinity).padding([.horizontal])
       }.navigationTitle("HomeView_Title")
     }

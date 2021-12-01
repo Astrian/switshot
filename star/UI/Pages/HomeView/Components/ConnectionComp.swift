@@ -11,8 +11,8 @@ import RealmSwift
 struct ConnectionComp: View {
   @State var status = 0
   @State var consoleName = ""
-  @ObservedRealmObject var list: TransferLogList
-  @ObservedRealmObject var mediaList: TransferedMediaList
+  @ObservedResults(TransferLog.self) var logs
+  @ObservedResults(TransferedMedia.self) var medias
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -132,10 +132,9 @@ struct ConnectionComp: View {
           media.id = uuid
           media.type = transferRes.mediaType
           log.media.append(media)
-          $mediaList.media.append(media)
           i += 1
         }
-        $list.logs.append(log)
+        $logs.append(log)
         status = 3
       } catch {
         status = -1
