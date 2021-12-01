@@ -11,41 +11,54 @@ import RealmSwift
 
 struct DetailView: View {
   @State var log: TransferLog
+  @State var logIndex: Int
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
   @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
   @State var showQL = false
   @State var QLFilename = ""
   @State var showShareAllActionSheet = false
   @State var showShareOneActionSheet = false
+  @State var showDeleteOneConfirm = false
   @State var mediaOperating: TransferedMedia?
+  @State var mediaOperatingIndex: Int?
+  @ObservedResults(TransferedMedia.self) var medias
+  @ObservedResults(TransferLog.self, sortDescriptor: SortDescriptor(keyPath: "date", ascending: false)) var logs
   private let columnGrid = [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)]
   
   var body: some View {
       ScrollView {
         VStack {
           LazyVGrid(columns: columnGrid) {
-            ForEach(log.media) { media in
-              let image = getPreview(media: media.id, type: media.type)!
-              NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
-                Image(uiImage: image)
-                  .resizable()
-                  .scaledToFit()
+            ForEach(0 ..< log.media.count) { index in
+              let media = log.media[index]
+              if getPreview(media: media.id, type: media.type) != nil {
+                let image = getPreview(media: media.id, type: media.type)!
+                NavigationLink(destination: QuickLookComp(url: URL(string: "\(fullPath)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")!)) {
+                  Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                }
+                .contextMenu(menuItems: {
+                  Button(role: .destructive) {
+                    mediaOperating = media
+                    mediaOperatingIndex = index
+                    showDeleteOneConfirm.toggle()
+                  } label: {
+                    Label("DetailView_ContextMenu_Delete", systemImage: "trash")
+                  }
+                  Button(action: {
+                    mediaOperating = media
+                    showShareOneActionSheet.toggle()
+                  }) {
+                    Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
+                  }
+                  Button {
+                    
+                  } label: {
+                    Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
+                  }
+                })
               }
-              .contextMenu(menuItems: {
-                Button(role: .destructive) {  } label: {
-                  Label("DetailView_ContextMenu_Delete", systemImage: "trash")
-                }
-                Button(action: {
-                  print("selected media: \(media.id.uuidString)")
-                  mediaOperating = media
-                  showShareOneActionSheet.toggle()
-                }) {
-                  Label("DetailView_ContextMenu_Share", systemImage: "square.and.arrow.up")
-                }
-                Button {} label: {
-                  Label("DetailView_ContextMenu_Save", systemImage: "square.and.arrow.down")
-                }
-              })
             }
           }
           
@@ -80,9 +93,15 @@ struct DetailView: View {
         ActivityViewController(activityItems: getAllMediaMeta()).ignoresSafeArea()
       }
       .sheet(isPresented: $showShareOneActionSheet) {
-        if mediaOperating != nil {
-          ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
-        }
+        ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
+      }
+      .alert(isPresented: $showDeleteOneConfirm) {
+        Alert(
+          title: Text("DetailView_DelOneAlert_Title"),
+          message: Text("DetailView_DelOneAlert_Msg"),
+          primaryButton: .default(Text("DetailView_DelOneAlert_Cancel"), action: { mediaOperating = nil }),
+          secondaryButton: .destructive(Text("DetailView_DelOneAlert_Confirm"), action: { deleteSingle() })
+        )
       }
   }
   
@@ -136,5 +155,19 @@ struct DetailView: View {
     metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
     metadata.originalURL = URL(string: "\(fullPath)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")!
     return [LinkPresentationItemSource(linkMetaData: metadata, shareData: data)]
+  }
+  
+  func deleteSingle() {
+    guard let media = mediaOperating else { return }
+    do {
+      let manager = FileManager.default
+      print("Removing media in log")
+      $log.media.remove(at: mediaOperatingIndex!)
+      print("Removing entire media in database")
+      $medias.remove(media)
+      print("Removing file")
+      try manager.removeItem(atPath: "\(path)/media/\(media.id.uuidString).\(media.type == "photo" ? "jpg" : "mp4")")
+      mediaOperating = nil
+    } catch { return }
   }
 }

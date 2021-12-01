@@ -45,6 +45,10 @@
 "DetailView_ContextMenu_Delete" = "删除";
 "DetailView_ContextMenu_Save" = "保存至图库";
 "DetailView_ContextMenu_Share" = "分享";
+"DetailView_DelOneAlert_Title" = "即将删除此媒体";
+"DetailView_DelOneAlert_Msg" = "此操作不可被撤销。";
+"DetailView_DelOneAlert_Cancel" = "不要删除";
+"DetailView_DelOneAlert_Confirm" = "继续";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "关闭";

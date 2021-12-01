@@ -45,6 +45,10 @@
 "DetailView_ContextMenu_Delete" = "Delete";
 "DetailView_ContextMenu_Save" = "Save to library";
 "DetailView_ContextMenu_Share" = "Share";
+"DetailView_DelOneAlert_Title" = "Deleting this media";
+"DetailView_DelOneAlert_Msg" = "This operation cannot be undone.";
+"DetailView_DelOneAlert_Cancel" = "Don’t delete";
+"DetailView_DelOneAlert_Confirm" = "Continue";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "Dismiss";
