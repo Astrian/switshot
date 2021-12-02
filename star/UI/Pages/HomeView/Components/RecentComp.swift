@@ -7,7 +7,6 @@
 
 import SwiftUI
 import RealmSwift
-import Alamofire
 
 struct RecentComp: View {
   @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path

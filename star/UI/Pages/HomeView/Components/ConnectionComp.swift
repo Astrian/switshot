@@ -65,9 +65,7 @@ struct ConnectionComp: View {
             Button(action: { prepareTransfer() }) {
               Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
             }
-            Button(action: {}) {
-              Text("HomeView_ConnectionComp_Error_HelpBtn")
-            }
+            Link("HomeView_ConnectionComp_Error_HelpBtn", destination: URL(string: "https://switshot.notion.site/How-to-connect-to-my-Nintendo-Switch-9a9f4791409942c3a02f39db807ccae9")!)
           }
         }
       }
