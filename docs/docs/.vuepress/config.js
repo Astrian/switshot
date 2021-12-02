@@ -50,6 +50,7 @@ function getSidebar(lang) {
       text: sidebarLanguage[lang].basic,
       children: [
         `${langInUrl}/basic/transfer.md`,
+        `${langInUrl}/basic/shortcut.md`,
       ]
     }
   ]
@@ -81,7 +82,7 @@ function getNavbar(lang) {
   else langInUrl = `/${lang}`
   let res = [
     { text: navBarLanguage[lang].basic, link: `${langInUrl}/basic/transfer.md` },
-    { text: navBarLanguage[lang].qna, link: `${langInUrl}/basic/transfer.md` },
+    { text: navBarLanguage[lang].qna, link: `${langInUrl}/qna/` },
     { text: navBarLanguage[lang].links, children: [
       { text: navBarLanguage[lang].links_github, link: 'https://github.com/Astrian/switshot'},
       { text: navBarLanguage[lang].links_appstore, link: 'https://apps.apple.com/us/app/switshot-console-media-manage/id1585470023'},

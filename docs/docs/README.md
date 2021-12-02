@@ -11,4 +11,4 @@ Basic usage instructions and tips about Switshots.
 ## Frequently Asked Questions
 Get solutions to common problems.
 
-[Start→](/basic/transfer.md)
+[Start→](/qna/)

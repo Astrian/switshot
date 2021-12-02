@@ -11,4 +11,4 @@ Switshot 的基本使用说明与提示。
 ## 常见问题
 获得常见疑难杂症的相关帮助。
 
-[走你 →](/zh-cn/basic/transfer.md)
+[走你 →](/zh-cn/qna/)
