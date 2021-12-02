@@ -3,13 +3,21 @@ module.exports = {
     logo: '/images/icon.png',
     locales: {
       '/': {
+        selectLanguageText: 'English',
         selectLanguageName: 'English (US)',
         sidebar: getSidebar('en-us'),
+        navbar: [
+          { text: 'Basic Usage', link: '/basic/transfer.md' },
+        ]
       },
       '/zh-cn/': {
+        selectLanguageText: '简体中文',
         selectLanguageName: '简体中文（中国大陆）',
         sidebar: getSidebar('zh-cn'),
-        tip: '提示'
+        tip: '提示',
+        navbar: [
+          { text: '基本用法', link: '/zh-cn/basic/transfer.md' },
+        ]
       }
     }
   },
