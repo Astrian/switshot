@@ -28,7 +28,8 @@ module.exports = {
       title: 'Switshot 帮助中心',
       description: '获取有关 Switshot 的解决方案和技巧。',
     },
-  }
+  },
+  head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
 }
 
 function getSidebar(lang) {
