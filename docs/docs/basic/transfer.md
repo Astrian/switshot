@@ -20,6 +20,12 @@ If you selected a screenshot, Nintendo Switch will ask you about “Only This On
 
 Next, Switch will show the QR code that include a Wi-Fi network information. Scan it with [Camera app](https://support.apple.com/en-us/HT208843) or iOS QR scanner on your iPhone.
 
+::: tip
+Do not exit “Send to Smartphone” screen in Nintendo Swith in whole transfer progress.
+:::
+
+![](https://i.loli.net/2021/09/16/lQDj2y1wSVoUkHz.png)
+
 Next, launch Switshot now. Then, Switshot will try to connect to Nintendo Switch.
 
 ::: tip
