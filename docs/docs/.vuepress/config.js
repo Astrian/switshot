@@ -6,18 +6,14 @@ module.exports = {
         selectLanguageText: 'English',
         selectLanguageName: 'English (US)',
         sidebar: getSidebar('en-us'),
-        navbar: [
-          { text: 'Basic Usage', link: '/basic/transfer.md' },
-        ]
+        navbar: getNavbar('en-us'),
       },
       '/zh-cn/': {
         selectLanguageText: '简体中文',
         selectLanguageName: '简体中文（中国大陆）',
         sidebar: getSidebar('zh-cn'),
         tip: '提示',
-        navbar: [
-          { text: '基本用法', link: '/zh-cn/basic/transfer.md' },
-        ]
+        navbar: getNavbar('zh-cn'),
       }
     }
   },
@@ -38,10 +34,10 @@ module.exports = {
 function getSidebar(lang) {
   let sidebarLanguage = {
     'zh-cn': {
-      basic: '基本用法'
+      basic: '必知必会'
     },
     'en-us': {
-      basic: 'Basic Usage'
+      basic: 'Must-knows'
     }
   }
 
@@ -60,3 +56,37 @@ function getSidebar(lang) {
   return res
 }
 
+function getNavbar(lang) {
+  let navBarLanguage = {
+    'zh-cn': {
+      basic: '必知必会',
+      qna: '常见问题',
+      links: '常用链接',
+      links_github: 'GitHub',
+      links_appstore: 'App Store',
+      links_updates: '更新与资讯'
+    },
+    'en-us': {
+      basic: 'Must-knows',
+      qna: 'Q&A',
+      links: 'Links',
+      links_github: 'GitHub',
+      links_appstore: 'App Store',
+      links_updates: 'Updates & News'
+    }
+  }
+
+  let langInUrl = ""
+  if (lang === 'en-us') langInUrl = ''
+  else langInUrl = `/${lang}`
+  let res = [
+    { text: navBarLanguage[lang].basic, link: `${langInUrl}/basic/transfer.md` },
+    { text: navBarLanguage[lang].qna, link: `${langInUrl}/basic/transfer.md` },
+    { text: navBarLanguage[lang].links, children: [
+      { text: navBarLanguage[lang].links_github, link: 'https://github.com/Astrian/switshot'},
+      { text: navBarLanguage[lang].links_appstore, link: 'https://apps.apple.com/us/app/switshot-console-media-manage/id1585470023'},
+      { text: navBarLanguage[lang].links_updates, link: 'https://updates.switshot.app'}
+    ] }
+  ]
+  return res
+}
