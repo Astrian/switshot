@@ -106,7 +106,7 @@ struct DetailView: View {
         ActivityViewController(activityItems: getOneImageMediaMeta(item: mediaOperating!)).ignoresSafeArea()
       }
       .sheet(isPresented: $quickLookVisible) {
-        QuickLookComp(url: URL(string: "\(fullPath)/media/\(mediaOperating!.id.uuidString).\(mediaOperating!.type == "photo" ? "jpg" : "mp4")")!, mediaType: mediaOperating!.type)
+        QuickLookComp(uuid: mediaOperating!.id, mediaType: mediaOperating!.type)
       }
       .alert(isPresented: $alertVisible) {
         if deleteEntireConfirmVisible {
@@ -233,13 +233,17 @@ struct DetailView: View {
   
   func saveToLibrary(_ list: [TransferedMedia]?) {
     let manager = FileManager.default
-    if list != nil {
+    if list != nil { 
       for i in list! {
         guard let data = manager.contents(atPath: "\(path)/media/\(i.id.uuidString).\(i.type == "photo" ? "jpg" : "mp4")") else {
           print("No such file")
           continue
         }
-        UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+        if i.type == "photo" {
+          UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+        } else if i.type == "movie" {
+          saveVideo(i.id)
+        }
       }
     } else {
       for i in log.media {
@@ -247,7 +251,11 @@ struct DetailView: View {
           print("No such file")
           continue
         }
-        UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+        if i.type == "photo" {
+          UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+        } else if i.type == "movie" {
+          saveVideo(i.id)
+        }
       }
     }
   }

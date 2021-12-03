@@ -37,7 +37,13 @@ func transfer(saveCopy: Bool?) async throws -> TransferResult {
     let fileName = (fileUuid.uuidString) + "." + String(item.split(separator: ".")[1])
     print("fileName = \(fileName)")
     manager.createFile(atPath: "\(String(describing: path))/media/\(fileName)", contents: fileData, attributes: nil)
-    if (saveCopy ?? false) { UIImageWriteToSavedPhotosAlbum(UIImage(data: fileData)!, nil, nil, nil) }
+    if (saveCopy ?? false) {
+      if res.FileType == "photo" {
+        UIImageWriteToSavedPhotosAlbum(UIImage(data: fileData)!, nil, nil, nil)
+      } else if res.FileType == "movie" {
+        saveVideo(fileUuid)
+      }
+    }
     i += 1
   }
   let transferResult = TransferResult(consoleName: res.ConsoleName, data: files, mediaType: res.FileType)

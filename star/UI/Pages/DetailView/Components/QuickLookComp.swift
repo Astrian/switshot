@@ -9,14 +9,15 @@ import SwiftUI
 import LinkPresentation
 
 struct QuickLookComp: View {
-  @State var url: URL
+  @State var fullPath = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.absoluteString
+  @State var uuid: UUID
   @State var mediaType: String
   @State var actionSheetVisible = false
   @Environment(\.presentationMode) private var presentationMode
   
   var body: some View {
     ZStack {
-      PreviewController(url: url)
+      PreviewController(url: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!)
         .background(Color.black)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
@@ -36,7 +37,11 @@ struct QuickLookComp: View {
             }
             Menu {
               Button {
-                UIImageWriteToSavedPhotosAlbum(getUIImage(), nil, nil, nil)
+                if mediaType == "photo" {
+                  UIImageWriteToSavedPhotosAlbum(getUIImage(), nil, nil, nil)
+                } else if mediaType == "movie" {
+                  saveVideo(uuid)
+                }
               } label: {
                 Label("DetailView_QuickLookComp_Menu_Save", systemImage: "square.and.arrow.down")
               }
@@ -59,19 +64,19 @@ struct QuickLookComp: View {
   
   func getUIImage() -> UIImage {
     let manager = FileManager.default
-    let shareData = manager.contents(atPath: url.path)!
+    let shareData = manager.contents(atPath: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!.path)!
     if mediaType == "image" {
       return UIImage(data: shareData)!
     } else {
-      return imageFromVideo(url: url, at: 0)!
+      return imageFromVideo(url: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!, at: 0)!
     }
   }
   
   func getShareMedia() -> LinkPresentationItemSource {
     let metadata = LPLinkMetadata()
-    metadata.iconProvider = NSItemProvider(contentsOf: url)
+    metadata.iconProvider = NSItemProvider(contentsOf: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!)
     metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
-    metadata.originalURL = url
+    metadata.originalURL = URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")
     return LinkPresentationItemSource(linkMetaData: metadata, shareData: getUIImage())
   }
 }

@@ -37,12 +37,13 @@
 		459F4E632757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		459F4E642757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		459F4E672757B110002A2A53 /* imageFromVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E662757B110002A2A53 /* imageFromVideo.swift */; };
-		459F4E682757B110002A2A53 /* imageFromVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E662757B110002A2A53 /* imageFromVideo.swift */; };
 		459F4E6B2757B782002A2A53 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E6A2757B782002A2A53 /* AboutView.swift */; };
 		459F4E6C2757B782002A2A53 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E6A2757B782002A2A53 /* AboutView.swift */; };
 		45AA097326EB8A5C001043AE /* starApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AA097226EB8A5C001043AE /* starApp.swift */; };
 		45AA097726EB8A5D001043AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097626EB8A5D001043AE /* Assets.xcassets */; };
 		45AA097A26EB8A5D001043AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AA097926EB8A5D001043AE /* Preview Assets.xcassets */; };
+		45B0D4692759A64D0009D033 /* saveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0D4682759A64D0009D033 /* saveVideo.swift */; };
+		45B0D46A2759A64D0009D033 /* saveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0D4682759A64D0009D033 /* saveVideo.swift */; };
 		45BA08982755CB77003C8F58 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BA08972755CB77003C8F58 /* InteractionView.swift */; };
 		DFB1E46526EFF2E60035A8F3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DFB1E46726EFF2E60035A8F3 /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
@@ -111,6 +112,7 @@
 		45AA097626EB8A5D001043AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45AA097926EB8A5D001043AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45AA097B26EB8A5D001043AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45B0D4682759A64D0009D033 /* saveVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveVideo.swift; sourceTree = "<group>"; };
 		45BA08972755CB77003C8F58 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		DFB1E46626EFF2E60035A8F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		DFB1E46926EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		45850BE42751083C004DCAFC /* Utilits */ = {
 			isa = PBXGroup;
 			children = (
+				459F4E662757B110002A2A53 /* imageFromVideo.swift */,
 				45850BE527510859004DCAFC /* LinkPresentationItemSource.swift */,
 				45850BE727510B68004DCAFC /* ActivityViewController.swift */,
 				45BA08972755CB77003C8F58 /* InteractionView.swift */,
@@ -257,7 +260,7 @@
 			children = (
 				459F4E622757A853002A2A53 /* writeToRealm.swift */,
 				45116D18274516F2002D278D /* transfer.swift */,
-				459F4E662757B110002A2A53 /* imageFromVideo.swift */,
+				45B0D4682759A64D0009D033 /* saveVideo.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -440,8 +443,8 @@
 				45116D212745EA40002D278D /* Intents.intentdefinition in Sources */,
 				459F4E642757A853002A2A53 /* writeToRealm.swift in Sources */,
 				459F4E6C2757B782002A2A53 /* AboutView.swift in Sources */,
+				45B0D46A2759A64D0009D033 /* saveVideo.swift in Sources */,
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
-				459F4E682757B110002A2A53 /* imageFromVideo.swift in Sources */,
 				454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
 			);
@@ -465,6 +468,7 @@
 				457ED7E6274B1BE8003C2958 /* ConnectionComp.swift in Sources */,
 				454D6450274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45850BE02750BA12004DCAFC /* PreviewController.swift in Sources */,
+				45B0D4692759A64D0009D033 /* saveVideo.swift in Sources */,
 				459F4E672757B110002A2A53 /* imageFromVideo.swift in Sources */,
 				459F4E632757A853002A2A53 /* writeToRealm.swift in Sources */,
 				45116D202745EA40002D278D /* Intents.intentdefinition in Sources */,
