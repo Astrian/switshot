@@ -1,6 +1,7 @@
 module.exports = {
   themeConfig: {
     logo: '/images/icon.png',
+    sidebarDepth: 1,
     locales: {
       '/': {
         selectLanguageText: 'English',

@@ -60,5 +60,5 @@ Nintendo Switch 本地联机网络的名称通常以 `switch_` 开头，例如 `
 
 ![](/images/zh-cn/shortcut-wechat-share.png)
 
-## 不受限的快捷指令
+### 不受限的快捷指令
 不仅仅是以上所列出的例子，Switshot 配合快捷指令的使用基本上不受限制。你可以根据你自己的需求和想象力，创建任何有用、有趣的快捷指令。
