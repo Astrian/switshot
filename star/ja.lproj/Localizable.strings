@@ -8,35 +8,35 @@
 
 // HomeView
 "HomeView_Title" = "Switshot";
-"HomeView_Initial" = "初期化中...";
+"HomeView_Initial" = "初期化中…";
 
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "転送";
 "HomeView_ConnectionComp_CheckingConnection" = "接続中…";
-"HomeView_ConnectionComp_Ready" = "転送準備";
+"HomeView_ConnectionComp_Ready" = "転送の準備ができました";
 "HomeView_ConnectionComp_Ready_Desc" = "「%@」に接続されています。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "転送";
-"HomeView_ConnectionComp_Transferring" = "転送する...";
-"HomeView_ConnectionComp_Done" = "完了です！";
-"HomeView_ConnectionComp_Done_Desc" = "最近の転送されたメディアは以下で確認できます。";
-"HomeView_ConnectionComp_Done_MoreBtn" = "より多くのメディアを転送";
-"HomeView_ConnectionComp_Error" = "ゲーム機に接続できない";
-"HomeView_ConnectionComp_Error_Noconn" = "ゲーム機で確立されたローカル接続に、デバイスが接続されていることを確認してください。";
-"HomeView_ConnectionComp_Error_Unknown" = "ハンドリングされていないエラーがあります。後日、再度お試しいただくか、開発者にお問い合わせください。";
+"HomeView_ConnectionComp_Transferring" = "転送中…";
+"HomeView_ConnectionComp_Done" = "転送完了！";
+"HomeView_ConnectionComp_Done_Desc" = "転送されたメディアは以下で確認できます。";
+"HomeView_ConnectionComp_Done_MoreBtn" = "さらに転送";
+"HomeView_ConnectionComp_Error" = "ゲーム機に接続できません";
+"HomeView_ConnectionComp_Error_Noconn" = "ゲーム機の LAN に接続することをご確認してください。";
+"HomeView_ConnectionComp_Error_Unknown" = "不明なエラーが発生しました。しばらく時間をおいてから再度お試しいただくか、開発者にお問い合わせください。";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "再試行";
-"HomeView_ConnectionComp_Error_HelpBtn" = "ヘルプ";
+"HomeView_ConnectionComp_Error_HelpBtn" = "お困りの場合";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近の転送";
 "HomeView_RecentComp_Empty" = "まだ何もありません";
 "HomeView_RecentComp_Empty_Desc" = "何かを転送しましょうか。";
 "HomeView_RecentComp_Menu_Delete" = "転送を削除";
-"HomeView_RecentComp_Menu_Share" = "すべてを共有する";
-"HomeView_RecentComp_Menu_Save" = "すべてを保存しました";
-"HomeView_RecentComp_DelAlert_Title" = "この転送を削除することについて";
-"HomeView_RecentComp_DelAlert_Msg" = "この転送では、すべてのメディアが消去され、復元することはできません。";
-"HomeView_RecentComp_DelAlert_Cancel" = "削除しない";
-"HomeView_RecentComp_DelAlert_Confirm" = "続ける";
+"HomeView_RecentComp_Menu_Share" = "すべてを共有";
+"HomeView_RecentComp_Menu_Save" = "すべてを保存";
+"HomeView_RecentComp_DelAlert_Title" = "削除してもよろしいですか？";
+"HomeView_RecentComp_DelAlert_Msg" = "この転送分の全てのメディアを削除します。削除すると元にもどせなくなります。";
+"HomeView_RecentComp_DelAlert_Cancel" = "やめる";
+"HomeView_RecentComp_DelAlert_Confirm" = "削除する";
 
 // DetailView
 "DetailView_Title" = "詳細";
@@ -45,13 +45,13 @@
 "DetailView_ContextMenu_Delete" = "削除";
 "DetailView_ContextMenu_Save" = "ライブラリーに保存";
 "DetailView_ContextMenu_Share" = "共有";
-"DetailView_DelOneAlert_Title" = "このメディアを削除する";
-"DetailView_DelOneAlert_Msg" = "この操作を元に戻すことはできません。";
-"DetailView_DelOneAlert_Cancel" = "削除しない";
-"DetailView_DelOneAlert_Confirm" = "続ける";
-"DetailView_Menu_Delete" = "この転送を削除";
-"DetailView_DelEntireAlert_Title" = "この転送を削除することについて";
-"DetailView_DelEntireAlert_Msg" = "この転送では、すべてのメディアが消去され、復元することはできません。";
+"DetailView_DelOneAlert_Title" = "削除してもよろしいですか？";
+"DetailView_DelOneAlert_Msg" = "選択したメディアを削除します。削除すると元にもどせなくなります。";
+"DetailView_DelOneAlert_Cancel" = "やめる";
+"DetailView_DelOneAlert_Confirm" = "削除する";
+"DetailView_Menu_Delete" = "転送を削除";
+"DetailView_DelEntireAlert_Title" = "削除してもよろしいですか？";
+"DetailView_DelEntireAlert_Msg" = "この転送分の全てのメディアを削除します。削除すると元にもどせなくなります。";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "完了";
