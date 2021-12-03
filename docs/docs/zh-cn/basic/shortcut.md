@@ -11,7 +11,7 @@ Switshot 在 2.0 版本以后新增 SiriKit 与快捷指令联动的功能，这
 在配置快捷指令之前，建议先启动 Switshot app 完成首次媒体转移操作。
 :::
 
-## 快捷指令操作
+## Switshot 的快捷指令操作一览
 ### 从连接的主机中转移媒体
 此操作运行时，Switshot 会从已连接的 Nintendo Switch 中转移媒体文件至 Switshot app 内。
 
