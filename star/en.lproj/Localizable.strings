@@ -18,16 +18,16 @@
 "HomeView_ConnectionComp_Ready_TransferBtn" = "Transfer";
 "HomeView_ConnectionComp_Transferring" = "Transferring...";
 "HomeView_ConnectionComp_Done" = "Done!";
-"HomeView_ConnectionComp_Done_Desc" = "View your transfered media in Gallery session below.";
+"HomeView_ConnectionComp_Done_Desc" = "View your transfered media in Gallery section below.";
 "HomeView_ConnectionComp_Done_MoreBtn" = "Transfer more media";
 "HomeView_ConnectionComp_Error" = "Cannot connect to console";
 "HomeView_ConnectionComp_Error_Noconn" = "Make sure that your device is connecting to the local connection established by your console.";
-"HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact developer.";
+"HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact the developer.";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
 "HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
 "HomeView_RecentComp_DelAlert_Title" = "Deleting this transfer";
-"HomeView_RecentComp_DelAlert_Msg" = "All media in this transfer will be wiped out and can’t be recovered.";
-"HomeView_RecentComp_DelAlert_Cancel" = "Don’t Delete";
+"HomeView_RecentComp_DelAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
+"HomeView_RecentComp_DelAlert_Cancel" = "Do not Delete";
 "HomeView_RecentComp_DelAlert_Confirm" = "Continue";
 
 // RecentComp
@@ -47,11 +47,11 @@
 "DetailView_ContextMenu_Share" = "Share";
 "DetailView_DelOneAlert_Title" = "Deleting this media";
 "DetailView_DelOneAlert_Msg" = "This operation cannot be undone.";
-"DetailView_DelOneAlert_Cancel" = "Don’t delete";
+"DetailView_DelOneAlert_Cancel" = "Do not delete";
 "DetailView_DelOneAlert_Confirm" = "Continue";
 "DetailView_Menu_Delete" = "Delete this transfer";
 "DetailView_DelEntireAlert_Title" = "Deleting this transfer";
-"DetailView_DelEntireAlert_Msg" = "All media in this transfer will be wiped out and can’t be recovered.";
+"DetailView_DelEntireAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "Done";
