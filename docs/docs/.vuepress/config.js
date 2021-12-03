@@ -62,6 +62,7 @@ function getNavbar(lang) {
   let navBarLanguage = {
     'zh-cn': {
       basic: '必知必会',
+      troubleshooting: '疑难排查',
       qna: '常见问题',
       links: '常用链接',
       links_github: 'GitHub',
@@ -70,6 +71,7 @@ function getNavbar(lang) {
     },
     'en-us': {
       basic: 'Must-knows',
+      troubleshooting: 'Troubleshooting',
       qna: 'Q&A',
       links: 'Links',
       links_github: 'GitHub',
@@ -83,6 +85,7 @@ function getNavbar(lang) {
   else langInUrl = `/${lang}`
   let res = [
     { text: navBarLanguage[lang].basic, link: `${langInUrl}/basic/transfer.md` },
+    { text: navBarLanguage[lang].troubleshooting, link: `${langInUrl}/troubleshooting` },
     { text: navBarLanguage[lang].qna, link: `${langInUrl}/qna/` },
     { text: navBarLanguage[lang].links, children: [
       { text: navBarLanguage[lang].links_github, link: 'https://github.com/Astrian/switshot'},
