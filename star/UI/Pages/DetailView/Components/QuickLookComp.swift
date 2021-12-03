@@ -38,7 +38,7 @@ struct QuickLookComp: View {
             Menu {
               Button {
                 if mediaType == "photo" {
-                  UIImageWriteToSavedPhotosAlbum(getUIImage(), nil, nil, nil)
+                  UIImageWriteToSavedPhotosAlbum(getUIImage()!, nil, nil, nil)
                 } else if mediaType == "movie" {
                   saveVideo(uuid)
                 }
@@ -62,13 +62,15 @@ struct QuickLookComp: View {
       
   }
   
-  func getUIImage() -> UIImage {
+  func getUIImage() -> UIImage? {
     let manager = FileManager.default
     let shareData = manager.contents(atPath: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!.path)!
-    if mediaType == "image" {
+    if mediaType == "photo" {
       return UIImage(data: shareData)!
-    } else {
+    } else if mediaType == "movie" {
       return imageFromVideo(url: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!, at: 0)!
+    } else {
+      return nil
     }
   }
   
@@ -77,6 +79,6 @@ struct QuickLookComp: View {
     metadata.iconProvider = NSItemProvider(contentsOf: URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")!)
     metadata.title = String(NSLocalizedString("DetailView_QuickLookComp_Share_Title", comment: ""))
     metadata.originalURL = URL(string: "\(fullPath)/media/\(uuid.uuidString).\(mediaType == "photo" ? "jpg" : "mp4")")
-    return LinkPresentationItemSource(linkMetaData: metadata, shareData: getUIImage())
+    return LinkPresentationItemSource(linkMetaData: metadata, shareData: getUIImage()!)
   }
 }
