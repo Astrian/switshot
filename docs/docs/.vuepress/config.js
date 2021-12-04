@@ -38,10 +38,12 @@ function getSidebar(lang) {
     'zh-cn': {
       basic: '必知必会',
       troubleshooting: '麻烦射击',
+      qna: '常见问题',
     },
     'en-us': {
       basic: 'Must-knows',
       troubleshooting: 'Troubleshooting',
+      qna: 'Q&A',
     }
   }
 
@@ -67,6 +69,14 @@ function getSidebar(lang) {
       ]
     }
   ]
+
+  res[`${langInUrl}/qna/`] = [
+    {
+      text: sidebarLanguage[lang].qna,
+      link: `${langInUrl}/qna/`,
+    }
+  ]
+
   return res
 }
 

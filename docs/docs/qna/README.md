@@ -1,3 +1,2 @@
-# QNA
+# Frequently Asked Questions
 
-TBD
