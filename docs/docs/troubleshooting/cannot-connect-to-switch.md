@@ -21,8 +21,15 @@ Check the permission out:
 - Make sure the “Local Network” switch is on in “Allow Switshot Access” section.
 
 ::: tip
-If this switch not exist, try other solutions first.+
+If this switch not exist, try other solutions first.
 :::
+
+If you are using the iPhone sold in China Mainland, there is another data permission option that will effect Switshot connect to Nintendo Switch. Check it out:
+
+- Launch Switshot app, tap the “About” icon in right-top corner of home page.
+- Tap “Settings” in the “About Switshot” page poped out. It will jump to Switshot settings in Settings app.
+- Tap “Wireless Data” in “Allow Switshot Access” section.
+- Make sure “WLAN” or “WLAN & Cellular Data” selected.
 
 ## Try again
 
