@@ -21,6 +21,10 @@ If you selected a screenshot, Nintendo Switch will ask you about “Only This On
 Next, Switch will show the QR code that include a Wi-Fi network information. Scan it with [Camera app](https://support.apple.com/en-us/HT208843) or iOS QR scanner on your iPhone.
 
 ::: tip
+You need to scan the QR code provided by Nintendo Switch every time, for Nintendo Switch will generate a new Wi-Fi network password every time.
+:::
+
+::: tip
 Do not exit “Send to Smartphone” screen in Nintendo Swith in whole transfer progress.
 :::
 
@@ -35,7 +39,7 @@ If this is the first time connect to Nintendo Switch, iOS will pops an alert say
 :::
 
 ::: tip
-It is possibile that the Switshot shows “Cannot connect to console” when you connect to Nintendo Switch in a short time. It may happened sometime. Make sure the connection is solid and click “Try again” button several times. If you still unable to connect, please refer to the FAQ section.
+It is possibile that the Switshot shows “Cannot connect to console” when you connect to Nintendo Switch in a short time. It may happened sometime. Make sure the connection is solid and click “Try again” button several times. If you still unable to connect, please make some trouble shootings with [“Cannot connect to console” part in Troubleshooting section](/troubleshooting/cannot-connect-to-switch.md).
 :::
 
 You can click “Transfer” button to start transfer progress when Switshot confirm the connection is established.

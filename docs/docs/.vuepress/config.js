@@ -36,10 +36,12 @@ module.exports = {
 function getSidebar(lang) {
   let sidebarLanguage = {
     'zh-cn': {
-      basic: '必知必会'
+      basic: '必知必会',
+      troubleshooting: '麻烦射击',
     },
     'en-us': {
-      basic: 'Must-knows'
+      basic: 'Must-knows',
+      troubleshooting: 'Troubleshooting',
     }
   }
 
@@ -53,6 +55,15 @@ function getSidebar(lang) {
       children: [
         `${langInUrl}/basic/transfer.md`,
         `${langInUrl}/basic/shortcut.md`,
+      ]
+    }
+  ]
+
+  res[`${langInUrl}/troubleshooting/`] = [
+    {
+      text: sidebarLanguage[lang].troubleshooting,
+      children: [
+        `${langInUrl}/troubleshooting/cannot-connect-to-switch.md`,
       ]
     }
   ]
@@ -86,7 +97,7 @@ function getNavbar(lang) {
   else langInUrl = `/${lang}`
   let res = [
     { text: navBarLanguage[lang].basic, link: `${langInUrl}/basic/transfer.md` },
-    { text: navBarLanguage[lang].troubleshooting, link: `${langInUrl}/troubleshooting` },
+    { text: navBarLanguage[lang].troubleshooting, link: `${langInUrl}/troubleshooting/cannot-connect-to-switch.md` },
     { text: navBarLanguage[lang].qna, link: `${langInUrl}/qna/` },
     { text: navBarLanguage[lang].links, children: [
       { text: navBarLanguage[lang].links_github, link: 'https://github.com/Astrian/switshot'},

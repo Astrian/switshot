@@ -21,6 +21,10 @@ Switshot 通过 Wi-Fi 与你的 Nintendo Switch 相连并进行媒体迁移。�
 接下来，Nintendo Switch 将会显示一个包含 Wi-Fi 网络信息的二维码。请使用 iPhone 上的 [相机 app](https://support.apple.com/zh-cn/HT208843) 或 iOS 系统中的二维码扫描器进行扫描。
 
 ::: tip
+每次转移过程都需要扫描 Nintendo Switch 提供的二维码进行连接，因为 Nintendo Switch 会在每次连接过程中生成一个新的 Wi-Fi 连接密码。
+:::
+
+::: tip
 在整个过程中，请不要在 Nintendo Switch 上退出「发送至智能手机」屏幕。
 :::
 
@@ -35,7 +39,7 @@ Switshot 通过 Wi-Fi 与你的 Nintendo Switch 相连并进行媒体迁移。�
 :::
 
 ::: tip
-有可能会在刚连线至 Nintendo Switch 时出现无法连接的错误，这是正常情况。在确保正常连线的前提下，点击「重试」按钮几次。若依然无法解决问题，参见常见问题一节。
+有可能会在刚连线至 Nintendo Switch 时出现无法连接的错误，这是正常情况。在确保正常连线的前提下，点击「重试」按钮几次。若依然无法解决问题，参见 [疑难排查中「无法连接至游戏主机」](/zh-cn/troubleshooting/cannot-connect-to-switch.md) 一节进行排障。
 :::
 
 当 Switshot 确认连接至 Nintendo Switch 后，可以点击「开始转移」按钮，进行媒体转移。
