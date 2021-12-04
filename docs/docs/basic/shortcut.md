@@ -4,7 +4,7 @@
 
 After version 2.0, Switshot supports SiriKit and Shortcuts. You can use Shortcut app with Switshot to:
 
-- **Transfer Media without launching Switshot app**。
+- **Transfer Media without launching Switshot app**.
 - **Create shortcut automation**. For example, transfer media automatically when your iPhone connected to network with Nintendo Switch.
 - **Submit transfered media to other apps** and share them to your friend, social networks, etc.
 
