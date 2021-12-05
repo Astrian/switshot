@@ -7,21 +7,20 @@ English
 
 <p align="center">Console Media Manager</p>
 
+<p align="center"><a href="https://help.switshot.app/">Help Center</a> | <a href="https://updates.switshot.app/">Latest Updates</a></p>
+
 Switshot is a game media manager helps you transfer your game media from Nintendo Switch to your phone, and manage your media just few taps.
 
 ## Feature
 
 - Connect to game console and save media without complex operation
 - Put your game media into Switshot internal space to keep your photo library tidy, or save to your photo library directly 
-- Manage your media with Files app without other file manager
+- With Shortcuts intergration, you can transfer your media without launching app 
+- Manage your media with just few taps
 
-## Install
+## Purchase and Installation
 
-- Purchase from [App Store](https://apps.apple.com/cn/app/switshot/id1585470023)
-- Download IAP file from [release page](https://github.com/Astrian/switshot/releases/), sideload with [AltStore](https://altstore.io) or other similar way (not guarteed)
-- Download source code and compile by yourself with Xcode
-- Contect me if you can (it easiser than you think XD)
-- Use alternative [like this shortcut](https://www.icloud.com/shortcuts/0b50c1db46fb42fea23f1ee1cf4b01f4) (yes, it is also made by me)
+Purchase from [App Store](https://apps.apple.com/cn/app/switshot/id1585470023) for 2.99 USD
 
 ## How to use
 
@@ -29,9 +28,7 @@ Switshot is a game media manager helps you transfer your game media from Nintend
 - Scan QR code show on your console
 - Launch Switshot, transfer with guidance.
 
-## Why you set it as a paid app?
-
-Because I hope somebody can help me to cover my App Store Developer paid tier fee (RMB 688 per year) 🤣. If you think this app is too simple to be paid for, you can get it as free with multiple ways, I listed them above.
+[More detailed guidence](https://help.switshot.app/basic/transfer.html)
 
 ----
 
@@ -44,28 +41,23 @@ Because I hope somebody can help me to cover my App Store Developer paid tier fe
 
 <p align="center">主机游戏媒体管理员</p>
 
+<p align="center"><a href="https://help.switshot.app/zh-cn/">帮助中心</a> | <a href="https://updates.switshot.app/">最新资讯</a></p>
+
 Switshot 是一个能够帮助你快速管理 Nintendo Switch 中的截屏与录制等媒体的工具。
 
 ## 功能
 
 - 无需复杂操作，轻松连接游戏主机
 - 媒体存储于 Switshot 内部以保证照片图库整洁，或直接保存至照片图库
-- 使用「文件」app 管理媒体，无需第三方应用
+- 使用快捷指令，无需启动 app 即可完成媒体转移
+- 轻点几下，管理你的游戏媒体库
 
-## 安装
+## 购买与安装
 
-- 从 [App Store](https://apps.apple.com/cn/app/switshot/id1585470023) 购买
-- 从 [分发版本页](https://github.com/Astrian/switshot/releases/) 下载 IPA 文件，并使用诸如 [AltStore](https://altstore.io) 等工具侧加载（不保证能用）
-- 下载源码，自己用 Xcode 编译
-- 直接联系我（想要找到我其实很简单 XD）
-- 用别的替代品，[比如这个快捷指令](https://www.icloud.com/shortcuts/0b50c1db46fb42fea23f1ee1cf4b01f4)（也是我做的）
+从 [App Store](https://apps.apple.com/cn/app/switshot/id1585470023) 花费 18 元人民币购买。
 
 ## 使用方法
 
 - 在 Nintendo Switch 上打开「相册」，选择你需要转移的截屏或录制，选择「发送到智能手机」
 - 扫描游戏主机上出现的二维码
 - 启动 Switshot，根据屏幕提示进行转移操作
-
-## 为什么这是款付费 App？
-
-人穷，想找人摊一下 Apple 开发者付费计划费用（人民币 688 一年）🤣。如果你还是想白嫖，上面我提供了很多种供你白嫖的方式，欢迎白嫖。
