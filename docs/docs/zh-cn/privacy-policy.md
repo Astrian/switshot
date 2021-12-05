@@ -32,9 +32,9 @@
 ### 云同步
 Switshot 使用 iCloud 功能进行云同步。云同步的目的是为了让阁下的数据能够被其他设备同步，以便阁下的数据能够在其他设备上被访问。
 
-iCloud 功能由 Apple Inc., 提供，根据登录 Apple ID 的区域不同，iCloud 功能包括 iCloud 服务和 iCloud（由云上贵州运营）服务。iCloud 服务由 Apple Inc., 运营，iCloud（由云上贵州运营）服务由云上贵州大数据产业发展有限公司运营。
+iCloud 功能由 Apple Inc., 提供，根据登录 Apple ID 的区域不同，iCloud 功能包括 iCloud 服务和 iCloud（由云上贵州运营）服务。iCloud 服务由 Apple Inc., 运营，iCloud（由云上贵州运营）服务由云上艾珀（贵州）技术有限公司运营。
 
-如果阁下开启 Switshot 的 iCloud 存储功能，在 Switshot 存储的数据将会被同步到 iCloud 服务或 iCloud（由云上贵州运营）服务。此时，Switshot 将可能会收集阁下 Apple ID 中一些必要数据以完成同步功能，这些数据将仅在本地进行处理，不会被发送。此外，Switshot 中的数据将会在 iCloud 服务或 iCloud（由云上贵州运营）的服务器中跨设备同步。
+如果阁下开启 Switshot 的 iCloud 存储功能，在 Switshot 存储的数据将会被同步到 iCloud 服务或 iCloud（由云上贵州运营）服务（根据阁下的 Apple ID 区域不同）。此时，Switshot 将可能会收集阁下 Apple ID 中一些必要数据以完成同步功能，这些数据将仅在本地进行处理，不会被发送。此外，Switshot 中的数据将会在 iCloud 服务或 iCloud（由云上贵州运营）服务的服务器中跨设备同步。
 
 若阁下不同意 iCloud 服务或 iCloud（由云上贵州运营）服务相关的隐私政策或用户协议，阁下可以选择随时关闭 Switshot 的 iCloud 功能进行跨设备同步。
 
