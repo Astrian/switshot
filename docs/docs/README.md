@@ -14,6 +14,6 @@ Get into troubles? Try those solutions first.
 [Start →](/troubleshooting/cannot-connect-to-switch.md)
 
 ## Frequently Asked Questions
-Get solutions to common problems.
+Something you care is here.
 
 [Start →](/qna/)
