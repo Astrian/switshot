@@ -3,7 +3,7 @@
 
 ::: tip 太长不看
 - 通常情况下，Switshot app 不会收集任何个人信息。
-- 开启 iCloud 云同步会将一些数据同步到 iCloud。
+- 开启 iCloud 云同步会将数据同步到 iCloud。
 - 开启 iOS 系统的「分析与改进」功能，iOS 会将 Switshot 的诊断信息匿名地上传到 Apple 的服务器，并与开发者共享。
 - Beta 测试会额外收集个人信息，但仅用于 Beta 测试中开发者进行额外诊断的目的。
 
