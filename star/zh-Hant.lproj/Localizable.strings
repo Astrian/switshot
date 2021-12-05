@@ -70,3 +70,11 @@
 "AboutView_SystemSettings" = "設定";
 "AboutView_Repo" = "前往GitHub倉庫";
 "AboutView_OpenSource" = "Switshot是一款開放原始碼軟體。";
+"AboutView_Dismiss" = "完成";
+"AboutView_HelpCenter" = "幫助中心（英文）";
+"AboutView_HelpCenter_Link" = "https://help.switshot.app/";
+"AboutView_Updates" = "最新資訊（簡體中文及英文）";
+"AboutView_Appreciation" = "致謝";
+"AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
+"AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁體中文及日文本地化";
+"AboutView_Appreciation_Contibutor_Website" = "網站";
