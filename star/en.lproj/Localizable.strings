@@ -25,10 +25,7 @@
 "HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact the developer.";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
 "HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
-"HomeView_RecentComp_DelAlert_Title" = "Deleting this transfer";
-"HomeView_RecentComp_DelAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
-"HomeView_RecentComp_DelAlert_Cancel" = "Do not Delete";
-"HomeView_RecentComp_DelAlert_Confirm" = "Continue";
+"HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "Recent";
@@ -37,6 +34,10 @@
 "HomeView_RecentComp_Menu_Delete" = "Delete this transfer";
 "HomeView_RecentComp_Menu_Share" = "Share all";
 "HomeView_RecentComp_Menu_Save" = "Save all to library";
+"HomeView_RecentComp_DelAlert_Title" = "Deleting this transfer";
+"HomeView_RecentComp_DelAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
+"HomeView_RecentComp_DelAlert_Cancel" = "Do not Delete";
+"HomeView_RecentComp_DelAlert_Confirm" = "Continue";
 "HomeView_RecentComp_WhereIsMyOldMedia" = "Where is legacy media?";
 "HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/qna/#where-is-my-media-transfered-before";
 

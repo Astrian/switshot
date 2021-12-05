@@ -25,6 +25,7 @@
 "HomeView_ConnectionComp_Error_Unknown" = "不明なエラーが発生しました。しばらく時間をおいてから再度お試しいただくか、開発者にお問い合わせください。";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "再試行";
 "HomeView_ConnectionComp_Error_HelpBtn" = "お困りの場合";
+"HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近の転送";

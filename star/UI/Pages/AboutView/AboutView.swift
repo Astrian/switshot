@@ -8,6 +8,7 @@ import SwiftUI
 
 struct AboutView: View {
   @State private var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+  @Binding var presented: Bool
   
   var body: some View {
     NavigationView {
@@ -25,6 +26,7 @@ struct AboutView: View {
         }
       }
       .navigationTitle("AboutView_Title")
+      
     }
   }
 }

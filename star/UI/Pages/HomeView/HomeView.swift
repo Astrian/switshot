@@ -33,7 +33,7 @@ struct HomeView: View {
       }
     }
     .sheet(isPresented: $aboutVisible) {
-      AboutView()
+      AboutView(presented: $aboutVisible)
     }
   }
   

@@ -25,6 +25,7 @@
 "HomeView_ConnectionComp_Error_Unknown" = "遇到無法處理的錯誤，請稍後再試，或聯繫開發者。";
 "HomeView_ConnectionComp_Error_TryAgainBtn" = "再試";
 "HomeView_ConnectionComp_Error_HelpBtn" = "需要幫助";
+"HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
