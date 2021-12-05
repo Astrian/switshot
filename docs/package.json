@@ -1,0 +1,14 @@
+{
+  "name": "docs",
+  "version": "2.0.0",
+  "main": "index.js",
+  "license": "MPL-2.0",
+  "private": false,
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.27"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

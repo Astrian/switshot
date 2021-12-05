@@ -6,43 +6,62 @@
   
 */
 
-// Tabs
-"Tabs_Connection" = "Connection";
-"Tabs_Album" = "Album";
+// HomeView
+"HomeView_Title" = "Switshot";
+"HomeView_Initial" = "Initialisation in progress...";
 
-// ConnectionView
-"ConnectionView_Title" = "Connection";
-"ConnectionView_ConnectedConsole" = "Connected to: %@";
-"ConnectionView_TransferBtn" = "Transfer now";
-"ConnectionView_Connecting" = "Connecting…";
-"ConnectionView_Failed" = "I can’t connect to your game console";
-"ConnectionView_FailedDes" = "Re-scan the QR code on your console or check your system settings";
-"ConnectionView_RetryBtn" = "Retry";
-"ConnectionView_Error_CannotCreateFolder" = "Cannot create media folder";
-"ConnectionView_Transfering" = "Transferring…";
-"ConnectionView_Transfering_Desc" = "It won’t take too long.";
-"ConnectionView_Transferred" = "Done!";
-"ConnectionView_Transferred_Desc" = "Go to “Album” to view all your media from the console.";
-"ConnectionView_TransferMoreBtn" = "Transfer more";
-"ConnectionView_HelpBtn" = "Help";
+// ConnectionComp
+"HomeView_ConnectionComp_Title" = "Transfer";
+"HomeView_ConnectionComp_CheckingConnection" = "Checking connection...";
+"HomeView_ConnectionComp_Ready" = "Ready to transfer";
+"HomeView_ConnectionComp_Ready_Desc" = "You’re now connected to “%@”.";
+"HomeView_ConnectionComp_Ready_TransferBtn" = "Transfer";
+"HomeView_ConnectionComp_Transferring" = "Transferring...";
+"HomeView_ConnectionComp_Done" = "Done!";
+"HomeView_ConnectionComp_Done_Desc" = "View your transfered media in Gallery section below.";
+"HomeView_ConnectionComp_Done_MoreBtn" = "Transfer more media";
+"HomeView_ConnectionComp_Error" = "Cannot connect to console";
+"HomeView_ConnectionComp_Error_Noconn" = "Make sure that your device is connecting to the local connection established by your console.";
+"HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact the developer.";
+"HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
+"HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
+"HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
-// AlbumView
-"AlbumView_Title" = "Media Album";
-"AlbumView_BtnDelete" = "Delete";
-"AlbumView_BtnSaveToPhoto" = "Save to Photo Library";
-"AlbumView_BtnShare" = "Share to…";
-"AlbumView_Empty_Title" = "There’s nothing";
-"AlbumView_Empty_Desc" = "Try transfer something to Switshot.";
-"AlbumView_Picker_Image" = "Images";
-"AlbumView_Picker_Video" = "Videos";
-"AlbumView_Error_CannotDelete" = "Cannot delete seleted media";
-"AlbumView_Toast_Deleted" = "Media has been deleted";
+// RecentComp
+"HomeView_RecentComp_Title" = "Recent";
+"HomeView_RecentComp_Empty" = "Nothing Here";
+"HomeView_RecentComp_Empty_Desc" = "Try transfer some media first.";
+"HomeView_RecentComp_Menu_Delete" = "Delete this transfer";
+"HomeView_RecentComp_Menu_Share" = "Share all";
+"HomeView_RecentComp_Menu_Save" = "Save all to library";
+"HomeView_RecentComp_DelAlert_Title" = "Deleting this transfer";
+"HomeView_RecentComp_DelAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
+"HomeView_RecentComp_DelAlert_Cancel" = "Do not Delete";
+"HomeView_RecentComp_DelAlert_Confirm" = "Continue";
+"HomeView_RecentComp_WhereIsMyOldMedia" = "Where is legacy media?";
+"HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/qna/#where-is-my-media-transfered-before";
 
-// ImageDetailView
-"ImageDetailView_BtnShare" = "Share to…";
-"ImageDetailView_BtnDelete" = "Delete";
-"ImageDetailView_BtnSaveToPhoto" = "Save to library";
-"ImageDetailView_Toast_Saved" = "This image is saved to your photo library";
+// DetailView
+"DetailView_Title" = "Detail";
+"DetailView_Shareall" = "Share all";
+"DetailView_Saveall" = "Save all to library";
+"DetailView_ContextMenu_Delete" = "Delete";
+"DetailView_ContextMenu_Save" = "Save to library";
+"DetailView_ContextMenu_Share" = "Share";
+"DetailView_DelOneAlert_Title" = "Deleting this media";
+"DetailView_DelOneAlert_Msg" = "This operation cannot be undone.";
+"DetailView_DelOneAlert_Cancel" = "Do not delete";
+"DetailView_DelOneAlert_Confirm" = "Continue";
+"DetailView_Menu_Delete" = "Delete this transfer";
+"DetailView_DelEntireAlert_Title" = "Deleting this transfer";
+"DetailView_DelEntireAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
+
+// QuickLookComp
+"DetailView_QuickLookComp_Dismiss" = "Done";
+"DetailView_QuickLookComp_Share" = "Share";
+"DetailView_QuickLookComp_Menu_Save" = "Save to library";
+"DetailView_QuickLookComp_Menu_Delete" = "Delete";
+"DetailView_QuickLookComp_Share_Title" = "Game media";
 
 // AboutView
 "AboutView_Title" = "About Switshot";
@@ -50,3 +69,12 @@
 "AboutView_SystemSettings" = "Settings";
 "AboutView_Repo" = "Go to GitHub Repository";
 "AboutView_OpenSource" = "Switshot is an open source project.";
+"AboutView_Dismiss" = "Done";
+"AboutView_HelpCenter" = "Help Center";
+"AboutView_HelpCenter_Link" = "https://help.switshot.app/";
+"AboutView_Updates" = "Latest Updates";
+"AboutView_Appreciation" = "Appreciation";
+"AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
+"AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "Traditional Chinese and Japanese localisation";
+"AboutView_Appreciation_Contibutor_Blog" = "Personal blog";
+"AboutView_Appreciation_Contibutor_Website" = "Website";

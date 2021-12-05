@@ -6,21 +6,17 @@
 //
 
 import SwiftUI
+import RealmSwift
+import Foundation
 
 @main
-struct starApp: App {
+struct starApp: SwiftUI.App {
+  @State var path = (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.astrianzheng.star"))!.path
+  
   var body: some Scene {
     WindowGroup {
-      TabView {
-        ConnectionView()
-          .tabItem {
-            Label("Tabs_Connection", systemImage: "link.circle.fill")
-          }
-        AlbumView()
-          .tabItem {
-            Label("Tabs_Album", systemImage: "photo.fill.on.rectangle.fill")
-          }
-      }
+      HomeView()
+        .environment(\.realmConfiguration, Realm.Configuration(fileURL: URL(string: "\(String(describing: path))/database.realm"), inMemoryIdentifier: nil, syncConfiguration: nil, encryptionKey: nil, readOnly: false, schemaVersion: 0, migrationBlock: nil, deleteRealmIfMigrationNeeded: true, shouldCompactOnLaunch: nil, objectTypes: nil))
     }
   }
 }
