@@ -37,6 +37,8 @@
 "HomeView_RecentComp_Menu_Delete" = "Delete this transfer";
 "HomeView_RecentComp_Menu_Share" = "Share all";
 "HomeView_RecentComp_Menu_Save" = "Save all to library";
+"HomeView_RecentComp_WhereIsMyOldMedia" = "Where is legacy media?";
+"HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/qna/#where-is-my-media-transfered-before";
 
 // DetailView
 "DetailView_Title" = "Detail";

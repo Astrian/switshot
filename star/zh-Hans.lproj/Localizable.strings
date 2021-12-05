@@ -37,6 +37,8 @@
 "HomeView_RecentComp_DelAlert_Msg" = "转移中的所有媒体将被销毁，并无法恢复。";
 "HomeView_RecentComp_DelAlert_Cancel" = "不要删除";
 "HomeView_RecentComp_DelAlert_Confirm" = "继续";
+"HomeView_RecentComp_WhereIsMyOldMedia" = "以前的媒体去哪了？";
+"HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/zh-cn/qna/#%E6%88%91%E4%BB%A5%E5%89%8D%E8%BD%AC%E7%A7%BB%E7%9A%84%E5%AA%92%E4%BD%93%E5%8E%BB%E5%93%AA%E4%BA%86";
 
 // DetailView
 "DetailView_Title" = "详情";

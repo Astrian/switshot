@@ -59,7 +59,8 @@ struct RecentComp: View {
               .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
             }
           }
-          Text("❦").foregroundColor(Color.gray).padding()
+          Text("•").foregroundColor(Color.gray).padding(8)
+          Link("HomeView_RecentComp_WhereIsMyOldMedia", destination: URL(string: NSLocalizedString("HomeView_RecentComp_WhereIsMyOldMedia_Link", comment: ""))!).padding(.bottom, 16)
         }
       } else {
         VStack(spacing: 4) {

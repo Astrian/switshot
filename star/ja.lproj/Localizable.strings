@@ -37,6 +37,8 @@
 "HomeView_RecentComp_DelAlert_Msg" = "この転送分の全てのメディアを削除します。削除すると元にもどせなくなります。";
 "HomeView_RecentComp_DelAlert_Cancel" = "やめる";
 "HomeView_RecentComp_DelAlert_Confirm" = "削除する";
+"HomeView_RecentComp_WhereIsMyOldMedia" = "オールドメディアはどこへ行ったのか？";
+"HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/qna/#where-is-my-media-transfered-before";
 
 // DetailView
 "DetailView_Title" = "詳細";
