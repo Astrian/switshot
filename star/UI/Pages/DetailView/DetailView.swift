@@ -145,7 +145,7 @@ struct DetailView: View {
     if type == "photo" {
       let manager = FileManager.default
       guard let data = manager.contents(atPath: "\(path)/media/\(media.uuidString).\(type == "photo" ? "jpg" : "mp4")") else {
-        print("No such file")
+        print("No such file 2")
         return nil
       }
       guard let res = UIImage(data: data) else {
@@ -166,7 +166,7 @@ struct DetailView: View {
     for item in log.media {
       let manager = FileManager.default
       guard let data = manager.contents(atPath: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")  else {
-        print("No such file")
+        print("No such file 3")
         continue
       }
       let metadata = LPLinkMetadata()
@@ -183,7 +183,7 @@ struct DetailView: View {
     let filepath = "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")"
     print(item.type)
     guard let data = manager.contents(atPath: filepath)  else {
-      print("No such file")
+      print("No such file 4")
       print(filepath)
       return [LinkPresentationItemSource]()
     }
@@ -215,8 +215,9 @@ struct DetailView: View {
   
   func deleteEntire() {
     let manager = FileManager.default
-    for item in log.media {
+    for index in (0 ..< log.media.count) {
       do {
+        let item = log.media[index]
         print("Removing file")
         try manager.removeItem(atPath: "\(path)/media/\(item.id.uuidString).\(item.type == "photo" ? "jpg" : "mp4")")
         print("Removing media in log")
@@ -228,6 +229,7 @@ struct DetailView: View {
       }
     }
     $logs.remove(log)
+    print("log removed.")
     presentationMode.wrappedValue.dismiss()
   }
   
@@ -236,7 +238,7 @@ struct DetailView: View {
     if list != nil { 
       for i in list! {
         guard let data = manager.contents(atPath: "\(path)/media/\(i.id.uuidString).\(i.type == "photo" ? "jpg" : "mp4")") else {
-          print("No such file")
+          print("No such file 5")
           continue
         }
         if i.type == "photo" {
@@ -248,7 +250,7 @@ struct DetailView: View {
     } else {
       for i in log.media {
         guard let data = manager.contents(atPath: "\(path)/media/\(i.id.uuidString).\(i.type == "photo" ? "jpg" : "mp4")") else {
-          print("No such file")
+          print("No such file 6")
           continue
         }
         if i.type == "photo" {

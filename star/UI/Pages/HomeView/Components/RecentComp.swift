@@ -57,6 +57,9 @@ struct RecentComp: View {
                 })
               }
               .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.3)))
+              .onAppear {
+                print(print(index))
+              }
             }
           }
           Text("•").foregroundColor(Color.gray).padding(8)
@@ -68,6 +71,7 @@ struct RecentComp: View {
           Text("HomeView_RecentComp_Empty_Desc").foregroundColor(Color.gray)
         }.frame(maxWidth: .infinity).padding(.top, 30)
       }
+      Text("\(logs.elements.count)").foregroundColor(Color.white.opacity(0.0)).frame(width: 0, height: 0)
     }
     .frame(maxWidth: .infinity)
     .alert(isPresented: $showDelAlert) {
@@ -92,7 +96,7 @@ struct RecentComp: View {
     }
     if first.type == "photo" {
       guard let data = manager.contents(atPath: "\(path)/media/\(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")") else {
-        print("No such file")
+        print("No such file 1")
         print("\(path)/media/ \(first.id.uuidString).\(first.type == "photo" ? "jpg" : "mp4")")
         return nil
       }
