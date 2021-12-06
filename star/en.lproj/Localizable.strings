@@ -55,6 +55,8 @@
 "DetailView_Menu_Delete" = "Delete this transfer";
 "DetailView_DelEntireAlert_Title" = "Deleting this transfer";
 "DetailView_DelEntireAlert_Msg" = "All media in this transfer will be wiped out and cannot be recovered.";
+"DetailView_DelEntireAlert_Cancel" = "Do not Delete";
+"DetailView_DelEntireAlert_Confirm" = "Continue";
 
 // QuickLookComp
 "DetailView_QuickLookComp_Dismiss" = "Done";
@@ -76,5 +78,4 @@
 "AboutView_Appreciation" = "Appreciation";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "Traditional Chinese and Japanese localisation";
-"AboutView_Appreciation_Contibutor_Blog" = "Personal blog";
 "AboutView_Appreciation_Contibutor_Website" = "Website";
