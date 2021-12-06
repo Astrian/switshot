@@ -68,7 +68,7 @@ struct RecentComp: View {
       } else {
         VStack(spacing: 4) {
           Text("HomeView_RecentComp_Empty").font(Font.title2)
-          Text("HomeView_RecentComp_Empty_Desc").foregroundColor(Color.gray)
+          Text("HomeView_RecentComp_Empty_Desc").multilineTextAlignment(.center).foregroundColor(Color.gray)
         }.frame(maxWidth: .infinity).padding(.top, 30)
       }
       Text("\(logs.elements.count)").foregroundColor(Color.white.opacity(0.0)).frame(width: 0, height: 0)

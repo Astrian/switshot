@@ -30,7 +30,7 @@
 // RecentComp
 "HomeView_RecentComp_Title" = "最近の転送";
 "HomeView_RecentComp_Empty" = "まだ何もありません";
-"HomeView_RecentComp_Empty_Desc" = "何かを転送しましょうか。";
+"HomeView_RecentComp_Empty_Desc" = "何かを転送しましょうか。\n[オールドメディアはどこへ行ったのか？](https://help.switshot.app/qna/#where-is-my-media-transfered-before)";
 "HomeView_RecentComp_Menu_Delete" = "転送を削除";
 "HomeView_RecentComp_Menu_Share" = "すべてを共有";
 "HomeView_RecentComp_Menu_Save" = "すべてを保存";

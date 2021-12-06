@@ -30,7 +30,7 @@
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
 "HomeView_RecentComp_Empty" = "空空如也";
-"HomeView_RecentComp_Empty_Desc" = "先试着转移一些媒体吧。";
+"HomeView_RecentComp_Empty_Desc" = "先试着转移一些媒体吧。\n[以前的媒体去哪了？](https://help.switshot.app/zh-cn/qna/#%E6%88%91%E4%BB%A5%E5%89%8D%E8%BD%AC%E7%A7%BB%E7%9A%84%E5%AA%92%E4%BD%93%E5%8E%BB%E5%93%AA%E4%BA%86)";
 "HomeView_RecentComp_Menu_Delete" = "删除此转移";
 "HomeView_RecentComp_Menu_Share" = "分享所有";
 "HomeView_RecentComp_Menu_Save" = "保存所有至图库";
