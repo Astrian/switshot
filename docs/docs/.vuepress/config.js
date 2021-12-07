@@ -89,7 +89,8 @@ function getNavbar(lang) {
       links: '常用链接',
       links_github: 'GitHub',
       links_appstore: 'App Store',
-      links_updates: '更新与资讯'
+      links_updates: '更新与资讯',
+      links_community: '社群',
     },
     'en-us': {
       basic: 'Must-knows',
@@ -98,7 +99,8 @@ function getNavbar(lang) {
       links: 'Links',
       links_github: 'GitHub',
       links_appstore: 'App Store',
-      links_updates: 'Updates & News'
+      links_updates: 'Updates & News',
+      links_community: 'Community',
     }
   }
 
@@ -112,7 +114,8 @@ function getNavbar(lang) {
     { text: navBarLanguage[lang].links, children: [
       { text: navBarLanguage[lang].links_github, link: 'https://github.com/Astrian/switshot'},
       { text: navBarLanguage[lang].links_appstore, link: 'https://apps.apple.com/us/app/switshot-console-media-manage/id1585470023'},
-      { text: navBarLanguage[lang].links_updates, link: 'https://updates.switshot.app'}
+      { text: navBarLanguage[lang].links_updates, link: 'https://updates.switshot.app'},
+      { text: navBarLanguage[lang].links_community, link: 'https://discord.gg/zeT2nnGvAA'}
     ] }
   ]
   return res

@@ -17,3 +17,6 @@ Switshot 的基本使用说明与提示。
 解答一些你关心的问题。
 
 [走你 →](/zh-cn/qna/)
+
+## 还不尽兴？
+加入 [Switshot 官方 Discord 社群](https://discord.gg/zeT2nnGvAA)。

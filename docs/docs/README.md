@@ -17,3 +17,6 @@ Get into troubles? Try those solutions first.
 Something you care is here.
 
 [Start →](/qna/)
+
+## Want more?
+Join [Switshot Discord Community!](https://discord.gg/zeT2nnGvAA)
