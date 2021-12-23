@@ -38,7 +38,7 @@
 "HomeView_RecentComp_DelAlert_Msg" = "轉移中的所有媒體將被刪除，且無法恢復。";
 "HomeView_RecentComp_DelAlert_Cancel" = "不要刪除";
 "HomeView_RecentComp_DelAlert_Confirm" = "繼續";
-"HomeView_RecentComp_WhereIsMyOldMedia" = "之前概媒體去佐邊度？";
+"HomeView_RecentComp_WhereIsMyOldMedia" = "之前轉移的媒體在哪裡？";
 "HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/qna/#where-is-my-media-transfered-before";
 
 // DetailView
