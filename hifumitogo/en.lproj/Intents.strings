@@ -5,7 +5,7 @@
 "KRRB7P" = "Console Name";
 "SyZMU6" = "Transfer media, ${saveToLibrary} to Photo Library";
 "UB5leK" = "Transfered media from ${consoleName}.";
-"WP4C72" = "Unable to transfer. Your device might have not connected to a console.";
+"WP4C72" = "Your device might have not connected to a console.";
 "XFS3AP" = "Transfered media from ${consoleName}.";
 "XeyI2k-qM3V4H" = "Transfer media without saving to Photo Library";
 "XeyI2k-qhuyOY" = "Transfer media and also save to Photo Library";
