@@ -74,6 +74,7 @@
 "AboutView_HelpCenter" = "幫助中心（英文）";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
 "AboutView_Updates" = "最新資訊（簡體中文及英文）";
+"AboutView_Discord" = "加入官方Discord伺服器";
 "AboutView_Appreciation" = "致謝";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁體中文及日文本地化";
