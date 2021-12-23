@@ -102,7 +102,11 @@ struct ConnectionComp: View {
           return
         }
         let request = URLRequest(url: consoleUrl)
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = 1.0
+        sessionConfig.timeoutIntervalForResource = 1.0
+        let session = URLSession(configuration: sessionConfig)
+        let (data, response) = try await session.data(for: request)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
           status = -1
           return
