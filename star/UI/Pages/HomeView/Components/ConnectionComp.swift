@@ -61,7 +61,7 @@ struct ConnectionComp: View {
       else if status == -1 {
         VStack(alignment: .leading, spacing: 8) {
           Text("HomeView_ConnectionComp_Ops").font(Font.title2)
-          Text("HomeView_ConnectionComp_Ops_Desc").foregroundColor(.gray)
+          Text("HomeView_ConnectionComp_Ops_Desc").foregroundColor(.gray).fixedSize(horizontal: false, vertical: true)
           HStack{
             Button(action: { showQRScanner = true }) {
               Text("HomeView_ConnectionComp_Ops_ScanBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
