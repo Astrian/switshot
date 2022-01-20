@@ -16,7 +16,7 @@
 "HomeView_ConnectionComp_Ops" = "ゲーム機との接続";
 "HomeView_ConnectionComp_Ops_Desc" = "Switshotのコードスキャナ経由でリンクします。";
 "HomeView_ConnectionComp_Ops_ScanBtn" = "スキャンして接続";
-"HomeView_ConnectionComp_Ops_MenuBtn" = "接続を試してみました";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "接続みました";
 "HomeView_ConnectionComp_Ready" = "転送の準備ができました";
 "HomeView_ConnectionComp_Ready_Desc" = "「%@」に接続されています。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "転送";

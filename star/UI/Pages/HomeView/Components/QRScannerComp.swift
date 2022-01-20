@@ -39,7 +39,7 @@ struct QRScannerComp: View {
         else if status == -1 {
           Spacer().frame(height: 20)
           VStack(spacing: 10) {
-            Text("HomeView_QRScannerComp_Scanning_Alert_Title").font(.title).bold()
+            Text("HomeView_QRScannerComp_Scanning_Alert_Title").font(.title).bold().multilineTextAlignment(.center)
             Text("HomeView_QRScannerComp_Scanning_Alert_Desc").foregroundColor(.gray).multilineTextAlignment(.center)
             Link(destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!) {
               Text("HomeView_QRScannerComp_Scanning_Alert_HelpBtn")
