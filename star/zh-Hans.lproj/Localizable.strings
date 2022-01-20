@@ -45,6 +45,9 @@
 "HomeView_QRScannerComp_Success_Desc" = "已连接至「%@」，现在可以继续媒体转移操作。";
 "HomeView_QRScannerComp_BackBtn" = "返回扫码";
 "HomeView_QRScannerComp_EndBtn" = "结束";
+"HomeView_QRScannerComp_ScannerError_Title" = "无法启动相机";
+"HomeView_QRScannerComp_ScannerError_Desc" = "可能因为你没有为Switshot开启相机权限。\n你依然可以通过其他方法建立与游戏主机的连接。";
+"HomeView_QRScannerComp_SystemSettings" = "前往Switshot设置";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";

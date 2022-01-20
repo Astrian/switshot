@@ -29,8 +29,8 @@ struct QRScannerComp: View {
               Task {
                 await scanResProcess(res: result.string)
               }
-            case .failure(let error):
-              print(error.localizedDescription)
+            case .failure(_):
+              status = -3
             }
           }.frame(width: 300, height: 200).cornerRadius(8)
           
@@ -49,7 +49,7 @@ struct QRScannerComp: View {
           Button(action: { status = 0 }) {
             HStack {
               Spacer()
-              Text("返回扫码").bold().foregroundColor(.black.opacity(0.9))
+              Text("HomeView_QRScannerComp_BackBtn").bold().foregroundColor(.black.opacity(0.9))
               Spacer()
             }.frame(height: 50).background(.gray.opacity(0.2)).cornerRadius(8)
           }
@@ -67,9 +67,28 @@ struct QRScannerComp: View {
           Button(action: { status = 0 }) {
             HStack {
               Spacer()
-              Text("返回扫码").bold().foregroundColor(.black.opacity(0.9))
+              Text("HomeView_QRScannerComp_BackBtn").bold()
               Spacer()
-            }.frame(height: 50).background(.gray.opacity(0.2)).cornerRadius(8)
+            }.frame(height: 50).background(.quaternary).cornerRadius(8)
+          }
+        }
+        else if status == -3 {
+          Spacer().frame(height: 20)
+          VStack(spacing: 10) {
+            Text("HomeView_QRScannerComp_ScannerError_Title").font(.title).bold()
+            Text("HomeView_QRScannerComp_ScannerError_Desc").foregroundColor(.gray).multilineTextAlignment(.center)
+            Link("HomeView_QRScannerComp_SystemSettings", destination: URL(string: UIApplication.openSettingsURLString)!)
+            Link(destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!) {
+              Text("HomeView_QRScannerComp_Scanning_Alert_HelpBtn")
+            }
+          }
+          Spacer()
+          Button(action: { presentationMode.wrappedValue.dismiss() }) {
+            HStack {
+              Spacer()
+              Text("HomeView_QRScannerComp_EndBtn").bold()
+              Spacer()
+            }.frame(height: 50).background(.quaternary).cornerRadius(8)
           }
         }
         else if status == 1 {

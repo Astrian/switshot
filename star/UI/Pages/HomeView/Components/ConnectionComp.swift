@@ -96,7 +96,7 @@ struct ConnectionComp: View {
     
     }
     .onAppear { prepareTransfer() }
-    .sheet(isPresented: $showQRScanner) {
+    .sheet(isPresented: $showQRScanner, onDismiss: { prepareTransfer() }) {
       QRScannerComp().interactiveDismissDisabled()
     }
   }
@@ -154,10 +154,6 @@ struct ConnectionComp: View {
         status = -1
       }
     }
-  }
-  
-  mutating func changeShowQRScanner(showQRScanner: Bool) {
-    prepareTransfer()
   }
 }
 
