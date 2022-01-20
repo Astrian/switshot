@@ -155,6 +155,10 @@ struct ConnectionComp: View {
       }
     }
   }
+  
+  mutating func changeShowQRScanner(showQRScanner: Bool) {
+    prepareTransfer()
+  }
 }
 
 /* struct ConnectionComp_Previews: PreviewProvider {

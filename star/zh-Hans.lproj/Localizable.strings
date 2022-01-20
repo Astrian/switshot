@@ -37,6 +37,14 @@
 "HomeView_QRScannerComp_Scanning_Alert_Title" = "不兼容该QR码";
 "HomeView_QRScannerComp_Scanning_Alert_Desc" = "请扫描来自兼容的游戏主机的QR码。";
 "HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "需要帮助";
+"HomeView_QRScannerComp_Wait_Title" = "正与游戏主机通讯";
+"HomeView_QRScannerComp_Wait_Desc" = "需要花费几分钟时间，请耐心等候。";
+"HomeView_QRScannerComp_Scanning_Failed_Title" = "无法与游戏主机通讯";
+"HomeView_QRScannerComp_Scanning_Failed_Desc" = "尝试重新扫码连接，或到帮助中心寻找相关解决方案。";
+"HomeView_QRScannerComp_Success_Title" = "完成连接";
+"HomeView_QRScannerComp_Success_Desc" = "已连接至「%@」，现在可以继续媒体转移操作。";
+"HomeView_QRScannerComp_BackBtn" = "返回扫码";
+"HomeView_QRScannerComp_EndBtn" = "结束";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
