@@ -31,6 +31,13 @@
 "HomeView_ConnectionComp_Ops_HelpBtn" = "需要帮助";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/zh-cn/basic/transfer.html";
 
+// QRScannerComp
+"HomeView_QRScannerComp_Scanning_Title" = "扫描QR码";
+"HomeView_QRScannerComp_Scanning_Desc" = "将游戏主机屏幕上显示的连接QR码放入取景框中。";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "不兼容该QR码";
+"HomeView_QRScannerComp_Scanning_Alert_Desc" = "请扫描来自兼容的游戏主机的QR码。";
+"HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "需要帮助";
+
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
 "HomeView_RecentComp_Empty" = "空空如也";

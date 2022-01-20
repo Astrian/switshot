@@ -46,6 +46,8 @@
 		45B0D46A2759A64D0009D033 /* saveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0D4682759A64D0009D033 /* saveVideo.swift */; };
 		45BA08982755CB77003C8F58 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BA08972755CB77003C8F58 /* InteractionView.swift */; };
 		45EA862F279904CD009EFE7D /* QRScannerComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EA862E279904CD009EFE7D /* QRScannerComp.swift */; };
+		45EA86322799087A009EFE7D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 45EA86312799087A009EFE7D /* CodeScanner */; };
+		45EA8634279943EA009EFE7D /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45EA8633279943EA009EFE7D /* NetworkExtension.framework */; };
 		DFB1E46526EFF2E60035A8F3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DFB1E46726EFF2E60035A8F3 /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,7 @@
 		45B0D4682759A64D0009D033 /* saveVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveVideo.swift; sourceTree = "<group>"; };
 		45BA08972755CB77003C8F58 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
 		45EA862E279904CD009EFE7D /* QRScannerComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerComp.swift; sourceTree = "<group>"; };
+		45EA8633279943EA009EFE7D /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		DFB1E46626EFF2E60035A8F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		DFB1E46926EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DFB1E46B26EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -139,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				454D644A274B7DA100C9B2CC /* RealmSwift in Frameworks */,
+				45EA8634279943EA009EFE7D /* NetworkExtension.framework in Frameworks */,
 				454D6448274B7DA100C9B2CC /* Realm in Frameworks */,
+				45EA86322799087A009EFE7D /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +191,7 @@
 		45506DB62744BAD5008E30C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45EA8633279943EA009EFE7D /* NetworkExtension.framework */,
 				45506DB72744BAD5008E30C0 /* Intents.framework */,
 			);
 			name = Frameworks;
@@ -366,6 +372,7 @@
 			packageProductDependencies = (
 				454D6447274B7DA100C9B2CC /* Realm */,
 				454D6449274B7DA100C9B2CC /* RealmSwift */,
+				45EA86312799087A009EFE7D /* CodeScanner */,
 			);
 			productName = star;
 			productReference = 45AA096F26EB8A5C001043AE /* star.app */;
@@ -402,6 +409,7 @@
 			mainGroup = 45AA096626EB8A5C001043AE;
 			packageReferences = (
 				454D6446274B7DA100C9B2CC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				45EA86302799087A009EFE7D /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 45AA097026EB8A5C001043AE /* Products */;
 			projectDirPath = "";
@@ -805,6 +813,14 @@
 				minimumVersion = 10.19.0;
 			};
 		};
+		45EA86302799087A009EFE7D /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -827,6 +843,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 454D6446274B7DA100C9B2CC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		45EA86312799087A009EFE7D /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45EA86302799087A009EFE7D /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
