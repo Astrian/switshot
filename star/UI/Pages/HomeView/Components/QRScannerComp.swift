@@ -49,9 +49,9 @@ struct QRScannerComp: View {
           Button(action: { status = 0 }) {
             HStack {
               Spacer()
-              Text("HomeView_QRScannerComp_BackBtn").bold().foregroundColor(.black.opacity(0.9))
+              Text("HomeView_QRScannerComp_BackBtn").bold()
               Spacer()
-            }.frame(height: 50).background(.gray.opacity(0.2)).cornerRadius(8)
+            }.frame(height: 50).background(.quaternary).cornerRadius(8)
           }
         }
         else if status == -2 {
