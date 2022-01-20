@@ -14,7 +14,7 @@
 "HomeView_ConnectionComp_Title" = "转移";
 "HomeView_ConnectionComp_CheckingConnection" = "检查连接…";
 "HomeView_ConnectionComp_Ops" = "开始连接";
-"HomeView_ConnectionComp_Ops_Desc" = "扫描游戏主机上的连接 QR 码，以进行连接。";
+"HomeView_ConnectionComp_Ops_Desc" = "使用Switshot内的扫码器进行连接。";
 "HomeView_ConnectionComp_Ops_ScanBtn" = "扫码连接";
 "HomeView_ConnectionComp_Ops_MenuBtn" = "我已尝试连接";
 "HomeView_ConnectionComp_Ready" = "准备转移";
@@ -41,12 +41,10 @@
 "HomeView_QRScannerComp_Wait_Desc" = "需要花费几分钟时间，请耐心等候。";
 "HomeView_QRScannerComp_Scanning_Failed_Title" = "无法与游戏主机通讯";
 "HomeView_QRScannerComp_Scanning_Failed_Desc" = "尝试重新扫码连接，或到帮助中心寻找相关解决方案。";
-"HomeView_QRScannerComp_Success_Title" = "完成连接";
-"HomeView_QRScannerComp_Success_Desc" = "已连接至「%@」，现在可以继续媒体转移操作。";
 "HomeView_QRScannerComp_BackBtn" = "返回扫码";
 "HomeView_QRScannerComp_EndBtn" = "结束";
 "HomeView_QRScannerComp_ScannerError_Title" = "无法启动相机";
-"HomeView_QRScannerComp_ScannerError_Desc" = "可能因为你没有为Switshot开启相机权限。\n你依然可以通过其他方法建立与游戏主机的连接。";
+"HomeView_QRScannerComp_ScannerError_Desc" = "可能是因为你没有为Switshot开启相机权限。\n你依然可以通过其他方法建立与游戏主机的连接。";
 "HomeView_QRScannerComp_SystemSettings" = "前往Switshot设置";
 
 // RecentComp

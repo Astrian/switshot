@@ -13,6 +13,10 @@
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "轉移";
 "HomeView_ConnectionComp_CheckingConnection" = "檢查連線…";
+"HomeView_ConnectionComp_Ops" = "開始連結";
+"HomeView_ConnectionComp_Ops_Desc" = "透過Switshot內的掃碼器進行連結。";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "掃碼連結";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "我已嘗試連結";
 "HomeView_ConnectionComp_Ready" = "準備轉移";
 "HomeView_ConnectionComp_Ready_Desc" = "已連接至「%@」。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "開始轉移";
@@ -23,9 +27,25 @@
 "HomeView_ConnectionComp_Error" = "無法連線至主機";
 "HomeView_ConnectionComp_Error_Noconn" = "請確認設備已連線至遊戲主機的本地網路。";
 "HomeView_ConnectionComp_Error_Unknown" = "遇到無法處理的錯誤，請稍後再試，或聯繫開發者。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "再試";
+"HomeView_ConnectionComp_Error_TryAgainBtn" = "重新檢測連結";
 "HomeView_ConnectionComp_Error_HelpBtn" = "需要幫助";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
+
+// QRScannerComp
+"HomeView_QRScannerComp_Scanning_Title" = "掃描QR碼";
+"HomeView_QRScannerComp_Scanning_Desc" = "將遊戲主機螢幕上顯示的連接QR碼置入取景框中。";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "與該QR碼不相容";
+"HomeView_QRScannerComp_Scanning_Alert_Desc" = "請掃描來自相容遊戲主機的QR碼。";
+"HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "需要幫助";
+"HomeView_QRScannerComp_Wait_Title" = "正與遊戲主機通訊";
+"HomeView_QRScannerComp_Wait_Desc" = "需要花費一些時間，請耐心等待。";
+"HomeView_QRScannerComp_Scanning_Failed_Title" = "無法與遊戲主機通訊";
+"HomeView_QRScannerComp_Scanning_Failed_Desc" = "嘗試重新掃碼連接，或到幫助中心尋找相關解決方案。";
+"HomeView_QRScannerComp_BackBtn" = "重新掃描QR碼";
+"HomeView_QRScannerComp_EndBtn" = "結束";
+"HomeView_QRScannerComp_ScannerError_Title" = "無法啟動相機";
+"HomeView_QRScannerComp_ScannerError_Desc" = "可能是因為你沒有為Switshot啟用相機權限。\n你依然可以透過其他方式建立與遊戲主機的連結。";
+"HomeView_QRScannerComp_SystemSettings" = "前往Switshot設定";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
