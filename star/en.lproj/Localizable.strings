@@ -94,8 +94,12 @@
 "AboutView_Dismiss" = "Done";
 "AboutView_HelpCenter" = "Help Center";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
+"AboutView_Discord" = "Discord Server";
 "AboutView_Updates" = "Latest Updates";
 "AboutView_Appreciation" = "Appreciation";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "Traditional Chinese and Japanese localisation";
 "AboutView_Appreciation_Contibutor_Website" = "Website";
+"AboutView_Comm" = "Community";
+"AboutView_QQ" = "QQ Guild";
+"AboutView_Weibo" = "Follow Weibo";

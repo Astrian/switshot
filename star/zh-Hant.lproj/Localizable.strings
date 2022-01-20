@@ -84,6 +84,7 @@
 "DetailView_QuickLookComp_Menu_Save" = "保存至圖庫";
 "DetailView_QuickLookComp_Menu_Delete" = "刪除";
 "DetailView_QuickLookComp_Share_Title" = "遊戲媒體";
+
 // AboutView
 "AboutView_Title" = "關於Switshot";
 "AboutView_Version" = "版本號";
@@ -94,8 +95,11 @@
 "AboutView_HelpCenter" = "幫助中心（英文）";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
 "AboutView_Updates" = "最新資訊（簡體中文及英文）";
-"AboutView_Discord" = "加入官方Discord伺服器";
+"AboutView_Discord" = "Discord伺服器";
 "AboutView_Appreciation" = "致謝";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁體中文及日文本地化";
 "AboutView_Appreciation_Contibutor_Website" = "網站";
+"AboutView_Comm" = "社群";
+"AboutView_QQ" = "QQ頻道";
+"AboutView_Weibo" = "關注開發者微博";

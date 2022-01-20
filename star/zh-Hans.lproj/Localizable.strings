@@ -93,11 +93,13 @@
 "AboutView_OpenSource" = "Switshot是一款开源软件。";
 "AboutView_Dismiss" = "完成";
 "AboutView_HelpCenter" = "帮助中心";
-"AboutView_Discord" = "加入官方Discord服务器";
+"AboutView_Discord" = "Discord服务器";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/zh-cn/";
 "AboutView_Updates" = "最新资讯";
 "AboutView_Appreciation" = "致谢";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁体中文、日文本地化";
 "AboutView_Appreciation_Contibutor_Website" = "网站";
-
+"AboutView_Comm" = "社群";
+"AboutView_QQ" = "QQ频道";
+"AboutView_Weibo" = "关注开发者微博";

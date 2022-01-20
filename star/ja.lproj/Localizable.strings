@@ -93,8 +93,11 @@
 "AboutView_HelpCenter" = "ヘルプセンター（英語）";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
 "AboutView_Updates" = "最新情報（簡体字中国語、英語）";
-"AboutView_Discord" = "Discordサーバーを参加";
+"AboutView_Discord" = "Discordサーバー";
 "AboutView_Appreciation" = "謝辞";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁体字中国語と日本語のローカライズ";
 "AboutView_Appreciation_Contibutor_Website" = "ホームページ";
+"AboutView_Comm" = "コミュニティ";
+"AboutView_QQ" = "QQギルド";
+"AboutView_Weibo" = "開発者のWeiboをフォローする";
