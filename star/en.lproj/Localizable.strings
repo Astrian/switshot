@@ -27,8 +27,8 @@
 "HomeView_ConnectionComp_Error" = "Cannot connect to console";
 "HomeView_ConnectionComp_Error_Noconn" = "Make sure that your device is connecting to the local connection established by your console.";
 "HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact the developer.";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "Re-check connection";
-"HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "Re-check connection";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "Need help";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
 // QRScannerComp

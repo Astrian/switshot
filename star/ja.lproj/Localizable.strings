@@ -27,8 +27,8 @@
 "HomeView_ConnectionComp_Error" = "ゲーム機に接続できません";
 "HomeView_ConnectionComp_Error_Noconn" = "ゲーム機のLANに接続することをご確認してください。";
 "HomeView_ConnectionComp_Error_Unknown" = "不明なエラーが発生しました。しばらく時間をおいてから再度お試しいただくか、開発者にお問い合わせください。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "接続を再確認する";
-"HomeView_ConnectionComp_Error_HelpBtn" = "お困りの場合";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "接続を再確認する";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "お困りの場合";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
 // QRScannerComp

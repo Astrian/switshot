@@ -27,14 +27,14 @@
 "HomeView_ConnectionComp_Error" = "無法連線至主機";
 "HomeView_ConnectionComp_Error_Noconn" = "請確認設備已連線至遊戲主機的本地網路。";
 "HomeView_ConnectionComp_Error_Unknown" = "遇到無法處理的錯誤，請稍後再試，或聯繫開發者。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "重新檢測連結";
-"HomeView_ConnectionComp_Error_HelpBtn" = "需要幫助";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "重新檢測連結";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "需要幫助";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
 
 // QRScannerComp
 "HomeView_QRScannerComp_Scanning_Title" = "掃描QR碼";
 "HomeView_QRScannerComp_Scanning_Desc" = "將遊戲主機螢幕上顯示的連接QR碼置入取景框中。";
-"HomeView_QRScannerComp_Scanning_Alert_Title" = "與該QR碼不相容";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "不相容的QR碼";
 "HomeView_QRScannerComp_Scanning_Alert_Desc" = "請掃描來自相容遊戲主機的QR碼。";
 "HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "需要幫助";
 "HomeView_QRScannerComp_Wait_Title" = "正與遊戲主機通訊";
@@ -50,7 +50,7 @@
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
 "HomeView_RecentComp_Empty" = "空空如也";
-"HomeView_RecentComp_Empty_Desc" = "先嘗試轉移一些媒體吧。[之前概媒體去佐邊度？](https://help.switshot.app/qna/#where-is-my-media-transfered-before)";
+"HomeView_RecentComp_Empty_Desc" = "先嘗試轉移一些媒體吧。\n[之前的媒體去了哪裡？](https://help.switshot.app/qna/#where-is-my-media-transfered-before)";
 "HomeView_RecentComp_Menu_Delete" = "刪除此轉移";
 "HomeView_RecentComp_Menu_Share" = "分享所有";
 "HomeView_RecentComp_Menu_Save" = "保存所有至圖庫";
