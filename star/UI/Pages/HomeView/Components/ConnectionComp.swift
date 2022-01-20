@@ -11,6 +11,7 @@ import RealmSwift
 struct ConnectionComp: View {
   @State var status = 0
   @State var consoleName = ""
+  @State var showQRScanner = false
   @ObservedResults(TransferLog.self) var logs
   @ObservedResults(TransferedMedia.self) var medias
   
@@ -59,13 +60,20 @@ struct ConnectionComp: View {
       // Cannot connect to console
       else if status == -1 {
         VStack(alignment: .leading, spacing: 8) {
-          Text("HomeView_ConnectionComp_Error").font(Font.title2)
-          Text("HomeView_ConnectionComp_Error_Noconn").foregroundColor(.gray)
+          Text("HomeView_ConnectionComp_Ops").font(Font.title2)
+          Text("HomeView_ConnectionComp_Ops_Desc").foregroundColor(.gray)
           HStack{
-            Button(action: { prepareTransfer() }) {
-              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+            Button(action: { showQRScanner = true }) {
+              Text("HomeView_ConnectionComp_Ops_ScanBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
             }
-            Link("HomeView_ConnectionComp_Error_HelpBtn", destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!)
+            Menu {
+              Button(action: { prepareTransfer() }) { Label("HomeView_ConnectionComp_Ops_TryAgainBtn", systemImage: "arrow.clockwise.circle") }
+              Link(destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!) {
+                Label("HomeView_ConnectionComp_Ops_HelpBtn", systemImage: "book.circle")
+              }
+            } label: {
+              Label("HomeView_ConnectionComp_Ops_MenuBtn", systemImage: "questionmark.circle.fill")
+            }
           }
         }
       }
@@ -88,6 +96,9 @@ struct ConnectionComp: View {
     
     }
     .onAppear { prepareTransfer() }
+    .sheet(isPresented: $showQRScanner) {
+      QRScannerComp().interactiveDismissDisabled()
+    }
   }
   
   func prepareTransfer() {

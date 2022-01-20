@@ -45,6 +45,7 @@
 		45B0D4692759A64D0009D033 /* saveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0D4682759A64D0009D033 /* saveVideo.swift */; };
 		45B0D46A2759A64D0009D033 /* saveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B0D4682759A64D0009D033 /* saveVideo.swift */; };
 		45BA08982755CB77003C8F58 /* InteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BA08972755CB77003C8F58 /* InteractionView.swift */; };
+		45EA862F279904CD009EFE7D /* QRScannerComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EA862E279904CD009EFE7D /* QRScannerComp.swift */; };
 		DFB1E46526EFF2E60035A8F3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DFB1E46726EFF2E60035A8F3 /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		45AA097B26EB8A5D001043AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45B0D4682759A64D0009D033 /* saveVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveVideo.swift; sourceTree = "<group>"; };
 		45BA08972755CB77003C8F58 /* InteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionView.swift; sourceTree = "<group>"; };
+		45EA862E279904CD009EFE7D /* QRScannerComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerComp.swift; sourceTree = "<group>"; };
 		DFB1E46626EFF2E60035A8F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		DFB1E46926EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DFB1E46B26EFF6CC0035A8F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				457ED7E5274B1BE8003C2958 /* ConnectionComp.swift */,
+				45EA862E279904CD009EFE7D /* QRScannerComp.swift */,
 				457ED7E7274B2188003C2958 /* RecentComp.swift */,
 			);
 			path = Components;
@@ -460,6 +463,7 @@
 				45850BE32750C1A7004DCAFC /* QuickLookComp.swift in Sources */,
 				45BA08982755CB77003C8F58 /* InteractionView.swift in Sources */,
 				457ED7E8274B2188003C2958 /* RecentComp.swift in Sources */,
+				45EA862F279904CD009EFE7D /* QRScannerComp.swift in Sources */,
 				457ED7F4274B7957003C2958 /* TransferLogs.swift in Sources */,
 				45116D19274516F2002D278D /* transfer.swift in Sources */,
 				45850BE627510859004DCAFC /* LinkPresentationItemSource.swift in Sources */,

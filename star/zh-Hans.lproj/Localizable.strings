@@ -13,6 +13,10 @@
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "转移";
 "HomeView_ConnectionComp_CheckingConnection" = "检查连接…";
+"HomeView_ConnectionComp_Ops" = "开始连接";
+"HomeView_ConnectionComp_Ops_Desc" = "扫描游戏主机上的连接 QR 码，以进行连接。";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "扫码连接";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "我已尝试连接";
 "HomeView_ConnectionComp_Ready" = "准备转移";
 "HomeView_ConnectionComp_Ready_Desc" = "已连接至「%@」。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "开始转移";
@@ -23,8 +27,8 @@
 "HomeView_ConnectionComp_Error" = "无法连接至主机";
 "HomeView_ConnectionComp_Error_Noconn" = "请确认你的设备已连接至主机的本地联机网络。";
 "HomeView_ConnectionComp_Error_Unknown" = "遇到无法处理的错误。过会儿再试试，或者联系一下开发者。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "重试";
-"HomeView_ConnectionComp_Error_HelpBtn" = "需要帮助";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "重新检测连接";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "需要帮助";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/zh-cn/basic/transfer.html";
 
 // RecentComp
