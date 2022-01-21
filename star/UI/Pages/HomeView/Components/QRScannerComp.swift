@@ -57,7 +57,7 @@ struct QRScannerComp: View {
         else if status == -2 {
           Spacer().frame(height: 20)
           VStack(spacing: 10) {
-            Text("HomeView_QRScannerComp_Scanning_Failed_Title").font(.title).bold()
+            Text("HomeView_QRScannerComp_Scanning_Failed_Title").font(.title).bold().multilineTextAlignment(.center)
             Text("HomeView_QRScannerComp_Scanning_Failed_Desc").foregroundColor(.gray).multilineTextAlignment(.center)
             Link(destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!) {
               Text("HomeView_QRScannerComp_Scanning_Alert_HelpBtn")
@@ -75,7 +75,7 @@ struct QRScannerComp: View {
         else if status == -3 {
           Spacer().frame(height: 20)
           VStack(spacing: 10) {
-            Text("HomeView_QRScannerComp_ScannerError_Title").font(.title).bold()
+            Text("HomeView_QRScannerComp_ScannerError_Title").font(.title).bold().multilineTextAlignment(.center)
             Text("HomeView_QRScannerComp_ScannerError_Desc").foregroundColor(.gray).multilineTextAlignment(.center)
             Link("HomeView_QRScannerComp_SystemSettings", destination: URL(string: UIApplication.openSettingsURLString)!)
             Link(destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!) {
