@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import StoreKit
 
 struct ConnectionComp: View {
   @State var status = 0
@@ -150,9 +151,23 @@ struct ConnectionComp: View {
         }
         $logs.append(log)
         status = 3
+        reviewGatcha()
       } catch {
         status = -1
       }
+    }
+  }
+  
+  func reviewGatcha() {
+    let random = arc4random_uniform(100)
+    print(random)
+    if random >= 98 {
+      print("gatcha!")
+      guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+        print("cannot get scene")
+        return
+      }
+      SKStoreReviewController.requestReview(in: scene)
     }
   }
 }
