@@ -26,10 +26,10 @@
 	<true/>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<false/>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>LocalNetworkPermission_Description</string>
 	<key>NSCameraUsageDescription</key>
 	<string>CameraPermission_Description</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>LocalNetworkPermission_Description</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>PhotoLibraryPermission_Description</string>
 	<key>NSUserActivityTypes</key>

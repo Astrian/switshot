@@ -100,6 +100,7 @@
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁體中文及日文本地化";
 "AboutView_Appreciation_Contibutor_Website" = "網站";
-"AboutView_Comm" = "社群";
+"AboutView_Comm" = "加入社群";
 "AboutView_QQ" = "QQ頻道";
-"AboutView_Weibo" = "關注開發者微博";
+"AboutView_Weibo" = "開發者微博";
+"AboutView_AppStore" = "為Switshot進行評價";

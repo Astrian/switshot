@@ -27,6 +27,7 @@ struct AboutView: View {
         Section {
           Link("AboutView_HelpCenter", destination: URL(string: NSLocalizedString("AboutView_HelpCenter_Link", comment: ""))!)
           Link("AboutView_Updates", destination: URL(string: "https://updates.switshot.app/")!)
+          Link("AboutView_Weibo", destination: URL(string: "https://weibo.com/n/Narixtas")!)
         }
         
         Section(header: Text("AboutView_Comm")) {
@@ -43,7 +44,7 @@ struct AboutView: View {
         }
         
         Section (footer: Text("AboutView_OpenSource")) {
-          Link("AboutView_Weibo", destination: URL(string: "https://weibo.com/n/Narixtas")!)
+          Link("AboutView_AppStore", destination: URL(string: "https://apps.apple.com/us/app/switshot/id1585470023?action=write-review")!)
           Link("AboutView_Repo", destination: URL(string: "https://github.com/Astrian/switshot")!)
         }
       }
