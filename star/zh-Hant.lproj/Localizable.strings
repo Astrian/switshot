@@ -104,3 +104,6 @@
 "AboutView_QQ" = "QQ頻道";
 "AboutView_Weibo" = "開發者微博";
 "AboutView_AppStore" = "為Switshot進行評價";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "掃碼連結";

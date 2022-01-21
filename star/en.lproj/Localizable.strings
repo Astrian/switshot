@@ -104,3 +104,6 @@
 "AboutView_QQ" = "QQ Guild";
 "AboutView_Weibo" = "Developer’s Weibo";
 "AboutView_AppStore" = "Rate Switshot";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "Scan and Connect";

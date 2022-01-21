@@ -104,3 +104,6 @@
 "AboutView_QQ" = "QQ频道";
 "AboutView_Weibo" = "开发者微博";
 "AboutView_AppStore" = "给Switshot评分";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "扫码连接";

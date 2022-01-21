@@ -15,7 +15,7 @@
 "HomeView_ConnectionComp_CheckingConnection" = "接続中…";
 "HomeView_ConnectionComp_Ops" = "ゲーム機との接続";
 "HomeView_ConnectionComp_Ops_Desc" = "Switshotのコードスキャナ経由でリンクします。";
-"HomeView_ConnectionComp_Ops_ScanBtn" = "スキャンして接続";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "スキャンと接続";
 "HomeView_ConnectionComp_Ops_MenuBtn" = "接続みました";
 "HomeView_ConnectionComp_Ready" = "転送の準備ができました";
 "HomeView_ConnectionComp_Ready_Desc" = "「%@」に接続されています。";
@@ -102,3 +102,6 @@
 "AboutView_QQ" = "QQギルド";
 "AboutView_Weibo" = "開発者のWeibo";
 "AboutView_AppStore" = "Switshotを評価";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "スキャンと接続";
