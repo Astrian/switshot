@@ -33,6 +33,7 @@ struct starApp: SwiftUI.App {
         switch (shortcutItem){
         case "Scanner":
           showQRScanner = true
+          shortcutItemToProcess = nil
         default:
           print("do noting")
         }
