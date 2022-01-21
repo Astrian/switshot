@@ -10,13 +10,14 @@ import RealmSwift
 
 struct HomeView: View {
   @State var aboutVisible = false
+  @Binding var showQRScanner: Bool
   
   var body: some View {
     NavigationView {
       ScrollView {
         VStack(alignment: .leading) {
           Divider()
-          ConnectionComp()
+          ConnectionComp(showQRScanner: $showQRScanner)
           Divider()
           RecentComp()
         }.frame(maxWidth: .infinity).padding([.horizontal])
@@ -37,10 +38,4 @@ struct HomeView: View {
     }
   }
   
-}
-
-struct HomeView_Previews: PreviewProvider {
-  static var previews: some View {
-    HomeView()
-  }
 }

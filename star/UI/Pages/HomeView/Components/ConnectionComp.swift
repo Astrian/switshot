@@ -12,7 +12,7 @@ import StoreKit
 struct ConnectionComp: View {
   @State var status = 0
   @State var consoleName = ""
-  @State var showQRScanner = false
+  @Binding var showQRScanner: Bool
   @ObservedResults(TransferLog.self) var logs
   @ObservedResults(TransferedMedia.self) var medias
   
