@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+  @State var status = 0
+  
+  var body: some View {
+    NavigationView {
+      Group {
+        switch status {
+        case 0:
+          ProgressView("Connecting")
+        default:
+          Text("Default")
+        }
+      }
+      .navigationTitle("AppName")
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
