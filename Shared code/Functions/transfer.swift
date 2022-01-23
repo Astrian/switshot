@@ -75,12 +75,3 @@ struct TransferResult {
   var data: [UUID: Data]
   var mediaType: String
 }
-
-struct ConsoleResponse: Codable {
-  var FileType: String
-  var DownloadMes: String?
-  var PhotoHelpMes: String?
-  var MovieHelpMes: String?
-  var ConsoleName: String
-  var FileNames: [String]
-}

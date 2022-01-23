@@ -8,3 +8,9 @@
 
 "AppName" = "Switshot";
 "Connecting" = "Checking connection...";
+"NotFound_Title" = "Console Not Found";
+"NotFound_Desc" = "Connect to game console with Camera app or system built-in Scanner.\nUse full version of Switshot for “Scan and Connect”.";
+"RetryConnect" = "Retry";
+"Connected_Title" = "Ready to Transfer";
+"Connected_Desc" = "Connected to “%@”. Tap “Transfer now” to transfer selected media on game console to your photo library.";
+"TransferNow" = "Transfer Now";

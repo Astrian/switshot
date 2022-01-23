@@ -40,6 +40,9 @@
 		459B1EB1279D972400289074 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459B1EB0279D972400289074 /* Preview Assets.xcassets */; };
 		459B1EB6279D972400289074 /* lucifer.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 459B1EA7279D972300289074 /* lucifer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		459B1EBD279D989300289074 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 459B1EBF279D989300289074 /* Localizable.strings */; };
+		459B1EC5279D9FAE00289074 /* ConsoleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */; };
+		459B1EC6279D9FAE00289074 /* ConsoleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */; };
+		459B1EC7279D9FAE00289074 /* ConsoleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */; };
 		459F4E632757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		459F4E642757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		459F4E672757B110002A2A53 /* imageFromVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E662757B110002A2A53 /* imageFromVideo.swift */; };
@@ -142,6 +145,7 @@
 		459B1EC0279D989500289074 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		459B1EC1279D989600289074 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		459B1EC2279D989700289074 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleResponse.swift; sourceTree = "<group>"; };
 		459F4E622757A853002A2A53 /* writeToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeToRealm.swift; sourceTree = "<group>"; };
 		459F4E662757B110002A2A53 /* imageFromVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromVideo.swift; sourceTree = "<group>"; };
 		459F4E6A2757B782002A2A53 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 			children = (
 				457ED7F3274B7957003C2958 /* TransferLogs.swift */,
 				454D644F274BCBD900C9B2CC /* TransferedMedia.swift */,
+				459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
 				454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
+				459B1EC6279D9FAE00289074 /* ConsoleResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459B1EC7279D9FAE00289074 /* ConsoleResponse.swift in Sources */,
 				459B1EAC279D972300289074 /* ContentView.swift in Sources */,
 				459B1EAA279D972300289074 /* luciferApp.swift in Sources */,
 			);
@@ -582,6 +589,7 @@
 				45EA862F279904CD009EFE7D /* QRScannerComp.swift in Sources */,
 				457ED7F4274B7957003C2958 /* TransferLogs.swift in Sources */,
 				45116D19274516F2002D278D /* transfer.swift in Sources */,
+				459B1EC5279D9FAE00289074 /* ConsoleResponse.swift in Sources */,
 				45850BE627510859004DCAFC /* LinkPresentationItemSource.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
 				45850BE827510B68004DCAFC /* ActivityViewController.swift in Sources */,
@@ -740,7 +748,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lucifer/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Switshot;
+				INFOPLIST_KEY_CFBundleDisplayName = "Switshot Clip";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -774,7 +782,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = lucifer/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Switshot;
+				INFOPLIST_KEY_CFBundleDisplayName = "Switshot Clip";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
