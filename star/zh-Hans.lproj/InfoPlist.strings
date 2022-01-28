@@ -8,3 +8,4 @@
 
 "NSPhotoLibraryAddUsageDescription" = "保存媒体至照片图库。";
 "NSLocalNetworkUsageDescription" = "……以连接至你的游戏主机！";
+"NSCameraUsageDescription" = "扫描来自游戏主机的本地网络连接QR码。";

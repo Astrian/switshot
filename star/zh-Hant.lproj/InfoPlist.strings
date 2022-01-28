@@ -8,3 +8,4 @@
 
 "NSPhotoLibraryAddUsageDescription" = "儲存媒體至照片相簿。";
 "NSLocalNetworkUsageDescription" = "……以連線至你的遊戲主機！";
+"NSCameraUsageDescription" = "掃描來自遊戲主機的本地網路QR碼。";

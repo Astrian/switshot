@@ -12,6 +12,7 @@ class TransferMediaIntentHandler: NSObject, TransferMediaIntentHandling {
   func handle(intent: TransferMediaIntent) async -> TransferMediaIntentResponse {
     do {
       let transferResult = try await transfer(saveCopy: intent.saveToLibrary as? Bool)
+      print("transfered")
       let result = TransferMediaIntentResponse(code: .success, userActivity: nil)
       result.media = [INFile]()
       var i = 0

@@ -13,6 +13,10 @@
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "轉移";
 "HomeView_ConnectionComp_CheckingConnection" = "檢查連線…";
+"HomeView_ConnectionComp_Ops" = "開始連結";
+"HomeView_ConnectionComp_Ops_Desc" = "透過Switshot內的掃碼器進行連結。";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "掃碼連結";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "我已嘗試連結";
 "HomeView_ConnectionComp_Ready" = "準備轉移";
 "HomeView_ConnectionComp_Ready_Desc" = "已連接至「%@」。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "開始轉移";
@@ -23,14 +27,30 @@
 "HomeView_ConnectionComp_Error" = "無法連線至主機";
 "HomeView_ConnectionComp_Error_Noconn" = "請確認設備已連線至遊戲主機的本地網路。";
 "HomeView_ConnectionComp_Error_Unknown" = "遇到無法處理的錯誤，請稍後再試，或聯繫開發者。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "再試";
-"HomeView_ConnectionComp_Error_HelpBtn" = "需要幫助";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "重新檢測連結";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "需要幫助";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
+
+// QRScannerComp
+"HomeView_QRScannerComp_Scanning_Title" = "掃描QR碼";
+"HomeView_QRScannerComp_Scanning_Desc" = "將遊戲主機螢幕上顯示的連接QR碼置入取景框中。";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "不相容的QR碼";
+"HomeView_QRScannerComp_Scanning_Alert_Desc" = "請掃描來自相容遊戲主機的QR碼。";
+"HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "需要幫助";
+"HomeView_QRScannerComp_Wait_Title" = "正與遊戲主機通訊";
+"HomeView_QRScannerComp_Wait_Desc" = "需要花費一些時間，請耐心等待。";
+"HomeView_QRScannerComp_Scanning_Failed_Title" = "無法與遊戲主機通訊";
+"HomeView_QRScannerComp_Scanning_Failed_Desc" = "嘗試重新掃碼連接，或到幫助中心尋找相關解決方案。";
+"HomeView_QRScannerComp_BackBtn" = "重新掃描QR碼";
+"HomeView_QRScannerComp_EndBtn" = "結束";
+"HomeView_QRScannerComp_ScannerError_Title" = "無法啟動相機";
+"HomeView_QRScannerComp_ScannerError_Desc" = "可能是因為你沒有為Switshot啟用相機權限。\n你依然可以透過其他方式建立與遊戲主機的連結。";
+"HomeView_QRScannerComp_SystemSettings" = "前往Switshot設定";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
 "HomeView_RecentComp_Empty" = "空空如也";
-"HomeView_RecentComp_Empty_Desc" = "先嘗試轉移一些媒體吧。[之前概媒體去佐邊度？](https://help.switshot.app/qna/#where-is-my-media-transfered-before)";
+"HomeView_RecentComp_Empty_Desc" = "先嘗試轉移一些媒體吧。\n[之前的媒體去了哪裡？](https://help.switshot.app/qna/#where-is-my-media-transfered-before)";
 "HomeView_RecentComp_Menu_Delete" = "刪除此轉移";
 "HomeView_RecentComp_Menu_Share" = "分享所有";
 "HomeView_RecentComp_Menu_Save" = "保存所有至圖庫";
@@ -38,7 +58,7 @@
 "HomeView_RecentComp_DelAlert_Msg" = "轉移中的所有媒體將被刪除，且無法恢復。";
 "HomeView_RecentComp_DelAlert_Cancel" = "不要刪除";
 "HomeView_RecentComp_DelAlert_Confirm" = "繼續";
-"HomeView_RecentComp_WhereIsMyOldMedia" = "之前概媒體去佐邊度？";
+"HomeView_RecentComp_WhereIsMyOldMedia" = "之前轉移的媒體在哪裡？";
 "HomeView_RecentComp_WhereIsMyOldMedia_Link" = "https://help.switshot.app/qna/#where-is-my-media-transfered-before";
 
 // DetailView
@@ -64,6 +84,7 @@
 "DetailView_QuickLookComp_Menu_Save" = "保存至圖庫";
 "DetailView_QuickLookComp_Menu_Delete" = "刪除";
 "DetailView_QuickLookComp_Share_Title" = "遊戲媒體";
+
 // AboutView
 "AboutView_Title" = "關於Switshot";
 "AboutView_Version" = "版本號";
@@ -74,7 +95,15 @@
 "AboutView_HelpCenter" = "幫助中心（英文）";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
 "AboutView_Updates" = "最新資訊（簡體中文及英文）";
+"AboutView_Discord" = "Discord伺服器";
 "AboutView_Appreciation" = "致謝";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁體中文及日文本地化";
 "AboutView_Appreciation_Contibutor_Website" = "網站";
+"AboutView_Comm" = "加入社群";
+"AboutView_QQ" = "QQ頻道";
+"AboutView_Weibo" = "開發者微博";
+"AboutView_AppStore" = "為Switshot進行評價";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "掃碼連結";

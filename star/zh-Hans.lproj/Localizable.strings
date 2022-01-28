@@ -13,6 +13,10 @@
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "转移";
 "HomeView_ConnectionComp_CheckingConnection" = "检查连接…";
+"HomeView_ConnectionComp_Ops" = "开始连接";
+"HomeView_ConnectionComp_Ops_Desc" = "使用Switshot内的扫码器进行连接。";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "扫码连接";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "我已尝试连接";
 "HomeView_ConnectionComp_Ready" = "准备转移";
 "HomeView_ConnectionComp_Ready_Desc" = "已连接至「%@」。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "开始转移";
@@ -23,9 +27,25 @@
 "HomeView_ConnectionComp_Error" = "无法连接至主机";
 "HomeView_ConnectionComp_Error_Noconn" = "请确认你的设备已连接至主机的本地联机网络。";
 "HomeView_ConnectionComp_Error_Unknown" = "遇到无法处理的错误。过会儿再试试，或者联系一下开发者。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "重试";
-"HomeView_ConnectionComp_Error_HelpBtn" = "需要帮助";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "重新检测连接";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "需要帮助";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/zh-cn/basic/transfer.html";
+
+// QRScannerComp
+"HomeView_QRScannerComp_Scanning_Title" = "扫描QR码";
+"HomeView_QRScannerComp_Scanning_Desc" = "将游戏主机屏幕上显示的连接QR码放入取景框中。";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "不兼容该QR码";
+"HomeView_QRScannerComp_Scanning_Alert_Desc" = "请扫描来自兼容的游戏主机的QR码。";
+"HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "需要帮助";
+"HomeView_QRScannerComp_Wait_Title" = "正与游戏主机通讯";
+"HomeView_QRScannerComp_Wait_Desc" = "需要花费几分钟时间，请耐心等候。";
+"HomeView_QRScannerComp_Scanning_Failed_Title" = "无法与游戏主机通讯";
+"HomeView_QRScannerComp_Scanning_Failed_Desc" = "尝试重新扫码连接，或到帮助中心寻找相关解决方案。";
+"HomeView_QRScannerComp_BackBtn" = "返回扫码";
+"HomeView_QRScannerComp_EndBtn" = "结束";
+"HomeView_QRScannerComp_ScannerError_Title" = "无法启动相机";
+"HomeView_QRScannerComp_ScannerError_Desc" = "可能是因为你没有为Switshot开启相机权限。\n你依然可以通过其他方法建立与游戏主机的连接。";
+"HomeView_QRScannerComp_SystemSettings" = "前往Switshot设置";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近";
@@ -73,9 +93,17 @@
 "AboutView_OpenSource" = "Switshot是一款开源软件。";
 "AboutView_Dismiss" = "完成";
 "AboutView_HelpCenter" = "帮助中心";
+"AboutView_Discord" = "Discord服务器";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/zh-cn/";
 "AboutView_Updates" = "最新资讯";
 "AboutView_Appreciation" = "致谢";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁体中文、日文本地化";
 "AboutView_Appreciation_Contibutor_Website" = "网站";
+"AboutView_Comm" = "加入社群";
+"AboutView_QQ" = "QQ频道";
+"AboutView_Weibo" = "开发者微博";
+"AboutView_AppStore" = "给Switshot评分";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "扫码连接";

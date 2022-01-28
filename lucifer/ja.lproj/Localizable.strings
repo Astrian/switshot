@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  star
+
+  Created by Astrian Zheng on 2022/1/23.
+  
+*/
+
+"AppName" = "Switshot";
+"Connecting" = "接続確認...";
+"NotFound_Title" = "ゲーム機が見つからない";
+"NotFound_Desc" = "まずはシステムカメラアプリやスキャナーを使ってゲーム機と接続してください。\n「スキャンと接続」機能を利用するには、Switshotのフルバージョンをダウンロードしてください。";
+"RetryConnect" = "再試行";
+"Connected_Title" = "転送の準備完了";
+"Connected_Desc" = "「%@」に接続している。「今すぐ転送」をタップすると、ゲーム機で選択したメディアをフォトライブラリに転送できます。";
+"TransferNow" = "今すぐ転送";

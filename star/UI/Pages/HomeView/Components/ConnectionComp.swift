@@ -7,10 +7,12 @@
 
 import SwiftUI
 import RealmSwift
+import StoreKit
 
 struct ConnectionComp: View {
   @State var status = 0
   @State var consoleName = ""
+  @Binding var showQRScanner: Bool
   @ObservedResults(TransferLog.self) var logs
   @ObservedResults(TransferedMedia.self) var medias
   
@@ -59,13 +61,20 @@ struct ConnectionComp: View {
       // Cannot connect to console
       else if status == -1 {
         VStack(alignment: .leading, spacing: 8) {
-          Text("HomeView_ConnectionComp_Error").font(Font.title2)
-          Text("HomeView_ConnectionComp_Error_Noconn").foregroundColor(.gray)
+          Text("HomeView_ConnectionComp_Ops").font(Font.title2)
+          Text("HomeView_ConnectionComp_Ops_Desc").foregroundColor(.gray).fixedSize(horizontal: false, vertical: true)
           HStack{
-            Button(action: { prepareTransfer() }) {
-              Text("HomeView_ConnectionComp_Error_TryAgainBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
+            Button(action: { showQRScanner = true }) {
+              Text("HomeView_ConnectionComp_Ops_ScanBtn").bold().padding([.horizontal], 18).frame(height: 30).background(Color.gray.opacity(0.1)).cornerRadius(15).padding(.vertical, 4)
             }
-            Link("HomeView_ConnectionComp_Error_HelpBtn", destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!)
+            Menu {
+              Button(action: { prepareTransfer() }) { Label("HomeView_ConnectionComp_Ops_TryAgainBtn", systemImage: "arrow.clockwise.circle") }
+              Link(destination: URL(string: NSLocalizedString("HomeView_ConnectionComp_Error_HelpBtn_Link", comment: ""))!) {
+                Label("HomeView_ConnectionComp_Ops_HelpBtn", systemImage: "book.circle")
+              }
+            } label: {
+              Label("HomeView_ConnectionComp_Ops_MenuBtn", systemImage: "questionmark.circle.fill")
+            }
           }
         }
       }
@@ -88,6 +97,9 @@ struct ConnectionComp: View {
     
     }
     .onAppear { prepareTransfer() }
+    .sheet(isPresented: $showQRScanner, onDismiss: { prepareTransfer() }) {
+      QRScannerComp().interactiveDismissDisabled()
+    }
   }
   
   func prepareTransfer() {
@@ -102,7 +114,11 @@ struct ConnectionComp: View {
           return
         }
         let request = URLRequest(url: consoleUrl)
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = 1.0
+        sessionConfig.timeoutIntervalForResource = 1.0
+        let session = URLSession(configuration: sessionConfig)
+        let (data, response) = try await session.data(for: request)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
           status = -1
           return
@@ -135,9 +151,23 @@ struct ConnectionComp: View {
         }
         $logs.append(log)
         status = 3
+        reviewGatcha()
       } catch {
         status = -1
       }
+    }
+  }
+  
+  func reviewGatcha() {
+    let random = arc4random_uniform(100)
+    print(random)
+    if random >= 98 {
+      print("gatcha!")
+      guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+        print("cannot get scene")
+        return
+      }
+      SKStoreReviewController.requestReview(in: scene)
     }
   }
 }

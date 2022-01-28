@@ -8,3 +8,4 @@
 
 "NSLocalNetworkUsageDescription" = "…in order to connect to your console!";
 "NSPhotoLibraryAddUsageDescription" = "Save your media into photo library.";
+"NSCameraUsageDescription" = "ゲーム機からQRコードを読み取って、ローカルネットワークに接続する。";

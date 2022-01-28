@@ -13,6 +13,10 @@
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "転送";
 "HomeView_ConnectionComp_CheckingConnection" = "接続中…";
+"HomeView_ConnectionComp_Ops" = "ゲーム機との接続";
+"HomeView_ConnectionComp_Ops_Desc" = "Switshotのコードスキャナ経由でリンクします。";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "スキャンと接続";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "接続みました";
 "HomeView_ConnectionComp_Ready" = "転送の準備ができました";
 "HomeView_ConnectionComp_Ready_Desc" = "「%@」に接続されています。";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "転送";
@@ -21,11 +25,27 @@
 "HomeView_ConnectionComp_Done_Desc" = "転送されたメディアは以下で確認できます。";
 "HomeView_ConnectionComp_Done_MoreBtn" = "さらに転送";
 "HomeView_ConnectionComp_Error" = "ゲーム機に接続できません";
-"HomeView_ConnectionComp_Error_Noconn" = "ゲーム機の LAN に接続することをご確認してください。";
+"HomeView_ConnectionComp_Error_Noconn" = "ゲーム機のLANに接続することをご確認してください。";
 "HomeView_ConnectionComp_Error_Unknown" = "不明なエラーが発生しました。しばらく時間をおいてから再度お試しいただくか、開発者にお問い合わせください。";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "再試行";
-"HomeView_ConnectionComp_Error_HelpBtn" = "お困りの場合";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "接続を再確認する";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "お困りの場合";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
+
+// QRScannerComp
+"HomeView_QRScannerComp_Scanning_Title" = "QRコードを読み取る";
+"HomeView_QRScannerComp_Scanning_Desc" = "ゲーム機の画面に表示されているQRコードをビューファインダーに入れる。";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "コンパチブルQRコードではありません";
+"HomeView_QRScannerComp_Scanning_Alert_Desc" = "対応ゲーム機からQRコードを読み取ってください。";
+"HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "お困りの場合";
+"HomeView_QRScannerComp_Wait_Title" = "ゲーム機との通信";
+"HomeView_QRScannerComp_Wait_Desc" = "しばらく時間がかかる場合がありますので、しばらくお待ちください。";
+"HomeView_QRScannerComp_Scanning_Failed_Title" = "ゲーム機との通信ができない";
+"HomeView_QRScannerComp_Scanning_Failed_Desc" = "QRコードを再度スキャンしてみるか、ヘルプセンターで解決策を確認してください。";
+"HomeView_QRScannerComp_BackBtn" = "QRコードの再スキャン";
+"HomeView_QRScannerComp_EndBtn" = "終了";
+"HomeView_QRScannerComp_ScannerError_Title" = "カメラを起動できない";
+"HomeView_QRScannerComp_ScannerError_Desc" = "Switshotのカメラ権限を有効にしていないためと思われます。\n他の方法でゲームホストとの接続を確立することは可能です。";
+"HomeView_QRScannerComp_SystemSettings" = "Switshotの設定に移動します";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "最近の転送";
@@ -73,7 +93,15 @@
 "AboutView_HelpCenter" = "ヘルプセンター（英語）";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
 "AboutView_Updates" = "最新情報（簡体字中国語、英語）";
+"AboutView_Discord" = "Discordサーバー";
 "AboutView_Appreciation" = "謝辞";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "繁体字中国語と日本語のローカライズ";
 "AboutView_Appreciation_Contibutor_Website" = "ホームページ";
+"AboutView_Comm" = "コミュニティに参加する";
+"AboutView_QQ" = "QQギルド";
+"AboutView_Weibo" = "開発者のWeibo";
+"AboutView_AppStore" = "Switshotを評価";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "スキャンと接続";

@@ -13,6 +13,10 @@
 // ConnectionComp
 "HomeView_ConnectionComp_Title" = "Transfer";
 "HomeView_ConnectionComp_CheckingConnection" = "Checking connection...";
+"HomeView_ConnectionComp_Ops" = "Connect to Console";
+"HomeView_ConnectionComp_Ops_Desc" = "With in-app QR scanner, you can connect to console quickly.";
+"HomeView_ConnectionComp_Ops_ScanBtn" = "Scan and connect";
+"HomeView_ConnectionComp_Ops_MenuBtn" = "More option";
 "HomeView_ConnectionComp_Ready" = "Ready to transfer";
 "HomeView_ConnectionComp_Ready_Desc" = "You’re now connected to “%@”.";
 "HomeView_ConnectionComp_Ready_TransferBtn" = "Transfer";
@@ -23,9 +27,25 @@
 "HomeView_ConnectionComp_Error" = "Cannot connect to console";
 "HomeView_ConnectionComp_Error_Noconn" = "Make sure that your device is connecting to the local connection established by your console.";
 "HomeView_ConnectionComp_Error_Unknown" = "There are some unhandled errors. Try again later or contact the developer.";
-"HomeView_ConnectionComp_Error_TryAgainBtn" = "Try again";
-"HomeView_ConnectionComp_Error_HelpBtn" = "Need help";
+"HomeView_ConnectionComp_Ops_TryAgainBtn" = "Re-check connection";
+"HomeView_ConnectionComp_Ops_HelpBtn" = "Need help";
 "HomeView_ConnectionComp_Error_HelpBtn_Link" = "https://help.switshot.app/basic/transfer.html";
+
+// QRScannerComp
+"HomeView_QRScannerComp_Scanning_Title" = "Scan QR Code";
+"HomeView_QRScannerComp_Scanning_Desc" = "Put QR code show on the screen of game console into viewing frame.";
+"HomeView_QRScannerComp_Scanning_Alert_Title" = "Not a Compatable Code";
+"HomeView_QRScannerComp_Scanning_Alert_Desc" = "Please scan the QR code from compatible game console.";
+"HomeView_QRScannerComp_Scanning_Alert_HelpBtn" = "Need Help";
+"HomeView_QRScannerComp_Wait_Title" = "Communicate with Console";
+"HomeView_QRScannerComp_Wait_Desc" = "It may spent some time, please wait patiently.";
+"HomeView_QRScannerComp_Scanning_Failed_Title" = "Cannot Communicate with Console";
+"HomeView_QRScannerComp_Scanning_Failed_Desc" = "Try to re-scan the QR code, or find solutions in help center.";
+"HomeView_QRScannerComp_BackBtn" = "Re-scan QR code";
+"HomeView_QRScannerComp_EndBtn" = "Done";
+"HomeView_QRScannerComp_ScannerError_Title" = "Camera is not Working";
+"HomeView_QRScannerComp_ScannerError_Desc" = "Switshot may not have been granted camera permission.\nHowever, you still can establish connection with other ways.";
+"HomeView_QRScannerComp_SystemSettings" = "Open settings of Switshot";
 
 // RecentComp
 "HomeView_RecentComp_Title" = "Recent";
@@ -74,8 +94,16 @@
 "AboutView_Dismiss" = "Done";
 "AboutView_HelpCenter" = "Help Center";
 "AboutView_HelpCenter_Link" = "https://help.switshot.app/";
+"AboutView_Discord" = "Discord Server";
 "AboutView_Updates" = "Latest Updates";
 "AboutView_Appreciation" = "Appreciation";
 "AboutView_Appreciation_Contributor_EanaHufwe" = "Eana Hufwe (blueset)";
 "AboutView_Appreciation_ContibuteTitle_EanaHufwe" = "Traditional Chinese and Japanese localisation";
 "AboutView_Appreciation_Contibutor_Website" = "Website";
+"AboutView_Comm" = "Join Community";
+"AboutView_QQ" = "QQ Guild";
+"AboutView_Weibo" = "Developer’s Weibo";
+"AboutView_AppStore" = "Rate Switshot";
+
+// Quick Actions
+"QuickAction_ScanQRCode" = "Scan and Connect";
