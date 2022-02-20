@@ -49,17 +49,35 @@
 		<key>hifumitogo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>lucifer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>2</integer>
 		</dict>
 		<key>star.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>45506DB42744BAD5008E30C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>459B1EA6279D972300289074</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>45AA096E26EB8A5C001043AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
