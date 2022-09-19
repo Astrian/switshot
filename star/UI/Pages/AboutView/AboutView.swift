@@ -28,6 +28,7 @@ struct AboutView: View {
           Link("AboutView_HelpCenter", destination: URL(string: NSLocalizedString("AboutView_HelpCenter_Link", comment: ""))!)
           Link("AboutView_Updates", destination: URL(string: "https://updates.switshot.app/")!)
           Link("AboutView_Weibo", destination: URL(string: "https://weibo.com/n/Narixtas")!)
+          Link("AboutView_Jike", destination: URL(string: "https://okjk.co/mNUu59")!)
         }
         
         Section(header: Text("AboutView_Comm")) {

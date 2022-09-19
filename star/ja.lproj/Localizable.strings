@@ -102,6 +102,7 @@
 "AboutView_QQ" = "QQギルド";
 "AboutView_Weibo" = "開発者のWeibo";
 "AboutView_AppStore" = "Switshotを評価";
+"AboutView_Weibo" = "開発者のJike";
 
 // Quick Actions
 "QuickAction_ScanQRCode" = "スキャンと接続";
