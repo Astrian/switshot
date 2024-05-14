@@ -104,6 +104,11 @@
 "AboutView_QQ" = "QQ頻道";
 "AboutView_Weibo" = "開發者微博";
 "AboutView_AppStore" = "為Switshot進行評價";
+"AboutView_Jike" = "開發者即刻";
+"AboutView_Mastodon" = "官方長毛象";
+
+"AboutView_Questionnaire" = "👀 2？";
+"AboutView_Questionnaire_URL" = "https://docs.google.com/forms/d/e/1FAIpQLSfxkwYW8wLVjLmQolTfZ4K3W93pm1Azqn0jS_JdJNbDy7sYGw/viewform?usp=pp_url&entry.875447622=Yes";
 
 // Quick Actions
 "QuickAction_ScanQRCode" = "掃碼連結";

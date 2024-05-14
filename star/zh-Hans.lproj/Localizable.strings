@@ -104,6 +104,11 @@
 "AboutView_QQ" = "QQ频道";
 "AboutView_Weibo" = "开发者微博";
 "AboutView_AppStore" = "给Switshot评分";
+"AboutView_Jike" = "开发者即刻";
+"AboutView_Mastodon" = "官方长毛象";
+
+"AboutView_Questionnaire" = "👀 2？";
+"AboutView_Questionnaire_Link" = "https://wj.qq.com/s2/14642642/95de/";
 
 // Quick Actions
 "QuickAction_ScanQRCode" = "扫码连接";

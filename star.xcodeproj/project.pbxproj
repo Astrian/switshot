@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,15 +34,6 @@
 		45850BE32750C1A7004DCAFC /* QuickLookComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45850BE22750C1A7004DCAFC /* QuickLookComp.swift */; };
 		45850BE627510859004DCAFC /* LinkPresentationItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45850BE527510859004DCAFC /* LinkPresentationItemSource.swift */; };
 		45850BE827510B68004DCAFC /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45850BE727510B68004DCAFC /* ActivityViewController.swift */; };
-		459B1EAA279D972300289074 /* luciferApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EA9279D972300289074 /* luciferApp.swift */; };
-		459B1EAC279D972300289074 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EAB279D972300289074 /* ContentView.swift */; };
-		459B1EAE279D972400289074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459B1EAD279D972400289074 /* Assets.xcassets */; };
-		459B1EB1279D972400289074 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459B1EB0279D972400289074 /* Preview Assets.xcassets */; };
-		459B1EB6279D972400289074 /* lucifer.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 459B1EA7279D972300289074 /* lucifer.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		459B1EBD279D989300289074 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 459B1EBF279D989300289074 /* Localizable.strings */; };
-		459B1EC5279D9FAE00289074 /* ConsoleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */; };
-		459B1EC6279D9FAE00289074 /* ConsoleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */; };
-		459B1EC7279D9FAE00289074 /* ConsoleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */; };
 		459F4E632757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		459F4E642757A853002A2A53 /* writeToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E622757A853002A2A53 /* writeToRealm.swift */; };
 		459F4E672757B110002A2A53 /* imageFromVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F4E662757B110002A2A53 /* imageFromVideo.swift */; };
@@ -68,13 +59,6 @@
 			remoteGlobalIDString = 45506DB42744BAD5008E30C0;
 			remoteInfo = hifumitogo;
 		};
-		459B1EB4279D972400289074 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45AA096726EB8A5C001043AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 459B1EA6279D972300289074;
-			remoteInfo = lucifer;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,17 +71,6 @@
 				45506DBF2744BAD5008E30C0 /* hifumitogo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		459B1EBA279D972400289074 /* Embed App Clips */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
-			dstSubfolderSpec = 16;
-			files = (
-				459B1EB6279D972400289074 /* lucifer.app in Embed App Clips */,
-			);
-			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -134,18 +107,6 @@
 		45850BE22750C1A7004DCAFC /* QuickLookComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookComp.swift; sourceTree = "<group>"; };
 		45850BE527510859004DCAFC /* LinkPresentationItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPresentationItemSource.swift; sourceTree = "<group>"; };
 		45850BE727510B68004DCAFC /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		459B1EA7279D972300289074 /* lucifer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lucifer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		459B1EA9279D972300289074 /* luciferApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luciferApp.swift; sourceTree = "<group>"; };
-		459B1EAB279D972300289074 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		459B1EAD279D972400289074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		459B1EB0279D972400289074 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		459B1EB2279D972400289074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		459B1EB3279D972400289074 /* lucifer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lucifer.entitlements; sourceTree = "<group>"; };
-		459B1EBE279D989300289074 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		459B1EC0279D989500289074 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		459B1EC1279D989600289074 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		459B1EC2279D989700289074 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleResponse.swift; sourceTree = "<group>"; };
 		459F4E622757A853002A2A53 /* writeToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeToRealm.swift; sourceTree = "<group>"; };
 		459F4E662757B110002A2A53 /* imageFromVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromVideo.swift; sourceTree = "<group>"; };
 		459F4E6A2757B782002A2A53 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -173,13 +134,6 @@
 				454D644E274B7DB100C9B2CC /* RealmSwift in Frameworks */,
 				454D644C274B7DB100C9B2CC /* Realm in Frameworks */,
 				45506DB82744BAD5008E30C0 /* Intents.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		459B1EA4279D972300289074 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +233,6 @@
 			children = (
 				457ED7F3274B7957003C2958 /* TransferLogs.swift */,
 				454D644F274BCBD900C9B2CC /* TransferedMedia.swift */,
-				459B1EC4279D9FAE00289074 /* ConsoleResponse.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -311,28 +264,6 @@
 			path = Utilits;
 			sourceTree = "<group>";
 		};
-		459B1EA8279D972300289074 /* lucifer */ = {
-			isa = PBXGroup;
-			children = (
-				459B1EA9279D972300289074 /* luciferApp.swift */,
-				459B1EAB279D972300289074 /* ContentView.swift */,
-				459B1EAD279D972400289074 /* Assets.xcassets */,
-				459B1EB2279D972400289074 /* Info.plist */,
-				459B1EB3279D972400289074 /* lucifer.entitlements */,
-				459B1EAF279D972400289074 /* Preview Content */,
-				459B1EBF279D989300289074 /* Localizable.strings */,
-			);
-			path = lucifer;
-			sourceTree = "<group>";
-		};
-		459B1EAF279D972400289074 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				459B1EB0279D972400289074 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		459F4E652757A8D6002A2A53 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,7 +288,6 @@
 				45116D17274516DB002D278D /* Shared code */,
 				45AA097126EB8A5C001043AE /* star */,
 				45506DB92744BAD5008E30C0 /* hifumitogo */,
-				459B1EA8279D972300289074 /* lucifer */,
 				45506DB62744BAD5008E30C0 /* Frameworks */,
 				45AA097026EB8A5C001043AE /* Products */,
 			);
@@ -370,7 +300,6 @@
 			children = (
 				45AA096F26EB8A5C001043AE /* star.app */,
 				45506DB52744BAD5008E30C0 /* hifumitogo.appex */,
-				459B1EA7279D972300289074 /* lucifer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,23 +354,6 @@
 			productReference = 45506DB52744BAD5008E30C0 /* hifumitogo.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		459B1EA6279D972300289074 /* lucifer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 459B1EB7279D972400289074 /* Build configuration list for PBXNativeTarget "lucifer" */;
-			buildPhases = (
-				459B1EA3279D972300289074 /* Sources */,
-				459B1EA4279D972300289074 /* Frameworks */,
-				459B1EA5279D972300289074 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = lucifer;
-			productName = lucifer;
-			productReference = 459B1EA7279D972300289074 /* lucifer.app */;
-			productType = "com.apple.product-type.application.on-demand-install-capable";
-		};
 		45AA096E26EB8A5C001043AE /* star */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45AA097E26EB8A5D001043AE /* Build configuration list for PBXNativeTarget "star" */;
@@ -450,13 +362,11 @@
 				45AA096C26EB8A5C001043AE /* Frameworks */,
 				45AA096D26EB8A5C001043AE /* Resources */,
 				45506DC02744BAD5008E30C0 /* Embed App Extensions */,
-				459B1EBA279D972400289074 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				45506DBE2744BAD5008E30C0 /* PBXTargetDependency */,
-				459B1EB5279D972400289074 /* PBXTargetDependency */,
 			);
 			name = star;
 			packageProductDependencies = (
@@ -474,14 +384,11 @@
 		45AA096726EB8A5C001043AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					45506DB42744BAD5008E30C0 = {
 						CreatedOnToolsVersion = 13.0;
-					};
-					459B1EA6279D972300289074 = {
-						CreatedOnToolsVersion = 13.2.1;
 					};
 					45AA096E26EB8A5C001043AE = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -510,7 +417,6 @@
 			targets = (
 				45AA096E26EB8A5C001043AE /* star */,
 				45506DB42744BAD5008E30C0 /* hifumitogo */,
-				459B1EA6279D972300289074 /* lucifer */,
 			);
 		};
 /* End PBXProject section */
@@ -520,16 +426,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		459B1EA5279D972300289074 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				459B1EB1279D972400289074 /* Preview Assets.xcassets in Resources */,
-				459B1EBD279D989300289074 /* Localizable.strings in Resources */,
-				459B1EAE279D972400289074 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,17 +458,6 @@
 				45506DBB2744BAD5008E30C0 /* IntentHandler.swift in Sources */,
 				454D6451274BCBD900C9B2CC /* TransferedMedia.swift in Sources */,
 				45506DC82744BBD2008E30C0 /* TransferMediaIntentHandler.swift in Sources */,
-				459B1EC6279D9FAE00289074 /* ConsoleResponse.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		459B1EA3279D972300289074 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				459B1EC7279D9FAE00289074 /* ConsoleResponse.swift in Sources */,
-				459B1EAC279D972300289074 /* ContentView.swift in Sources */,
-				459B1EAA279D972300289074 /* luciferApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +474,6 @@
 				45EA862F279904CD009EFE7D /* QRScannerComp.swift in Sources */,
 				457ED7F4274B7957003C2958 /* TransferLogs.swift in Sources */,
 				45116D19274516F2002D278D /* transfer.swift in Sources */,
-				459B1EC5279D9FAE00289074 /* ConsoleResponse.swift in Sources */,
 				45850BE627510859004DCAFC /* LinkPresentationItemSource.swift in Sources */,
 				45AA097326EB8A5C001043AE /* starApp.swift in Sources */,
 				45850BE827510B68004DCAFC /* ActivityViewController.swift in Sources */,
@@ -610,11 +494,6 @@
 			isa = PBXTargetDependency;
 			target = 45506DB42744BAD5008E30C0 /* hifumitogo */;
 			targetProxy = 45506DBD2744BAD5008E30C0 /* PBXContainerItemProxy */;
-		};
-		459B1EB5279D972400289074 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 459B1EA6279D972300289074 /* lucifer */;
-			targetProxy = 459B1EB4279D972400289074 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -653,17 +532,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		459B1EBF279D989300289074 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				459B1EBE279D989300289074 /* en */,
-				459B1EC0279D989500289074 /* zh-Hans */,
-				459B1EC1279D989600289074 /* zh-Hant */,
-				459B1EC2279D989700289074 /* ja */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		DFB1E46726EFF2E60035A8F3 /* Localizable.stringsdict */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -684,8 +552,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hifumitogo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = hifumitogo;
@@ -696,8 +564,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
+				MARKETING_VERSION = 2.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astrianzheng.star.hifumitogo-new";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -712,8 +580,8 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hifumitogo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = hifumitogo;
@@ -724,78 +592,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
+				MARKETING_VERSION = 2.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astrianzheng.star.hifumitogo-new";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		459B1EB8279D972400289074 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = lucifer/lucifer.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_ASSET_PATHS = "\"lucifer/Preview Content\"";
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = lucifer/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Switshot Clip";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 2.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.lucifer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		459B1EB9279D972400289074 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_ENTITLEMENTS = lucifer/lucifer.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_ASSET_PATHS = "\"lucifer/Preview Content\"";
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = lucifer/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Switshot Clip";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 2.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.lucifer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -928,19 +728,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = star/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 2.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -954,19 +758,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = star/star.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = star/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 2.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -980,15 +788,6 @@
 			buildConfigurations = (
 				45506DC12744BAD5008E30C0 /* Debug */,
 				45506DC22744BAD5008E30C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		459B1EB7279D972400289074 /* Build configuration list for PBXNativeTarget "lucifer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				459B1EB8279D972400289074 /* Debug */,
-				459B1EB9279D972400289074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

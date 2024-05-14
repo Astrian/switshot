@@ -27,12 +27,7 @@ struct AboutView: View {
         Section {
           Link("AboutView_HelpCenter", destination: URL(string: NSLocalizedString("AboutView_HelpCenter_Link", comment: ""))!)
           Link("AboutView_Updates", destination: URL(string: "https://updates.switshot.app/")!)
-          Link("AboutView_Weibo", destination: URL(string: "https://weibo.com/n/Narixtas")!)
-        }
-        
-        Section(header: Text("AboutView_Comm")) {
-          Link("AboutView_Discord", destination: URL(string: "https://discord.gg/zeT2nnGvAA")!)
-          Link("AboutView_QQ", destination: URL(string: "https://jq.qq.com/?_wv=1027&k=VFMbQrFe")!)
+          Link("AboutView_Mastodon", destination: URL(string: "https://astrian.social/@switshot")!)
         }
         
         Section(header: Text("AboutView_Appreciation")) {
@@ -46,6 +41,10 @@ struct AboutView: View {
         Section (footer: Text("AboutView_OpenSource")) {
           Link("AboutView_AppStore", destination: URL(string: "https://apps.apple.com/us/app/switshot/id1585470023?action=write-review")!)
           Link("AboutView_Repo", destination: URL(string: "https://github.com/Astrian/switshot")!)
+        }
+        
+        Section {
+          Link("AboutView_Questionnaire", destination: URL(string: NSLocalizedString("AboutView_Questionnaire_Link", comment: ""))!)
         }
       }
       .navigationTitle("AboutView_Title")
