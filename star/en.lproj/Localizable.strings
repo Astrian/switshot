@@ -105,6 +105,10 @@
 "AboutView_Weibo" = "Developer’s Weibo";
 "AboutView_AppStore" = "Rate Switshot";
 "AboutView_Jike" = "Developer’s Jike";
+"AboutView_Mastodon" = "Official Mastodon";
+
+"AboutView_Questionnaire" = "👀 2?";
+"AboutView_Questionnaire_Link" = "https://docs.google.com/forms/d/e/1FAIpQLSfxkwYW8wLVjLmQolTfZ4K3W93pm1Azqn0jS_JdJNbDy7sYGw/viewform?usp=pp_url&entry.875447622=Yes";
 
 // Quick Actions
 "QuickAction_ScanQRCode" = "Scan and Connect";

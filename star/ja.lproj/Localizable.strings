@@ -103,6 +103,10 @@
 "AboutView_Weibo" = "開発者のWeibo";
 "AboutView_AppStore" = "Switshotを評価";
 "AboutView_Weibo" = "開発者のJike";
+"AboutView_Mastodon" = "公式Mastodon";
+
+"AboutView_Questionnaire" = "👀 2？";
+"AboutView_Questionnaire_URL" = "https://docs.google.com/forms/d/e/1FAIpQLSfxkwYW8wLVjLmQolTfZ4K3W93pm1Azqn0jS_JdJNbDy7sYGw/viewform?usp=pp_url&entry.875447622=Yes";
 
 // Quick Actions
 "QuickAction_ScanQRCode" = "スキャンと接続";

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -553,7 +553,7 @@
 				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hifumitogo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = hifumitogo;
@@ -565,7 +565,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astrianzheng.star.hifumitogo-new";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -581,7 +581,7 @@
 				CODE_SIGN_ENTITLEMENTS = hifumitogo/hifumitogo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hifumitogo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = hifumitogo;
@@ -593,7 +593,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star.hifumitogo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astrianzheng.star.hifumitogo-new";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -730,7 +730,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = star/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -739,7 +739,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.2;
+				MARKETING_VERSION = 2.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -760,7 +760,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"star/Preview Content\"";
-				DEVELOPMENT_TEAM = AEV7JY3XBK;
+				DEVELOPMENT_TEAM = U496NXS4BR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = star/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -769,7 +769,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.2;
+				MARKETING_VERSION = 2.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.astrianzheng.star;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
